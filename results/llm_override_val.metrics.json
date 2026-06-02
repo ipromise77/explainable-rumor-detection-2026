@@ -1,0 +1,18 @@
+{
+  "size": 401,
+  "accuracy": 0.8827930174563591,
+  "macro_f1": 0.8786608723643972,
+  "confusion_matrix": [
+    [
+      214,
+      12
+    ],
+    [
+      35,
+      140
+    ]
+  ],
+  "llm_calls": 70,
+  "llm_overrides": 3,
+  "local_only": 331
+}
