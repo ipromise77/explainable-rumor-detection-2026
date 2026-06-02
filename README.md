@@ -144,4 +144,4 @@ reason = detector.explain("input tweet text")
 
 ## 备注
 
-报告中的小组成员、学号和贡献比例需要按真实情况填写后再提交。若需要上传 GitHub，请把上述文件整体提交到公开仓库，并在 Canvas 中提交仓库地址。
+暂无
