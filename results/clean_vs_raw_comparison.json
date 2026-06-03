@@ -1,0 +1,9 @@
+{
+  "raw_accuracy": 0.8802992518703242,
+  "clean_accuracy": 0.8802992518703242,
+  "raw_macro_f1": 0.8757167209050054,
+  "clean_macro_f1": 0.8757167209050054,
+  "changed_predictions": 0,
+  "max_abs_probability_delta": 0.03145107922229817,
+  "mean_abs_probability_delta": 0.0007330976020553275
+}

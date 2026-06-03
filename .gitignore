@@ -8,6 +8,7 @@ env/
 Thumbs.db
 *.zip
 report.pdf
+models/*_raw.joblib
 *.doc
 人工智能导论*.pdf
 人工智能导论课程大作业支持文档.md

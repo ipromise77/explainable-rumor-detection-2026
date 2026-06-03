@@ -1,0 +1,17 @@
+{
+  "normalization_rule": "html_unescape + lowercase + URLTOKEN + USERTOKEN + HASHTAG expansion + whitespace collapse",
+  "train_rows": 2840,
+  "val_rows": 401,
+  "train_conflict_groups": 3,
+  "train_conflict_rows": 7,
+  "train_clean_rows": 2833,
+  "removed_train_rows": 7,
+  "val_conflict_groups": 0,
+  "val_conflict_rows": 0,
+  "recommended_action": "Remove training rows whose normalized text maps to conflicting labels; keep val.csv unchanged for fair evaluation.",
+  "outputs": {
+    "train_conflict_table": "results\\train_preprocess_label_conflicts.csv",
+    "val_conflict_table": "results\\val_preprocess_label_conflicts.csv",
+    "clean_train": "rumer2026\\train_clean.csv"
+  }
+}

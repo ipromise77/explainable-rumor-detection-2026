@@ -8,6 +8,7 @@
 .
 ├── rumer2026/
 │   ├── train.csv
+│   ├── train_clean.csv
 │   └── val.csv
 ├── src/
 │   ├── rumor_detector.py   # 核心检测类、预处理、解释生成
@@ -21,6 +22,11 @@
 ├── results/
 │   ├── metrics.json
 │   └── val_predictions.csv
+├── scripts/
+│   ├── audit_data_quality.py
+│   └── build_report.py
+├── docs/
+│   └── data_quality_and_iteration_notes.md
 ├── report.pdf
 └── requirements.txt
 ```
@@ -41,11 +47,30 @@ pip install -r requirements.txt
 python -m src.train --with-explanations
 ```
 
-脚本会读取 `rumer2026/train.csv` 与 `rumer2026/val.csv`，训练模型并生成：
+脚本会优先读取 `rumer2026/train_clean.csv`；如果该文件不存在，则回退到 `rumer2026/train.csv`。验证集始终使用原始 `rumer2026/val.csv`，训练后生成：
 
 - `models/rumor_ensemble.joblib`：保存后的检测模型
 - `results/metrics.json`：验证集指标
 - `results/val_predictions.csv`：验证集预测结果和解释
+
+## 数据质量审计
+
+训练集中存在少量“当前预处理后文本相同但标签不同”的异常样本。可运行：
+
+```bash
+python scripts/audit_data_quality.py
+```
+
+脚本会生成：
+
+- `results/train_preprocess_label_conflicts.csv`
+- `results/val_preprocess_label_conflicts.csv`
+- `results/data_quality_summary.json`
+- `rumer2026/train_clean.csv`
+
+详细发现和处理思路记录在 `docs/data_quality_and_iteration_notes.md`。
+
+当前清洗策略是删除训练集中 3 组、7 行标签冲突样本，保留原始 `train.csv` 不动。清洗后训练集为 2833 条。本地模型在 `val.csv` 上的 Accuracy 仍为 0.8803，与原始训练结果一致；原始模型和清洗模型的验证集预测标签没有发生变化。
 
 ## 评估
 

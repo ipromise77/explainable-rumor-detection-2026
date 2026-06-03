@@ -13,6 +13,11 @@ from .rumor_detector import explain_text, predict_label, predict_proba, save_mod
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Train the explainable rumor detector.")
     parser.add_argument("--data-dir", default="rumer2026", help="Directory containing train.csv and val.csv.")
+    parser.add_argument(
+        "--train-file",
+        default=None,
+        help="Training CSV filename. Defaults to train_clean.csv if it exists, otherwise train.csv.",
+    )
     parser.add_argument("--model-out", default="models/rumor_ensemble.joblib")
     parser.add_argument("--results-dir", default="results")
     parser.add_argument(
@@ -29,7 +34,11 @@ def main() -> None:
     results_dir = Path(args.results_dir)
     results_dir.mkdir(parents=True, exist_ok=True)
 
-    train_df = pd.read_csv(data_dir / "train.csv")
+    train_file = args.train_file
+    if train_file is None:
+        train_file = "train_clean.csv" if (data_dir / "train_clean.csv").exists() else "train.csv"
+
+    train_df = pd.read_csv(data_dir / train_file)
     val_df = pd.read_csv(data_dir / "val.csv")
 
     bundle = train_ensemble(train_df["text"], train_df["label"])
@@ -38,6 +47,7 @@ def main() -> None:
 
     metrics = {
         "train_size": int(len(train_df)),
+        "train_file": train_file,
         "val_size": int(len(val_df)),
         "threshold": float(bundle["threshold"]),
         "accuracy": float(accuracy_score(val_df["label"], val_pred)),
@@ -71,4 +81,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

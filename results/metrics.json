@@ -1,5 +1,6 @@
 {
-  "train_size": 2840,
+  "train_size": 2833,
+  "train_file": "train_clean.csv",
   "val_size": 401,
   "threshold": 0.5,
   "accuracy": 0.8802992518703242,

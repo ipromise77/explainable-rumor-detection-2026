@@ -1,0 +1,51 @@
+{
+  "train_size": 2833,
+  "train_file": "train_clean.csv",
+  "val_size": 401,
+  "threshold": 0.5,
+  "accuracy": 0.8802992518703242,
+  "macro_f1": 0.8757167209050054,
+  "rumor_f1": 0.8518518518518519,
+  "confusion_matrix": [
+    [
+      215,
+      11
+    ],
+    [
+      37,
+      138
+    ]
+  ],
+  "classification_report": {
+    "0": {
+      "precision": 0.8531746031746031,
+      "recall": 0.9513274336283186,
+      "f1-score": 0.899581589958159,
+      "support": 226.0
+    },
+    "1": {
+      "precision": 0.9261744966442953,
+      "recall": 0.7885714285714286,
+      "f1-score": 0.8518518518518519,
+      "support": 175.0
+    },
+    "accuracy": 0.8802992518703242,
+    "macro avg": {
+      "precision": 0.8896745499094492,
+      "recall": 0.8699494310998737,
+      "f1-score": 0.8757167209050054,
+      "support": 401.0
+    },
+    "weighted avg": {
+      "precision": 0.8850324120454165,
+      "recall": 0.8802992518703242,
+      "f1-score": 0.8787519037521646,
+      "support": 401.0
+    }
+  },
+  "model_names": [
+    "word12_char36_c4",
+    "word12_char25_c8",
+    "word13_char35_c4"
+  ]
+}
