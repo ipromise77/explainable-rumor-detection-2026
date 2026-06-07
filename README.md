@@ -23,6 +23,9 @@
 │   ├── metrics.json
 │   ├── event_accuracy.csv
 │   ├── event_0_1_error_analysis.csv
+│   ├── fn_recall_review_candidates.csv
+│   ├── fn_recall_review_sweep.csv
+│   ├── fn_recall_review_summary.json
 │   ├── dev_threshold_experiment.csv
 │   ├── cv_results.csv
 │   ├── generalization_experiments_summary.json
@@ -30,10 +33,12 @@
 ├── scripts/
 │   ├── audit_data_quality.py
 │   ├── run_generalization_experiments.py
+│   ├── run_fn_recall_review_experiment.py
 │   └── build_report.py
 ├── docs/
 │   ├── data_quality_and_iteration_notes.md
-│   └── generalization_experiments.md
+│   ├── generalization_experiments.md
+│   └── fn_recall_review_experiment.md
 ├── report.pdf
 └── requirements.txt
 ```
@@ -104,6 +109,22 @@ python scripts/run_generalization_experiments.py
 
 详细记录在 `docs/generalization_experiments.md`。
 
+## 低置信 False Negative 召回复核
+
+事件级错误分析发现，event 0 / event 1 的主要问题是漏报谣言。为此新增一个定向复核实验：
+
+```bash
+python scripts/run_fn_recall_review_experiment.py
+```
+
+策略是只复核本地模型预测为 `0` 且 `0.20 <= prob_rumor < 0.50` 的样本；只有当 `deepseek-reasoner` 建议改为谣言且置信度不低于 `0.85` 时才覆盖。该实验生成：
+
+- `results/fn_recall_review_candidates.csv`
+- `results/fn_recall_review_sweep.csv`
+- `results/fn_recall_review_summary.json`
+
+当前结果：复核 79 条候选样本，最终只覆盖 1 条，救回 1 个 false negative，没有新增 false positive。Accuracy 从 `0.8803` 提升到 `0.8828`，Rumor F1 从 `0.8519` 提升到 `0.8554`。详细记录在 `docs/fn_recall_review_experiment.md`。
+
 ## 评估
 
 ```bash
@@ -158,6 +179,7 @@ python -m src.evaluate_llm --low 0.30 --high 0.70 --allow-override --override-co
 | 模式 | Accuracy | Macro-F1 | Rumor F1 | LLM调用 |
 | --- | ---: | ---: | ---: | ---: |
 | 本地TF-IDF集成 | 0.8803 | 0.8757 | 0.8519 | 0 |
+| 低置信FN召回复核 | 0.8828 | 0.8784 | 0.8554 | 79 |
 | LLM增强高置信覆盖 | 0.8828 | 0.8787 | 0.8563 | 70 |
 
 默认增强模式不会让大模型随意改标签，而是优先使用本地模型标签，由大模型润色解释；只有当大模型与本地模型冲突且自评置信度不低于 `0.85` 时才覆盖。

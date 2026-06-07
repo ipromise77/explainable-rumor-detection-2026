@@ -16,6 +16,7 @@ template_extracted.txt
 template_converted.docx
 report_preview/
 results/llm_cache.jsonl
+results/fn_review_llm_cache.jsonl
 results/llm_uncertain10.csv
 results/llm_uncertain10.metrics.json
 results/llm_val_predictions.csv
