@@ -21,12 +21,19 @@
 │   └── rumor_ensemble.joblib
 ├── results/
 │   ├── metrics.json
+│   ├── event_accuracy.csv
+│   ├── event_0_1_error_analysis.csv
+│   ├── dev_threshold_experiment.csv
+│   ├── cv_results.csv
+│   ├── generalization_experiments_summary.json
 │   └── val_predictions.csv
 ├── scripts/
 │   ├── audit_data_quality.py
+│   ├── run_generalization_experiments.py
 │   └── build_report.py
 ├── docs/
-│   └── data_quality_and_iteration_notes.md
+│   ├── data_quality_and_iteration_notes.md
+│   └── generalization_experiments.md
 ├── report.pdf
 └── requirements.txt
 ```
@@ -71,6 +78,31 @@ python scripts/audit_data_quality.py
 详细发现和处理思路记录在 `docs/data_quality_and_iteration_notes.md`。
 
 当前清洗策略是删除训练集中 3 组、7 行标签冲突样本，保留原始 `train.csv` 不动。清洗后训练集为 2833 条。本地模型在 `val.csv` 上的 Accuracy 仍为 0.8803，与原始训练结果一致；原始模型和清洗模型的验证集预测标签没有发生变化。
+
+## 泛化与阈值实验
+
+运行：
+
+```bash
+python scripts/run_generalization_experiments.py
+```
+
+脚本会生成：
+
+- `results/event_accuracy.csv`
+- `results/event_0_1_error_analysis.csv`
+- `results/dev_threshold_experiment.csv`
+- `results/cv_results.csv`
+- `results/generalization_experiments_summary.json`
+
+主要结论：
+
+- 5-fold 交叉验证 Accuracy 为 `0.8641 ± 0.0176`，说明模型在训练集内部划分上较稳定。
+- train 内部 dev 最佳阈值为 `0.51`，但应用到 `val.csv` 后 Accuracy 从 `0.8803` 降到 `0.8753`，因此最终保留默认阈值 `0.5`。
+- 事件级分析显示 event 6 表现最好，Accuracy 为 `0.9101`；event 0 样本少且最难，Accuracy 为 `0.7692`。
+- event 0 / event 1 的错误主要是 false negative：模型把部分真实谣言判为非谣言，说明后续优化重点应放在这些事件的谣言召回上。
+
+详细记录在 `docs/generalization_experiments.md`。
 
 ## 评估
 
@@ -136,7 +168,7 @@ python -m src.evaluate_llm --low 0.30 --high 0.70 --allow-override --override-co
 {
   "label": 1,
   "prob_rumor": 0.8598,
-  "explanation": "预测为1（谣言），平均置信度0.860。主要支持谣言的证据包括：..."
+  "explanation": "预测标签：1（谣言）\n谣言概率：0.860\n分类置信度：0.860\n判断依据：\n1. 支持谣言的主要证据：...\n2. 支持非谣言的反向证据：...\n3. 综合判断：..."
 }
 ```
 
@@ -158,7 +190,7 @@ reason = detector.explain("input tweet text")
 - 字符级 TF-IDF：提升对 hashtag、拼写变体、短文本片段的鲁棒性。
 - 逻辑回归集成：平均三个互补模型的谣言概率，兼顾准确率、运行速度和可解释性。
 
-基础解释模块计算当前文本中每个 TF-IDF 特征与逻辑回归权重的乘积，汇总为“支持谣言”和“支持非谣言”的局部证据。LLM 增强模块会把本地证据和相似训练样本发送给 `deepseek-reasoner`，让大模型生成更自然的中文判断依据，并在极少数高置信冲突样本上进行保守修正。
+基础解释模块计算当前文本中每个 TF-IDF 特征与逻辑回归权重的乘积，汇总为“支持谣言”和“支持非谣言”的局部证据。最终解释采用固定结构：预测标签、谣言概率、分类置信度、正向证据、反向证据和综合判断，便于老师检查依据的正确性与合理性。LLM 增强模块会把本地证据和相似训练样本发送给 `deepseek-reasoner`，让大模型生成更自然的中文判断依据，并在极少数高置信冲突样本上进行保守修正。
 
 ## 创新点
 

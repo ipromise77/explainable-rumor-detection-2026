@@ -196,6 +196,7 @@ def evidence_for_text(bundle: dict, text: str, top_k: int = 5) -> dict:
 def explain_text(bundle: dict, text: str, top_k: int = 4) -> str:
     evidence = evidence_for_text(bundle, text, top_k=top_k)
     label = int(evidence["label"])
+    prob = float(evidence["prob_rumor"])
     confidence = float(evidence["confidence"])
 
     def top_items(items: list[dict]) -> str:
@@ -207,18 +208,29 @@ def explain_text(bundle: dict, text: str, top_k: int = 4) -> str:
 
     pro_rumor = top_items(evidence["rumor_evidence"])
     pro_non_rumor = top_items(evidence["non_rumor_evidence"])
+    label_name = "谣言" if label == 1 else "非谣言"
     if label == 1:
         return (
-            f"预测为1（谣言），平均置信度{confidence:.3f}。主要支持谣言的证据包括："
-            f"{pro_rumor}；同时模型也检查到非谣言方向证据：{pro_non_rumor}。"
-            "判定依据来自词级和字符级TF-IDF特征在训练集中学习到的权重，正向贡献越大，"
-            "说明该词项在当前文本中越推动模型判为谣言。"
+            f"预测标签：{label}（{label_name}）\n"
+            f"谣言概率：{prob:.3f}\n"
+            f"分类置信度：{confidence:.3f}\n"
+            "判断依据：\n"
+            f"1. 支持谣言的主要证据：{pro_rumor}。\n"
+            f"2. 支持非谣言的反向证据：{pro_non_rumor}。\n"
+            "3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，"
+            "贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据"
+            "整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。"
         )
     return (
-        f"预测为0（非谣言），平均置信度{confidence:.3f}。主要支持非谣言的证据包括："
-        f"{pro_non_rumor}；同时模型也检查到谣言方向证据：{pro_rumor}。"
-        "判定依据来自词级和字符级TF-IDF特征在训练集中学习到的权重，负向贡献越大，"
-        "说明该词项在当前文本中越推动模型判为非谣言。"
+        f"预测标签：{label}（{label_name}）\n"
+        f"谣言概率：{prob:.3f}\n"
+        f"分类置信度：{confidence:.3f}\n"
+        "判断依据：\n"
+        f"1. 支持非谣言的主要证据：{pro_non_rumor}。\n"
+        f"2. 支持谣言的反向证据：{pro_rumor}。\n"
+        "3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，"
+        "贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据"
+        "整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。"
     )
 
 
