@@ -34,11 +34,13 @@
 │   ├── audit_data_quality.py
 │   ├── run_generalization_experiments.py
 │   ├── run_fn_recall_review_experiment.py
+│   ├── run_rhetorical_feature_experiment.py
 │   └── build_report.py
 ├── docs/
 │   ├── data_quality_and_iteration_notes.md
 │   ├── generalization_experiments.md
 │   ├── fn_recall_review_experiment.md
+│   ├── rhetorical_feature_experiment.md
 │   ├── dense_embedding.md
 │   ├── experiment_logs.md
 │   └── llm_strategy_evolution.md
@@ -130,7 +132,7 @@ python scripts/run_fn_recall_review_experiment.py
 
 ## 探索记录
 
-`docs/dense_embedding.md`、`docs/experiment_logs.md` 和 `docs/llm_strategy_evolution.md` 记录了若干未进入最终主线的探索实验，包括稠密语义特征、event 特征、阈值扫描、L1 正则化和 LLM Prompt 迭代。这些内容用于说明项目迭代过程和取舍依据；最终可复现主线仍以当前 TF-IDF 集成模型、清洗训练集、保守 LLM 复核和高置信覆盖策略为准。
+`docs/dense_embedding.md`、`docs/experiment_logs.md`、`docs/llm_strategy_evolution.md` 和 `docs/rhetorical_feature_experiment.md` 记录了若干未进入最终主线的探索实验，包括稠密语义特征、event 特征、阈值扫描、L1 正则化、LLM Prompt 迭代和谣言话术辅助特征。话术特征实验表明，`anonymous+obtained`、`smear+campaign`、`hiding` 等模式更适合作为解释阶段的证据归纳，不适合作为直接覆盖标签的规则。最终可复现主线仍以当前 TF-IDF 集成模型、清洗训练集、保守 LLM 复核和高置信覆盖策略为准。
 
 ## 评估
 

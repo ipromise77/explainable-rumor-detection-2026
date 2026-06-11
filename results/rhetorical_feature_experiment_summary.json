@@ -1,0 +1,130 @@
+{
+  "train_file": "rumer2026\\train_clean.csv",
+  "val_file": "rumer2026/val.csv",
+  "rhetorical_patterns": {
+    "anonymous_leak_signal": {
+      "anonymous_words": [
+        "anonymous",
+        "unnamed",
+        "unidentified",
+        "undisclosed"
+      ],
+      "leak_words": [
+        "obtained",
+        "acquired",
+        "leaked",
+        "uncovered",
+        "secured"
+      ]
+    },
+    "smear_campaign_signal": {
+      "smear_words": [
+        "smear",
+        "slander",
+        "defame",
+        "discredit"
+      ],
+      "required_word": "campaign"
+    },
+    "concealment_signal": {
+      "hide_words": [
+        "hiding",
+        "concealing",
+        "covering up",
+        "cover up",
+        "withholding",
+        "suppressing"
+      ]
+    },
+    "extreme_worst_signal": {
+      "devolve_words": [
+        "devolved",
+        "deteriorated",
+        "descended",
+        "degenerated"
+      ],
+      "required_word": "worst"
+    }
+  },
+  "selection_rule": "select scale using train_clean 5-fold only; val is used once for final comparison",
+  "baseline_cv": {
+    "strategy": "baseline",
+    "feature_set": "baseline",
+    "scale": 0.0,
+    "folds": 5,
+    "accuracy_mean": 0.8641059198185228,
+    "accuracy_std": 0.01764429841563474,
+    "macro_f1_mean": 0.8605850286002896,
+    "macro_f1_std": 0.0186555424571206,
+    "rumor_f1_mean": 0.8385424608886447,
+    "rumor_f1_std": 0.023457120503815626,
+    "precision_1_mean": 0.8698954238136274,
+    "precision_1_std": 0.0158100402786938,
+    "recall_1_mean": 0.8100626877367116,
+    "recall_1_std": 0.0388509109789105,
+    "fp_mean": 30.0,
+    "fp_std": 4.06201920231798,
+    "fn_mean": 47.0,
+    "fn_std": 9.669539802906858
+  },
+  "best_rhetorical_cv": {
+    "strategy": "strict_rhetorical_scale_0.5",
+    "feature_set": "strict",
+    "scale": 0.5,
+    "folds": 5,
+    "accuracy_mean": 0.8641059198185228,
+    "accuracy_std": 0.01764429841563474,
+    "macro_f1_mean": 0.8605850286002896,
+    "macro_f1_std": 0.0186555424571206,
+    "rumor_f1_mean": 0.8385424608886447,
+    "rumor_f1_std": 0.023457120503815626,
+    "precision_1_mean": 0.8698954238136274,
+    "precision_1_std": 0.0158100402786938,
+    "recall_1_mean": 0.8100626877367116,
+    "recall_1_std": 0.0388509109789105,
+    "fp_mean": 30.0,
+    "fp_std": 4.06201920231798,
+    "fn_mean": 47.0,
+    "fn_std": 9.669539802906858,
+    "delta_accuracy_vs_baseline": 0.0,
+    "delta_macro_f1_vs_baseline": 0.0
+  },
+  "baseline_val": {
+    "strategy": "baseline_val",
+    "accuracy": 0.8802992518703242,
+    "macro_f1": 0.8757167209050054,
+    "rumor_f1": 0.8518518518518519,
+    "precision_1": 0.9261744966442953,
+    "recall_1": 0.7885714285714286,
+    "tn": 215,
+    "fp": 11,
+    "fn": 37,
+    "tp": 138
+  },
+  "rhetorical_val_selected_by_cv": {
+    "strategy": "rhetorical_val_scale_0.5",
+    "accuracy": 0.8802992518703242,
+    "macro_f1": 0.8757167209050054,
+    "rumor_f1": 0.8518518518518519,
+    "precision_1": 0.9261744966442953,
+    "recall_1": 0.7885714285714286,
+    "tn": 215,
+    "fp": 11,
+    "fn": 37,
+    "tp": 138,
+    "selected_by": "best 5-fold train_clean accuracy; ties by macro_f1 and rumor_f1",
+    "selected_scale": 0.5,
+    "selected_feature_set": "strict",
+    "delta_accuracy_vs_baseline": 0.0,
+    "delta_macro_f1_vs_baseline": 0.0,
+    "changed_predictions": 0
+  },
+  "outputs": {
+    "train_feature_stats": "results\\rhetorical_feature_train_stats.csv",
+    "val_feature_stats": "results\\rhetorical_feature_val_stats.csv",
+    "cv": "results\\rhetorical_feature_cv.csv",
+    "cv_summary": "results\\rhetorical_feature_cv_summary.csv",
+    "val_predictions": "results\\rhetorical_feature_val_predictions.csv",
+    "summary": "results\\rhetorical_feature_experiment_summary.json"
+  }
+}

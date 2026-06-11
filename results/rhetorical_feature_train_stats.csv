@@ -1,0 +1,17 @@
+﻿feature,feature_set,active_rows,active_rumor,active_non_rumor,rumor_rate_when_active
+anonymous_leak_signal,strict,0,0,0,
+smear_campaign_signal,strict,0,0,0,
+concealment_signal,strict,1,1,0,1.0
+extreme_worst_signal,strict,0,0,0,
+rhetorical_signal_count,strict,1,1,0,1.0
+anonymous_word_any,component,8,3,5,0.375
+leak_word_any,component,0,0,0,
+anonymous_leak_signal,component,0,0,0,
+smear_word_any,component,6,3,3,0.5
+campaign_word,component,5,0,5,0.0
+smear_campaign_signal,component,0,0,0,
+concealment_signal,component,1,1,0,1.0
+devolve_word_any,component,3,2,1,0.6666666666666666
+worst_word,component,5,1,4,0.2
+extreme_worst_signal,component,0,0,0,
+component_signal_count,component,28,10,18,0.35714285714285715
