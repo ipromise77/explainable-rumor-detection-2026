@@ -1,0 +1,20 @@
+{
+  "confidence_threshold": 0.65,
+  "baseline_accuracy": 0.8802992518703242,
+  "optimized_accuracy": 0.8877805486284289,
+  "macro_f1": 0.8842534685473473,
+  "confusion_matrix": [
+    [
+      213,
+      13
+    ],
+    [
+      32,
+      143
+    ]
+  ],
+  "total_overrides": 7,
+  "rescued_fn": 5,
+  "new_fp": 2,
+  "improvement_accuracy": 0.007481296758104716
+}

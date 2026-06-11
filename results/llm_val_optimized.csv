@@ -1,0 +1,2160 @@
+﻿id,text,label,pred,source,prob_rumor,explanation,local_label,llm_label,llm_confidence
+500364250461003777,"So, to sum up: 1) Darren Wilson KNEW NOTHING of the robbery, 2) shot #MikeBrown over jaywalking, and 3) was allowed to escape #Ferguson.",1,1,local,0.8720923449088561,"预测标签：1（谣言）
+谣言概率：0.872
+分类置信度：0.872
+判断依据：
+1. 支持谣言的主要证据：词项'robbery'(贡献1.322)、词项'was'(贡献0.869)、词项'shot'(贡献0.631)、词项'escape'(贡献0.576)。
+2. 支持非谣言的反向证据：词项'over'(贡献0.666)、字符片段'over'(贡献0.352)、字符片段'ove'(贡献0.319)、词项'to'(贡献0.221)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+500277808883830784,"BREAKING: #Ferguson police chief just announced that officer Darren Wilson shot the unarmed teen, Michael Brown.",1,1,local,0.8942404831449361,"预测标签：1（谣言）
+谣言概率：0.894
+分类置信度：0.894
+判断依据：
+1. 支持谣言的主要证据：词项'shot'(贡献0.636)、词项'officer'(贡献0.553)、词项'michael'(贡献0.499)、字符片段'shot'(贡献0.493)。
+2. 支持非谣言的反向证据：字符片段'son'(贡献0.221)、词项'announced'(贡献0.214)、词项'officer darren'(贡献0.192)、词项'ferguson'(贡献0.181)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+500360889347096576,so ... they clearly released that video  only to shame &amp; blame the victim. #Ferguson #MikeBrown,1,1,llm_override,0.21035924391069125,推文声称警方发布视频是为了羞辱和指责受害者，与相似谣言样本'警方发布视频是经过精心计算的'高度一致，都隐含了未经证实的指控。,0,1,0.7
+499553593041903616,BREAKING: #Anonymous has obtained audio files of police dispatch and EMS during the #MikeBrown shooting. Will release ASAP. #Ferguson,1,0,local,0.14939176742057547,"预测标签：0（非谣言）
+谣言概率：0.149
+分类置信度：0.851
+判断依据：
+1. 支持非谣言的主要证据：词项'of police'(贡献0.331)、词项'shooting'(贡献0.314)、字符片段'ned'(贡献0.184)、词项'ferguson'(贡献0.184)。
+2. 支持谣言的反向证据：词项'breaking'(贡献0.451)、词项'release'(贡献0.308)、词项'will release'(贡献0.283)、词项'during'(贡献0.251)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+500336373833170945,#Ferguson police are embarking on what can only be described as an elaborate smear campaign of Michael Brown http://t.co/SaLZExqR1D,1,0,local,0.10083180633234651,"预测标签：0（非谣言）
+谣言概率：0.101
+分类置信度：0.899
+判断依据：
+1. 支持非谣言的主要证据：词项'police are'(贡献0.552)、词项'be'(贡献0.372)、词项'what'(贡献0.360)、词项'as an'(贡献0.250)。
+2. 支持谣言的反向证据：词项'michael'(贡献0.522)、词项'brown'(贡献0.281)、字符片段'mich'(贡献0.164)、字符片段'mic'(贡献0.161)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+500303238810574849,Someone with better eyes than me please #checkthedatestamp on the bottom left photo. Isn't that JUNE? #Ferguson http://t.co/PTNuxY2v5B,1,0,local,0.031549309288171394,"预测标签：0（非谣言）
+谣言概率：0.032
+分类置信度：0.968
+判断依据：
+1. 支持非谣言的主要证据：词项'ferguson URL'(贡献0.689)、词项'left'(贡献0.666)、词项'photo'(贡献0.585)、词项'on the'(贡献0.500)。
+2. 支持谣言的反向证据：字符片段'ate'(贡献0.141)、字符片段'sta'(贡献0.128)、词项'better'(贡献0.114)、词项'that'(贡献0.111)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499494187969298432,"What are #Ferguson Police hiding about ""drive by"" shooting of black woman recording last night's action? http://t.co/wfuDYm9q27 #OpFerguson",1,0,local,0.07855886593893989,"预测标签：0（非谣言）
+谣言概率：0.079
+分类置信度：0.921
+判断依据：
+1. 支持非谣言的主要证据：词项'about'(贡献0.541)、词项'shooting of'(贡献0.415)、词项'what'(贡献0.326)、词项'shooting'(贡献0.294)。
+2. 支持谣言的反向证据：字符片段'wom'(贡献0.244)、字符片段'ding'(贡献0.236)、词项'woman'(贡献0.224)、字符片段'sho'(贡献0.216)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+498272309535191041,200 cops in riot gear in #ferguson because there is a prayer circle and a concerned compassionate community,1,0,local,0.051425859867923675,"预测标签：0（非谣言）
+谣言概率：0.051
+分类置信度：0.949
+判断依据：
+1. 支持非谣言的主要证据：词项'in hashtag_ferguson'(贡献0.693)、词项'community'(贡献0.392)、词项'is'(贡献0.357)、字符片段'com'(贡献0.241)。
+2. 支持谣言的反向证据：字符片段'cir'(贡献0.283)、字符片段'con'(贡献0.261)、字符片段'co'(贡献0.245)、词项'in'(贡献0.198)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+500290456845299714,Here's the police report. Somehow #Ferguson cops valued a box of Swishers at nearly $50. Time to stop smokin I guess http://t.co/8ZkvrHkApc,1,1,llm_override,0.38829685399277825,文本使用“Somehow”表达质疑，并断言警方高估商品价值至近50美元，缺乏证据且带讽刺语气，与相似谣言样本（如质疑警方报告的推文）的煽动性特征一致。,0,1,0.65
+500368579875704832,I'm so disgusted. #Ferguson RT @ZandarVTS: This has now devolved into the worst police shooting cover-up attempt in US history.,1,0,local,0.12086021453125889,"预测标签：0（非谣言）
+谣言概率：0.121
+分类置信度：0.879
+判断依据：
+1. 支持非谣言的主要证据：词项'rt'(贡献0.385)、词项'us'(贡献0.357)、词项'rt USER'(贡献0.331)、词项'history'(贡献0.309)。
+2. 支持谣言的反向证据：词项'cover'(贡献0.615)、词项'cover up'(贡献0.469)、词项'so'(贡献0.301)、词项'now'(贡献0.299)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+500360018928353280,Lawyers for police in bad shootings often advise shooters not to write reports or even speak to commanders or investigators. #Ferguson,1,0,llm_explain,0.4065197684865757,输入文本使用“often advise”进行概括性断言，与相似谣言样本中“educated guess”的话术相似，均无具体来源，具有煽动性，而相似真实新闻则为客观报道或律师声明。,0,1,0.62
+500284871541940225,I'm NOT believing this story because I know how the police lie and will keep lying and will organize together AND LIE. #MIKEBROWN #Ferguson,1,0,local,0.15163703380399798,"预测标签：0（非谣言）
+谣言概率：0.152
+分类置信度：0.848
+判断依据：
+1. 支持非谣言的主要证据：词项'how'(贡献0.573)、词项'and'(贡献0.345)、字符片段'eep'(贡献0.263)、词项'not'(贡献0.237)。
+2. 支持谣言的反向证据：词项'the police'(贡献1.057)、词项'lie'(贡献0.880)、字符片段'lie'(贡献0.714)、词项'story'(贡献0.432)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499366666300846081,Line of police cars with high beams on greets anyone trying to enter #Ferguson. It's shut down. No media allowed. http://t.co/bk6jFFM7jj,1,1,llm_override,0.3182306268579869,文本与相似谣言高度一致，使用了‘shut down’和‘No media allowed’等断言性表述，缺乏来源，具有典型的未证实谣言特征。,0,1,0.65
+500354853680340993,Boom RT @newsneighbor Why was #Ferguson PD still looking for the suspect 7 hours after Michael Brown had been killed? http://t.co/4TH5aFsge2,1,1,local,0.8082694955660569,"预测标签：1（谣言）
+谣言概率：0.808
+分类置信度：0.808
+判断依据：
+1. 支持谣言的主要证据：词项'ferguson pd'(贡献0.717)、词项'was'(贡献0.704)、字符片段'was'(贡献0.700)、词项'pd'(贡献0.611)。
+2. 支持非谣言的反向证据：词项'hours'(贡献0.363)、词项'rt'(贡献0.331)、词项'rt USER'(贡献0.284)、字符片段'hour'(贡献0.264)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+499431474731683841,#BREAKING One woman shot in drive-by shooting on 1300 Highmont near the QT. Cannot confirm if the victim survived. #ferguson #mikebrown,1,1,llm_explain,0.6710929849109464,文本使用“#BREAKING”和“Cannot confirm”等不确定的突发报道表述，与相似谣言样本（如“BREAKING...cannot confirm”）话术一致；而相似的非谣言样本是经警方确认的正式报道，当前推文缺乏核实，属于未证实断言。,1,1,0.65
+500277526590423041,BREAKING NEWS: NAME OF OFFICER WHO SHOT #MIKEBROWN - OFFICER DAREN WILSON - #Ferguson,1,1,local,0.8082147983700695,"预测标签：1（谣言）
+谣言概率：0.808
+分类置信度：0.808
+判断依据：
+1. 支持谣言的主要证据：词项'officer'(贡献1.131)、词项'shot'(贡献0.767)、词项'name of'(贡献0.687)、字符片段'shot'(贡献0.549)。
+2. 支持非谣言的反向证据：词项'breaking news'(贡献0.484)、词项'shot hashtag_mikebrown'(贡献0.257)、字符片段'son'(贡献0.246)、词项'ferguson'(贡献0.220)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+500280249629036544,Police name the officer who shot #Ferguson teenager #MichaelBrown. Watch: http://t.co/O76WptH1nE  http://t.co/R6bxjsY9CZ,1,1,local,0.7259827823616009,"预测标签：1（谣言）
+谣言概率：0.726
+分类置信度：0.726
+判断依据：
+1. 支持谣言的主要证据：词项'shot'(贡献0.691)、词项'officer'(贡献0.601)、字符片段'shot'(贡献0.504)、词项'the officer'(贡献0.476)。
+2. 支持非谣言的反向证据：词项'name the'(贡献0.390)、词项'URL'(贡献0.240)、词项'police name'(贡献0.211)、词项'ferguson'(贡献0.197)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+498294764718915586,White man aiming down on police...nothing happens. Unarmed black kid walking back from store shot 10 times. #Ferguson http://t.co/48EcUF2Bwa,1,0,llm_explain,0.27486464059553434,推文通过对比白人持枪瞄准警察无后果与黑人少年被射杀，表达社会不公的批评，类似训练样本均为非谣言，且本地模型认为非谣言证据充分。,0,0,0.7251
+500291116403789824,"Let's not forget that even if Mike Brown did shoplift, that's not why police said he was stopped or why he was shot. #mikebrown #ferguson",1,1,local,0.7107856690742774,"预测标签：1（谣言）
+谣言概率：0.711
+分类置信度：0.711
+判断依据：
+1. 支持谣言的主要证据：词项'was'(贡献1.067)、字符片段'was'(贡献0.951)、词项'stopped'(贡献0.486)、词项'shot'(贡献0.458)。
+2. 支持非谣言的反向证据：词项'not'(贡献0.296)、字符片段'not'(贡献0.222)、词项'or'(贡献0.219)、字符片段'son'(贡献0.153)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+500328758201815041,Disgusting: MO chapter of Klan raising money as “reward” for the officer killing #MikeBrown. #Ferguson #UniteBlue http://t.co/xRCCazRSFs,1,1,llm_override,0.20377515905356525,推文声称密苏里州三K党为杀害MikeBrown的警察筹集赏金，与相似度为0.8476的谣言样本内容高度一致，缺乏可靠来源，符合典型谣言叙事。,0,1,0.8
+500289307257868288,The selective release of information by #Ferguson PD tells us nothing about the shooting. Instead appears to be a basic smear job.,1,0,local,0.14804661332014574,"预测标签：0（非谣言）
+谣言概率：0.148
+分类置信度：0.852
+判断依据：
+1. 支持非谣言的主要证据：词项'about'(贡献0.560)、词项'us'(贡献0.374)、词项'be'(贡献0.349)、词项'shooting'(贡献0.304)。
+2. 支持谣言的反向证据：词项'ferguson pd'(贡献0.874)、词项'pd'(贡献0.744)、词项'the shooting'(贡献0.582)、字符片段'pd'(贡献0.389)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+500298752469770240,Shoot unarmed kid. Conceal evidence. Impose martial law. Harass reporters. Smear the victim. Worst. Police. Ever. #Ferguson #MikeBrown,1,0,llm_explain,0.20229171319525405,推文虽以强烈措辞指责警察，但结合本地模型非谣言证据（如关键词#Ferguson #MikeBrown）和相似训练样本（均为非谣言），判断为对事件的评论而非制造谣言。,0,0,0.7977
+499571799764770816,People of #Ferguson: Stop #attacking our brave #heroes! -- http://t.co/DfxchWSDBM,0,0,local,0.049485226163713224,"预测标签：0（非谣言）
+谣言概率：0.049
+分类置信度：0.951
+判断依据：
+1. 支持非谣言的主要证据：词项'stop'(贡献0.469)、词项'our'(贡献0.434)、词项'of hashtag_ferguson'(贡献0.367)、词项'heroes'(贡献0.334)。
+2. 支持谣言的反向证据：字符片段'oes'(贡献0.165)、字符片段'stop'(贡献0.136)、字符片段'ing'(贡献0.132)、字符片段':'(贡献0.121)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499672226887897089,RT @freegcf: RT @organizemo: @OpFerguson PLS RT! Jail support info for ppl arrested at #mikebrown rallies. #ferguson http://t.co/GRJvO1dAlp,0,0,local,0.03849207331360955,"预测标签：0（非谣言）
+谣言概率：0.038
+分类置信度：0.962
+判断依据：
+1. 支持非谣言的主要证据：词项'rt'(贡献0.923)、词项'rt USER'(贡献0.640)、词项'ferguson URL'(贡献0.573)、词项'support'(贡献0.529)。
+2. 支持谣言的反向证据：词项'USER USER'(贡献0.590)、词项'at'(贡献0.339)、词项'USER rt'(贡献0.218)、字符片段':'(贡献0.211)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+500210207986028544,#wakeup #MarshallLaw #Ferguson - America - how's that land of the free working out? http://t.co/uI9nWUXr8a,0,0,local,0.07005629261637891,"预测标签：0（非谣言）
+谣言概率：0.070
+分类置信度：0.930
+判断依据：
+1. 支持非谣言的主要证据：词项'how'(贡献0.960)、词项'out URL'(贡献0.444)、词项'america'(贡献0.378)、词项'ferguson'(贡献0.296)。
+2. 支持谣言的反向证据：词项'out'(贡献0.429)、字符片段'ree'(贡献0.285)、字符片段'hall'(贡献0.184)、字符片段't?'(贡献0.166)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499381917490237440,Something being talked about tonight is the makeup of the #Ferguson Police Dept. Here's a breakdown: #MichaelBrown http://t.co/gYd5qgJh5M,0,0,local,0.11577956528722662,"预测标签：0（非谣言）
+谣言概率：0.116
+分类置信度：0.884
+判断依据：
+1. 支持非谣言的主要证据：词项'about'(贡献0.452)、词项'is'(贡献0.258)、字符片段'bout'(贡献0.221)、字符片段'abo'(贡献0.216)。
+2. 支持谣言的反向证据：词项'tonight'(贡献0.316)、字符片段'tal'(贡献0.238)、字符片段'mich'(贡献0.196)、字符片段'mic'(贡献0.196)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+498292628455034882,#message RT @brennamuncy: Someone please remind me what year it is again? #ferguson http://t.co/vI4tDnvT1W,0,0,local,0.015532550712769657,"预测标签：0（非谣言）
+谣言概率：0.016
+分类置信度：0.984
+判断依据：
+1. 支持非谣言的主要证据：词项'again'(贡献0.600)、词项'ferguson URL'(贡献0.501)、词项'rt'(贡献0.382)、词项'please'(贡献0.355)。
+2. 支持谣言的反向证据：字符片段'age'(贡献0.241)、字符片段'so'(贡献0.140)、字符片段':'(贡献0.131)、字符片段're'(贡献0.100)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+500306548841660416,This is the sassiest protest sign I have ever seen. I love our black queens! 😭 #Ferguson #MikeBrown http://t.co/C6zk8Fwb0Y,0,0,local,0.009189312699012882,"预测标签：0（非谣言）
+谣言概率：0.009
+分类置信度：0.991
+判断依据：
+1. 支持非谣言的主要证据：词项'mikebrown URL'(贡献0.664)、词项'our'(贡献0.461)、词项'is'(贡献0.438)、词项'love'(贡献0.437)。
+2. 支持谣言的反向证据：词项'is the'(贡献0.301)、字符片段'n.'(贡献0.164)、词项'ever'(贡献0.146)、字符片段'sign'(贡献0.136)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+500334308867858432,Fyi cigars in #Ferguson cost $38 million.,0,0,llm_explain,0.39820544906882205,该推文以'Fyi'开头，语气如同分享信息，且类似非谣言样本多为中性描述或链接，而非谣言的质疑或指控话术；虽然提及具体金额，但缺乏煽动性断言，更接近非谣言样本特征。,0,0,0.6018
+500277481119956992,This Cartoon Says It All: via @BennettCartoons via Chattanooga Times Free Press #Ferguson #UniteBlue #libcrib #KY http://t.co/A5XHpJPq75,0,0,local,0.05646608964196176,"预测标签：0（非谣言）
+谣言概率：0.056
+分类置信度：0.944
+判断依据：
+1. 支持非谣言的主要证据：词项'all'(贡献0.390)、词项'press'(贡献0.287)、字符片段'unit'(贡献0.179)、词项'it all'(贡献0.169)。
+2. 支持谣言的反向证据：字符片段'ree'(贡献0.202)、字符片段'ays'(贡献0.136)、词项'says'(贡献0.133)、字符片段'ee'(贡献0.096)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499530401136668672,UNEASY NIGHT: St. Louis Post Dispatch's reporting on last night's clashes in #Ferguson http://t.co/wHNNo9yo3T http://t.co/OOuZIRkjpL,0,0,local,0.1865736300789452,"预测标签：0（非谣言）
+谣言概率：0.187
+分类置信度：0.813
+判断依据：
+1. 支持非谣言的主要证据：词项'in hashtag_ferguson'(贡献0.804)、词项'ferguson URL'(贡献0.677)、词项'URL'(贡献0.279)、词项'night'(贡献0.257)。
+2. 支持谣言的反向证据：字符片段'repo'(贡献0.380)、字符片段'rep'(贡献0.372)、字符片段'ost'(贡献0.320)、字符片段'post'(贡献0.282)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+500368204376850432,How many #Ferguson officers are in the KKK? #jw,0,0,local,0.06868220351729208,"预测标签：0（非谣言）
+谣言概率：0.069
+分类置信度：0.931
+判断依据：
+1. 支持非谣言的主要证据：词项'how'(贡献0.799)、词项'how many'(贡献0.520)、字符片段'how'(贡献0.466)、字符片段'are'(贡献0.316)。
+2. 支持谣言的反向证据：词项'kkk'(贡献0.244)、字符片段'offi'(贡献0.242)、字符片段'man'(贡献0.196)、字符片段'in'(贡献0.175)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499702206455488513,The #Ferguson police are STILL on the tv LYING about wanting peace and there's military guns and amour trucks here in broad daylight,0,0,local,0.033492251573241504,"预测标签：0（非谣言）
+谣言概率：0.033
+分类置信度：0.967
+判断依据：
+1. 支持非谣言的主要证据：词项'about'(贡献0.493)、词项'police are'(贡献0.454)、词项'on the'(贡献0.335)、词项'and'(贡献0.245)。
+2. 支持谣言的反向证据：字符片段'gun'(贡献0.201)、词项'still on'(贡献0.198)、字符片段'ere'(贡献0.161)、词项'here in'(贡献0.145)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+500249081286250496,"Protesters march peacefully alongside state troopers in #Ferguson: http://t.co/qqiQ0XKDRN (Scott Olson, Getty Images) http://t.co/D6DKEK0z5n",0,0,llm_explain,0.20571203687312165,推文描述抗议者和平游行，非谣言证据中‘protesters’和‘Ferguson’等特征得分高，且相似样本多数为真实报道；虽有谣言相似样本，但其内容涉及枪击与推文不符，因此保持本地模型判断。,0,0,0.7943
+498274493337702401,: Teenager #MikeBrown won't start college on Monday because he was shot ten times by a #Ferguson police officer. http://t.co/dCFmzlkFRD”,0,0,llm_explain,0.2985391750416842,输入文本与多个高度相似的训练样本（标签为0）一致，且本地模型非谣言概率较高（0.7015），文本中“won't start college”和“on Monday”等词项被识别为非谣言特征。,0,0,0.7015
+498259432237969408,People are now matching to the #Ferguson Police Dept headquarters. http://t.co/4KEsby2ZPj,0,0,local,0.04454605952304495,"预测标签：0（非谣言）
+谣言概率：0.045
+分类置信度：0.955
+判断依据：
+1. 支持非谣言的主要证据：字符片段'rs.'(贡献0.298)、词项'people are'(贡献0.281)、词项'are'(贡献0.257)、字符片段'are'(贡献0.227)。
+2. 支持谣言的反向证据：词项'are now'(贡献0.490)、词项'now'(贡献0.383)、字符片段'now'(贡献0.309)、字符片段'ept'(贡献0.179)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499701423135678464,"You guess photo of war? Yes, you are right. This is a war between oppressor &amp; oppressed. #Ferguson #MikeBrown http://t.co/74TvAG92CR",0,0,local,0.010701615044907192,"预测标签：0（非谣言）
+谣言概率：0.011
+分类置信度：0.989
+判断依据：
+1. 支持非谣言的主要证据：词项'you'(贡献0.755)、字符片段'you'(贡献0.651)、词项'mikebrown URL'(贡献0.559)、词项'photo'(贡献0.512)。
+2. 支持谣言的反向证据：词项'between'(贡献0.288)、字符片段'opp'(贡献0.223)、字符片段'war'(贡献0.202)、字符片段'wa'(贡献0.157)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499691638424608768,RT .@ryanjreilly: A massive SWAT team just showed up to peaceful demonstration in #ferguson https://t.co/VZh6Iu2MmL,0,0,local,0.025596380261622503,"预测标签：0（非谣言）
+谣言概率：0.026
+分类置信度：0.974
+判断依据：
+1. 支持非谣言的主要证据：词项'in hashtag_ferguson'(贡献0.593)、词项'ferguson URL'(贡献0.499)、词项'rt'(贡献0.383)、词项'rt USER'(贡献0.329)。
+2. 支持谣言的反向证据：字符片段'sho'(贡献0.284)、字符片段'mass'(贡献0.255)、词项'up'(贡献0.231)、字符片段'mas'(贡献0.222)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+500240534481666049,Capt. Ron Johnson leads #Ferguson protestors through a peaceful night #RonJohnson #leader http://t.co/JpUnwUsN6f http://t.co/Vl504sVOaE,0,0,local,0.018360311315840226,"预测标签：0（非谣言）
+谣言概率：0.018
+分类置信度：0.982
+判断依据：
+1. 支持非谣言的主要证据：词项'protestors'(贡献0.383)、词项'johnson'(贡献0.376)、词项'peaceful'(贡献0.350)、字符片段'lead'(贡献0.269)。
+2. 支持谣言的反向证据：字符片段'ro'(贡献0.193)、字符片段'er'(贡献0.115)、字符片段'thr'(贡献0.097)、字符片段'cap'(贡献0.097)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+498305962726273024,I’m in #Ferguson and the witnesses are telling a chillin story. This young man was truly executed.,0,0,llm_explain,0.2579867747745665,推文虽有'executed'等强烈指控，但本地模型基于'#Ferguson'等词项以及多数相似训练样本（非谣言）判断为个人观点或描述，未呈现典型谣言模式。,0,0,0.742
+500364705622671360,Exactly How Often Do Police Shoot Unarmed Black Men? http://t.co/6KXMOhu2EA #Ferguson http://t.co/1Cd6egf2LQ,0,0,local,0.03018649624984186,"预测标签：0（非谣言）
+谣言概率：0.030
+分类置信度：0.970
+判断依据：
+1. 支持非谣言的主要证据：词项'how'(贡献0.732)、词项'ferguson URL'(贡献0.667)、词项'URL hashtag_ferguson'(贡献0.469)、词项'do'(贡献0.393)。
+2. 支持谣言的反向证据：字符片段'sho'(贡献0.328)、字符片段'sh'(贡献0.175)、字符片段'ten'(贡献0.166)、字符片段'ed'(贡献0.162)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499401831874043905,"Protestor on bull horn: ""Is this the Gaza Strip you bombin'"" #Ferguson http://t.co/rsPzBuPYb1",0,0,local,0.010900479862361876,"预测标签：0（非谣言）
+谣言概率：0.011
+分类置信度：0.989
+判断依据：
+1. 支持非谣言的主要证据：词项'ferguson URL'(贡献0.832)、词项'you'(贡献0.615)、字符片段'you'(贡献0.550)、词项'is'(贡献0.508)。
+2. 支持谣言的反向证据：字符片段'rip'(贡献0.243)、字符片段'bul'(贡献0.187)、字符片段'bull'(贡献0.152)、字符片段'ull'(贡献0.123)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499674159916789760,Police look on as protestors rally in #Ferguson http://t.co/LCzNUCNvKE,0,0,local,0.01351751841900471,"预测标签：0（非谣言）
+谣言概率：0.014
+分类置信度：0.986
+判断依据：
+1. 支持非谣言的主要证据：词项'in hashtag_ferguson'(贡献1.079)、词项'ferguson URL'(贡献0.908)、词项'protestors'(贡献0.632)、词项'in hashtag_ferguson ferguson'(贡献0.322)。
+2. 支持谣言的反向证据：字符片段'ook'(贡献0.189)、字符片段'lly'(贡献0.184)、词项'in'(贡献0.182)、字符片段'in'(贡献0.172)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+500364003734867970,"Video footage of my arrest, @AntonioFrench staffers, and Michael Powers Protest and arrests 8-13-14: http://t.co/RLaAUlKyyv #Ferguson",0,0,local,0.07148893280224622,"预测标签：0（非谣言）
+谣言概率：0.071
+分类置信度：0.929
+判断依据：
+1. 支持非谣言的主要证据：词项'my'(贡献0.783)、词项'URL hashtag_ferguson'(贡献0.450)、字符片段'my'(贡献0.419)、字符片段'est'(贡献0.390)。
+2. 支持谣言的反向证据：词项'michael'(贡献0.596)、词项'arrest'(贡献0.404)、词项'13'(贡献0.281)、词项'footage of'(贡献0.236)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499426471300329472,Prayers for #Ferguson.,0,0,local,0.011513308215822632,"预测标签：0（非谣言）
+谣言概率：0.012
+分类置信度：0.988
+判断依据：
+1. 支持非谣言的主要证据：词项'prayers for'(贡献0.610)、词项'ferguson'(贡献0.441)、字符片段'pray'(贡献0.438)、字符片段'son'(贡献0.434)。
+2. 支持谣言的反向证据：字符片段'pr'(贡献0.102)、字符片段'for'(贡献0.048)、字符片段'er'(贡献0.027)、字符片段'tag'(贡献0.025)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499359735947087872,Anonymous hacking group threatens the #Ferguson police in wake of the murder of Mike Brown --&gt; http://t.co/TqaA59wH9x http://t.co/p8VtikmeyD,0,0,local,0.05112589892565139,"预测标签：0（非谣言）
+谣言概率：0.051
+分类置信度：0.949
+判断依据：
+1. 支持非谣言的主要证据：词项'wake'(贡献0.395)、词项'wake of'(贡献0.344)、词项'in wake'(贡献0.339)、字符片段'wake'(贡献0.321)。
+2. 支持谣言的反向证据：词项'mike brown'(贡献0.235)、词项'brown'(贡献0.234)、词项'mike'(贡献0.195)、字符片段'thre'(贡献0.179)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499696137708658688,Coming soon to everyone's town. MT @ryanjreilly: Overkill in #Ferguson. Officer won't answer...why this is needed. http://t.co/Uj7olrFBjB,0,0,local,0.08017972612942474,"预测标签：0（非谣言）
+谣言概率：0.080
+分类置信度：0.920
+判断依据：
+1. 支持非谣言的主要证据：词项'in hashtag_ferguson'(贡献0.545)、字符片段'ove'(贡献0.363)、词项'everyone'(贡献0.350)、字符片段'over'(贡献0.281)。
+2. 支持谣言的反向证据：词项'officer'(贡献0.473)、字符片段'own.'(贡献0.368)、字符片段'wn.'(贡献0.368)、词项'coming'(贡献0.263)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+498273703428620289,"The mother of #MikeBrown, the 17-year-old killed by #Ferguson police today, says her son was about to start at Vatterott College next week.",0,0,local,0.054029568724844663,"预测标签：0（非谣言）
+谣言概率：0.054
+分类置信度：0.946
+判断依据：
+1. 支持非谣言的主要证据：词项'about'(贡献0.426)、词项'start'(贡献0.371)、词项'old'(贡献0.245)、字符片段'bout'(贡献0.209)。
+2. 支持谣言的反向证据：词项'was'(贡献0.654)、字符片段'was'(贡献0.523)、词项'at'(贡献0.237)、字符片段'old'(贡献0.174)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499376069485821952,Next up on Fox News: Here's some footage of angry black people in #Ferguson with no discussion about why they're angry. Enjoy! #MikeBrown,0,0,local,0.02223923168910842,"预测标签：0（非谣言）
+谣言概率：0.022
+分类置信度：0.978
+判断依据：
+1. 支持非谣言的主要证据：词项're'(贡献0.565)、词项'in hashtag_ferguson'(贡献0.538)、词项'about'(贡献0.483)、词项'they re'(贡献0.276)。
+2. 支持谣言的反向证据：词项'they'(贡献0.289)、词项'up'(贡献0.210)、字符片段'tage'(贡献0.181)、词项'footage of'(贡献0.167)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+498264393185239040,"Police aren't being taught to protect and serve anymore. They are being taught to shoot first, explain later. #ferguson",0,0,local,0.14300998266073742,"预测标签：0（非谣言）
+谣言概率：0.143
+分类置信度：0.857
+判断依据：
+1. 支持非谣言的主要证据：词项'aren'(贡献0.444)、字符片段'are'(贡献0.233)、字符片段'en't'(贡献0.231)、词项'to'(贡献0.217)。
+2. 支持谣言的反向证据：词项'are being'(贡献0.511)、词项'explain'(贡献0.408)、词项'they'(贡献0.323)、字符片段'they'(贡献0.227)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499536812109742080,The fact that while we've been focused on #Ferguson another black man was killed by cops in LA and it barely made the news says a lot.,0,0,llm_explain,0.3846781917366697,该推文虽情绪批判但基于具体事件（LA警察杀人）和事实对比，话术更接近相似非谣言样本中对媒体偏见的评论，未出现概括性断言或煽动性语言。,0,0,0.6153
+498285782512050176,Awful. RT @AntonioFrench #Ferguson Police have dogs and shotguns. The unarmed crowd is raising their hands. https://t.co/OFXxJLuDtj,0,0,local,0.038569721893474,"预测标签：0（非谣言）
+谣言概率：0.039
+分类置信度：0.961
+判断依据：
+1. 支持非谣言的主要证据：词项'rt'(贡献0.351)、词项'rt USER'(贡献0.302)、词项'is'(贡献0.278)、词项'crowd'(贡献0.241)。
+2. 支持谣言的反向证据：字符片段'shot'(贡献0.335)、字符片段'sho'(贡献0.257)、字符片段'l.'(贡献0.206)、词项'raising'(贡献0.189)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+500261600579043328,"Powerful, disturbing advice from the humans in #Gaza to the humans in #Ferguson on how to deal with military/police. http://t.co/4hxr1QEjLt",0,0,local,0.027734092780256698,"预测标签：0（非谣言）
+谣言概率：0.028
+分类置信度：0.972
+判断依据：
+1. 支持非谣言的主要证据：词项'in hashtag_ferguson'(贡献0.519)、词项'how'(贡献0.479)、字符片段'ans'(贡献0.286)、字符片段'how'(贡献0.222)。
+2. 支持谣言的反向证据：词项'with military'(贡献0.202)、字符片段'dea'(贡献0.193)、字符片段'dist'(贡献0.170)、词项'in'(贡献0.148)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+500281037486698498,Exactly how often do police shoot unarmed black men? http://t.co/m5X6ICFtdv #Ferguson http://t.co/elWTCmN3ZN,0,0,local,0.03018649624984186,"预测标签：0（非谣言）
+谣言概率：0.030
+分类置信度：0.970
+判断依据：
+1. 支持非谣言的主要证据：词项'how'(贡献0.732)、词项'ferguson URL'(贡献0.667)、词项'URL hashtag_ferguson'(贡献0.469)、词项'do'(贡献0.393)。
+2. 支持谣言的反向证据：字符片段'sho'(贡献0.328)、字符片段'sh'(贡献0.175)、字符片段'ten'(贡献0.166)、字符片段'ed'(贡献0.162)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499700824432717824,"On some Tiananmen shit. RT @sebwalker: Military-style police: 3 APCs, ~100 officers, high-powered rifles #Ferguson http://t.co/JK0ZBrnEIO",0,0,llm_explain,0.21828140337935542,输入为转推描述弗格森事件，包含URL和转推标记，本地模型非谣言证据充分（词项'ferguson URL'得分0.5517），相似样本多数为非谣言（最高相似度0.6462的样本为0）。,0,0,0.7817
+499362348940144640,"Police still at one end of W. Florissant, protesters now at Greater St. Mark Church. #Ferguson p/v @JustinGlawe http://t.co/ujLgUmKLNS",0,0,local,0.03752846470650055,"预测标签：0（非谣言）
+谣言概率：0.038
+分类置信度：0.962
+判断依据：
+1. 支持非谣言的主要证据：词项'end'(贡献0.460)、字符片段'end'(贡献0.439)、词项'protesters'(贡献0.334)、词项'mark'(贡献0.215)。
+2. 支持谣言的反向证据：词项'at'(贡献0.477)、字符片段'at'(贡献0.328)、词项'now'(贡献0.285)、词项'one'(贡献0.275)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499388619425980416,"This is #Ferguson, a suburb in America. http://t.co/GfmHLo4u5q",0,0,local,0.035084692164772203,"预测标签：0（非谣言）
+谣言概率：0.035
+分类置信度：0.965
+判断依据：
+1. 支持非谣言的主要证据：词项'is'(贡献0.571)、词项'this'(贡献0.414)、词项'america'(贡献0.404)、字符片段'is'(贡献0.354)。
+2. 支持谣言的反向证据：词项'is hashtag_ferguson'(贡献0.354)、字符片段'su'(贡献0.318)、词项'suburb'(贡献0.240)、词项'in'(贡献0.188)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499697498072420352,Dear #Ferguson PD After our towns murders we didn't deploy SWAT Respectfully a Sandy Hook Dad and ex-cop. http://t.co/fpRWMowwAj,0,0,llm_explain,0.30310387043144155,文本以‘Dear’开头、语气礼貌，类似相似非谣言样本的冷静陈述；虽涉及弗格森警局但无煽动性质，更像个人对比而非传播未证实信息，故维持非谣言判断。,0,0,0.75
+498286281894682624,What year are we in again? This is looking like the 50s #Ferguson http://t.co/TeLcT3d3yh,0,0,local,0.007658135122590861,"预测标签：0（非谣言）
+谣言概率：0.008
+分类置信度：0.992
+判断依据：
+1. 支持非谣言的主要证据：词项'again'(贡献0.941)、词项'ferguson URL'(贡献0.781)、词项'we'(贡献0.660)、词项'what'(贡献0.502)。
+2. 支持谣言的反向证据：字符片段'in'(贡献0.170)、词项'in'(贡献0.157)、字符片段'at'(贡献0.118)、字符片段'ing'(贡献0.117)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499701669437784064,Just as the Founding Fathers intended. RT @BmoreConetta: Current situation in #ferguson http://t.co/QVNG2ZmlxV,0,0,local,0.022485125830493946,"预测标签：0（非谣言）
+谣言概率：0.022
+分类置信度：0.978
+判断依据：
+1. 支持非谣言的主要证据：词项'in hashtag_ferguson'(贡献0.712)、词项'ferguson URL'(贡献0.599)、词项'rt'(贡献0.461)、词项'rt USER'(贡献0.396)。
+2. 支持谣言的反向证据：字符片段'ding'(贡献0.191)、字符片段'in'(贡献0.167)、字符片段':'(贡献0.147)、词项'situation'(贡献0.143)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+500212911856295940,"No matter what we do, it won't be as bad as killing a kid and leaving him to die on the street, covered with his own blood. #Ferguson",0,0,llm_explain,0.3166966740180263,推文使用假设性比较（'No matter what we do...'），没有断言具体事实，更像情绪表达而非指控；类似非谣言样本（如'Police are leaving now'）也偏向客观陈述，而相似谣言样本则包含具体指控和链接。,0,0,0.81
+499579650926858240,"Image of #Ferguson protester throwing tear gas back at police, wearing the American flag, is amazing. http://t.co/JXi1sibnGG @AntonioFrench",0,0,local,0.07285960566511064,"预测标签：0（非谣言）
+谣言概率：0.073
+分类置信度：0.927
+判断依据：
+1. 支持非谣言的主要证据：词项'tear'(贡献0.311)、词项'is'(贡献0.305)、词项'gas'(贡献0.300)、词项'tear gas'(贡献0.288)。
+2. 支持谣言的反向证据：词项'flag'(贡献0.591)、词项'at'(贡献0.296)、字符片段'fla'(贡献0.264)、字符片段'flag'(贡献0.260)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499605248747786240,"Right now the United States has a stronger militarized force in #Ferguson, Missouri than it does in Baghdad.",0,0,local,0.049693729149870434,"预测标签：0（非谣言）
+谣言概率：0.050
+分类置信度：0.950
+判断依据：
+1. 支持非谣言的主要证据：词项'in hashtag_ferguson'(贡献0.657)、词项'force'(贡献0.362)、词项'than'(贡献0.359)、词项'right'(贡献0.267)。
+2. 支持谣言的反向证据：词项'now'(贡献0.331)、词项'states'(贡献0.286)、字符片段'now'(贡献0.247)、词项'united states'(贡献0.224)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+498531639472189441,#Ferguson v #Bundy: Black jaywalking teen shot &amp; killed by cops. White trespassig rancher's militia aim guns at cops. http://t.co/MEGjYq2feR,0,0,llm_explain,0.2647959429912698,推文对比Ferguson与Bundy事件，描述符合已知新闻框架，未发现虚构线索；本地模型及多个相似样本均判定为非谣言。,0,0,0.7352
+500399997113098240,I asked Ron Johnson why #Ferguson cops aren't wearing name tags: http://t.co/ghiG5XM8Rd,0,0,local,0.08197177962556747,"预测标签：0（非谣言）
+谣言概率：0.082
+分类置信度：0.918
+判断依据：
+1. 支持非谣言的主要证据：词项'aren'(贡献0.573)、词项'johnson'(贡献0.447)、字符片段'en't'(贡献0.321)、字符片段'son'(贡献0.266)。
+2. 支持谣言的反向证据：词项'name'(贡献0.475)、词项'ferguson cops'(贡献0.469)、字符片段'name'(贡献0.378)、字符片段'nam'(贡献0.315)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+498349598197702656,"Police in #Ferguson, Missouri, shot and killed a 17-year-old boy. http://t.co/TbVlOFxEus #FergusonShooting",0,0,local,0.16273581557736536,"预测标签：0（非谣言）
+谣言概率：0.163
+分类置信度：0.837
+判断依据：
+1. 支持非谣言的主要证据：词项'in hashtag_ferguson'(贡献0.606)、词项'old'(贡献0.313)、词项'missouri'(贡献0.229)、字符片段'son'(贡献0.207)。
+2. 支持谣言的反向证据：词项'shot'(贡献0.604)、字符片段'shot'(贡献0.469)、字符片段'sho'(贡献0.372)、词项'fergusonshooting'(贡献0.242)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499699803576881152,The live stream from #Ferguson is back up and running. Watch here while you can: http://t.co/7QTY8soT46,0,0,local,0.1423242020387389,"预测标签：0（非谣言）
+谣言概率：0.142
+分类置信度：0.858
+判断依据：
+1. 支持非谣言的主要证据：字符片段'you'(贡献0.561)、词项'you'(贡献0.436)、词项'is'(贡献0.360)、词项'from'(贡献0.248)。
+2. 支持谣言的反向证据：词项'while'(贡献0.423)、字符片段'stre'(贡献0.336)、词项'watch'(贡献0.301)、字符片段'live'(贡献0.292)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+498283038338711552,They've brought the dogs out in #Ferguson https://t.co/gXQeLtaXjt,0,0,local,0.02237411627887129,"预测标签：0（非谣言）
+谣言概率：0.022
+分类置信度：0.978
+判断依据：
+1. 支持非谣言的主要证据：词项'in hashtag_ferguson'(贡献0.892)、词项'ferguson URL'(贡献0.750)、词项'dogs'(贡献0.302)、字符片段'son'(贡献0.299)。
+2. 支持谣言的反向证据：词项'they'(贡献0.478)、词项'out'(贡献0.369)、词项'out in'(贡献0.283)、字符片段'they'(贡献0.188)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499703156889362432,#BREAKING: State Senator Maria Chapelle Nadal has been taken into police custody; she had been tear-gassed at an earlier protest. #Ferguson,0,0,llm_explain,0.49756432516257254,推文内容与相似的非谣言样本高度一致（相似度1.2844），均提及同一事件且语气客观，虽有#BREAKING但为常见新闻标签，未发现煽动性或未证实断言，因此判断为真实新闻。,0,0,0.85
+499478732315566080,Your friendly local police department. Protect and Serve. #Ferguson http://t.co/LIUfLlnXXK,0,0,local,0.024675607589263553,"预测标签：0（非谣言）
+谣言概率：0.025
+分类置信度：0.975
+判断依据：
+1. 支持非谣言的主要证据：词项'ferguson URL'(贡献0.689)、词项'friendly'(贡献0.300)、字符片段'you'(贡献0.295)、词项'ferguson'(贡献0.233)。
+2. 支持谣言的反向证据：字符片段'dly'(贡献0.231)、字符片段'ect'(贡献0.193)、字符片段'cal'(贡献0.178)、词项'local'(贡献0.131)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+500362679039840257,RT @FreeTopher: OFFICER DARREN WILSON STANDING OVER MIKE BROWN'S BODY AFTER SHOOTING HIM 9 TIMES #Ferguson http://t.co/7uAMFPdyPO,0,1,llm_override,0.22867034447877843,推文具体描述警察开枪次数和站立尸体旁，与相似度最高（0.8561）的训练样本一致均为谣言；本地模型中“him”等词项支持谣言方向。,0,1,0.65
+500163501961142275,"Photo taken by @FroGoddess ""thanks for the advice #Palestine"" - #Ferguson #STL #MikeBrown http://t.co/UkfKu2Zzdl",0,0,local,0.013551741305920892,"预测标签：0（非谣言）
+谣言概率：0.014
+分类置信度：0.986
+判断依据：
+1. 支持非谣言的主要证据：词项'mikebrown URL'(贡献0.491)、词项'photo'(贡献0.449)、字符片段'stl'(贡献0.435)、词项'hashtag_stl'(贡献0.291)。
+2. 支持谣言的反向证据：词项'for the'(贡献0.186)、词项'thanks'(贡献0.180)、词项'taken'(贡献0.121)、字符片段'mi'(贡献0.083)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+500322242296041473,"If Michael Brown had been carrying a gun, would Republicans still say he had a right to bear arms? Or is that only for white men? #ferguson",0,0,llm_explain,0.20152267837255577,推文以假设性修辞质问质疑种族双重标准，未陈述可验证的事实，且与相似非谣言样本（如对迈克尔·布朗案件的类似反问）一致，因此判断为非谣言。,0,0,0.8
+499529014797557760,All of yesterday's Vines in one YouTube video. #ferguson  http://t.co/Q2wUmBg5Cr,0,0,local,0.03533318237446753,"预测标签：0（非谣言）
+谣言概率：0.035
+分类置信度：0.965
+判断依据：
+1. 支持非谣言的主要证据：词项'all'(贡献0.911)、词项'ferguson URL'(贡献0.852)、词项'yesterday'(贡献0.509)、字符片段'you'(贡献0.322)。
+2. 支持谣言的反向证据：词项'one'(贡献0.494)、词项'video'(贡献0.281)、字符片段'ube'(贡献0.249)、词项'youtube'(贡献0.224)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+498575704582148096,If u r white &amp; u r not outraged about #Ferguson then the problem is much bigger than the police. #americaforall,0,0,local,0.029920949646116437,"预测标签：0（非谣言）
+谣言概率：0.030
+分类置信度：0.970
+判断依据：
+1. 支持非谣言的主要证据：词项'about'(贡献0.655)、词项'than'(贡献0.400)、词项'is'(贡献0.375)、词项'white'(贡献0.346)。
+2. 支持谣言的反向证据：词项'the police'(贡献1.242)、词项'then'(贡献0.318)、字符片段'ged'(贡献0.282)、字符片段'rob'(贡献0.276)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499598945417703424,More from #Ferguson this morning http://t.co/82Ylq2SqzK,0,0,local,0.026033238503175352,"预测标签：0（非谣言）
+谣言概率：0.026
+分类置信度：0.974
+判断依据：
+1. 支持非谣言的主要证据：字符片段'mo'(贡献0.590)、词项'this'(贡献0.368)、词项'ferguson this'(贡献0.361)、字符片段'son'(贡献0.358)。
+2. 支持谣言的反向证据：词项'this morning'(贡献0.401)、词项'morning'(贡献0.325)、字符片段'ore'(贡献0.231)、字符片段'ing'(贡献0.165)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499602370917978112,"One pattern of the last few days: After police move the media out of the area, they become more heavy-handed and violent. #Ferguson",0,0,local,0.03445713514330726,"预测标签：0（非谣言）
+谣言概率：0.034
+分类置信度：0.966
+判断依据：
+1. 支持非谣言的主要证据：词项'after police'(贡献0.379)、词项'few'(贡献0.352)、字符片段'few'(贡献0.350)、词项'violent'(贡献0.345)。
+2. 支持谣言的反向证据：词项'days'(贡献0.592)、词项'out of'(贡献0.403)、字符片段'days'(贡献0.289)、词项'they'(贡献0.287)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499636076852420608,Better Family life out here in the #FERGUSON community offering therapy for the residents of Canfield #MikeBrown http://t.co/SIiRImomBP,0,0,local,0.04730703761956128,"预测标签：0（非谣言）
+谣言概率：0.047
+分类置信度：0.953
+判断依据：
+1. 支持非谣言的主要证据：词项'mikebrown URL'(贡献0.508)、词项'community'(贡献0.369)、词项'residents'(贡献0.321)、词项'the'(贡献0.244)。
+2. 支持谣言的反向证据：词项'out'(贡献0.269)、字符片段'eld'(贡献0.211)、词项'for the'(贡献0.192)、词项'here in'(贡献0.173)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499602333404504064,Police militarization on display in #Ferguson http://t.co/m9jyPq3ALq,0,0,local,0.018262496885868493,"预测标签：0（非谣言）
+谣言概率：0.018
+分类置信度：0.982
+判断依据：
+1. 支持非谣言的主要证据：词项'in hashtag_ferguson'(贡献0.861)、词项'ferguson URL'(贡献0.725)、字符片段'disp'(贡献0.296)、字符片段'son'(贡献0.255)。
+2. 支持谣言的反向证据：字符片段'di'(贡献0.232)、词项'display'(贡献0.164)、字符片段'in'(贡献0.149)、词项'in'(贡献0.145)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499704241741520897,"People who claim to be against big, intrusive government and for the Constitution are cheerleading for the cops in #Ferguson now. Telling.",0,0,local,0.09788228040201445,"预测标签：0（非谣言）
+谣言概率：0.098
+分类置信度：0.902
+判断依据：
+1. 支持非谣言的主要证据：词项'in hashtag_ferguson'(贡献0.638)、词项'be'(贡献0.356)、词项'the'(贡献0.238)、词项'to be'(贡献0.231)。
+2. 支持谣言的反向证据：词项'now'(贡献0.321)、词项'for the'(贡献0.318)、词项'and for'(贡献0.293)、字符片段'con'(贡献0.240)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499699779426066432,Cops are forcing us to move even as legally we have the right to stand on the  sidewalk... #Ferguson,0,0,local,0.04941574285495822,"预测标签：0（非谣言）
+谣言概率：0.049
+分类置信度：0.951
+判断依据：
+1. 支持非谣言的主要证据：词项'we'(贡献0.446)、词项'on the'(贡献0.383)、词项'us'(贡献0.377)、字符片段'ove'(贡献0.307)。
+2. 支持谣言的反向证据：词项'even'(贡献0.594)、字符片段'even'(贡献0.174)、字符片段'alk'(贡献0.156)、字符片段'ven'(贡献0.138)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+498321666267561985,"No matter what COLOR you are...the murder by cop in #Ferguson is WRONG.  Let's stand together, do NOT let them divide us.",0,0,local,0.020131604754750204,"预测标签：0（非谣言）
+谣言概率：0.020
+分类置信度：0.980
+判断依据：
+1. 支持非谣言的主要证据：词项'in hashtag_ferguson'(贡献0.563)、字符片段'you'(贡献0.395)、词项'you'(贡献0.350)、词项'us'(贡献0.338)。
+2. 支持谣言的反向证据：词项'cop'(贡献0.261)、词项'ferguson is'(贡献0.217)、词项'are the'(贡献0.173)、词项'by cop'(贡献0.172)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499362441697193985,Peaceful youth demonstration at Greater St. Mark Church #ferguson http://t.co/feWLxdme9R,0,0,local,0.0220352344631093,"预测标签：0（非谣言）
+谣言概率：0.022
+分类置信度：0.978
+判断依据：
+1. 支持非谣言的主要证据：词项'ferguson URL'(贡献0.529)、词项'peaceful'(贡献0.335)、字符片段'you'(贡献0.289)、词项'mark'(贡献0.238)。
+2. 支持谣言的反向证据：词项'at'(贡献0.312)、字符片段'at'(贡献0.237)、字符片段'st.'(贡献0.127)、字符片段'ate'(贡献0.116)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499674825753772033,"#Ferguson #FergusonRiot #JailSupport helps those arrested in order to connect them to lawyers, relay messages... http://t.co/9NQJclwvah",0,0,local,0.11241745532205112,"预测标签：0（非谣言）
+谣言概率：0.112
+分类置信度：0.888
+判断依据：
+1. 支持非谣言的主要证据：词项'those'(贡献0.282)、词项'to'(贡献0.229)、词项'ferguson'(贡献0.187)、字符片段'pport'(贡献0.178)。
+2. 支持谣言的反向证据：字符片段'con'(贡献0.203)、词项'them to'(贡献0.176)、字符片段'ot'(贡献0.132)、字符片段'ect'(贡献0.125)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499441454498852864,"RT @PDPJ: #Ferguson picture from earlier in the day, high powered rifles trained on protesters http://t.co/qUkG9ztaQt",0,0,local,0.054898751759131614,"预测标签：0（非谣言）
+谣言概率：0.055
+分类置信度：0.945
+判断依据：
+1. 支持非谣言的主要证据：词项'rt'(贡献0.328)、词项'protesters'(贡献0.299)、词项'rt USER'(贡献0.282)、字符片段'ned'(贡献0.258)。
+2. 支持谣言的反向证据：字符片段'ier'(贡献0.391)、词项'the day'(贡献0.259)、词项'picture'(贡献0.248)、字符片段'ed'(贡献0.220)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+500296090671796224,Our account from the ground in #Ferguson Protesting 4 #JusticeForMikeBrown? Know your rights https://t.co/bqWdKblUoM http://t.co/A60AYAS1GV,0,0,local,0.0112720621212946,"预测标签：0（非谣言）
+谣言概率：0.011
+分类置信度：0.989
+判断依据：
+1. 支持非谣言的主要证据：词项'in hashtag_ferguson'(贡献0.666)、词项'our'(贡献0.360)、词项'rights'(贡献0.248)、词项'from'(贡献0.236)。
+2. 支持谣言的反向证据：词项'protesting'(贡献0.292)、词项'know'(贡献0.249)、字符片段'acc'(贡献0.227)、词项'account'(贡献0.152)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499696733979688961,"Military-style police in overwhelming show of force: 3 APCs, ~100 officers, high-powered rifles #Ferguson http://t.co/joc9ZnPuqM",0,0,llm_explain,0.2090664818604291,推文描述警察武力展示，但属于对事件客观描述，与相似度最高的非谣言样本（#Ferguson picture...）一致，且本地模型非谣言证据充分。,0,0,0.7909
+499688832300630016,"BREAKING: #Ferguson both lanes of W Florissant Ave blocked again, crowd chanting ""They say get back, we say fuck that"" tact teams driving up",0,0,local,0.14971076485845378,"预测标签：0（非谣言）
+谣言概率：0.150
+分类置信度：0.850
+判断依据：
+1. 支持非谣言的主要证据：词项'again'(贡献0.657)、词项'we'(贡献0.459)、词项'crowd'(贡献0.288)、词项'fuck'(贡献0.250)。
+2. 支持谣言的反向证据：词项'breaking'(贡献0.453)、词项'they'(贡献0.347)、词项'say'(贡献0.293)、词项'up'(贡献0.253)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+500197999205965824,St. Louis police chief condemns military tactics being used in #Ferguson http://t.co/6jmeZutuoe,0,0,local,0.11907219686481334,"预测标签：0（非谣言）
+谣言概率：0.119
+分类置信度：0.881
+判断依据：
+1. 支持非谣言的主要证据：词项'in hashtag_ferguson'(贡献0.757)、词项'ferguson URL'(贡献0.638)、词项'ferguson'(贡献0.216)、字符片段'son'(贡献0.205)。
+2. 支持谣言的反向证据：词项'police chief'(贡献0.561)、词项'chief'(贡献0.403)、词项'condemns'(贡献0.335)、字符片段'con'(贡献0.322)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+500292129802186752,"Follow Amnesty delegation on the ground in #Ferguson to observe, collect testimony http://t.co/srQ7W2vAyx",0,0,local,0.025474246709250775,"预测标签：0（非谣言）
+谣言概率：0.025
+分类置信度：0.975
+判断依据：
+1. 支持非谣言的主要证据：词项'in hashtag_ferguson'(贡献0.917)、词项'on the'(贡献0.560)、词项'ferguson'(贡献0.262)、词项'ground'(贡献0.252)。
+2. 支持谣言的反向证据：字符片段'ect'(贡献0.171)、词项'in'(贡献0.154)、词项'follow'(贡献0.127)、字符片段'co'(贡献0.109)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499658267493019651,Great Minds Think Alike But So Do DUMBASSES! Jesse Jackson: There's a '#Ferguson' near U http://t.co/PIlkbY2YB6 #tcot http://t.co/RRz31Fqc1m,0,0,local,0.12576354784756427,"预测标签：0（非谣言）
+谣言概率：0.126
+分类置信度：0.874
+判断依据：
+1. 支持非谣言的主要证据：词项'do'(贡献0.353)、词项'URL'(贡献0.248)、字符片段'e's'(贡献0.209)、词项'but'(贡献0.205)。
+2. 支持谣言的反向证据：词项'so'(贡献0.362)、字符片段'so'(贡献0.231)、词项'URL hashtag_tcot'(贡献0.218)、字符片段'eat'(贡献0.172)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+498602787614511104,Happening now in #Ferguson http://t.co/w8r9FTl4Kb,0,0,local,0.015916208271880457,"预测标签：0（非谣言）
+谣言概率：0.016
+分类置信度：0.984
+判断依据：
+1. 支持非谣言的主要证据：词项'in hashtag_ferguson'(贡献1.269)、词项'ferguson URL'(贡献1.069)、词项'happening'(贡献0.617)、字符片段'happ'(贡献0.570)。
+2. 支持谣言的反向证据：词项'now'(贡献0.639)、词项'now in'(贡献0.600)、字符片段'now'(贡献0.531)、字符片段'in'(贡献0.238)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+498271531386953728,"Reminder that this is legal, but young unarmed black men are threatening and make us ""uncomfortable""  #Ferguson http://t.co/VbRyW7J9nR",0,0,local,0.03520290201158652,"预测标签：0（非谣言）
+谣言概率：0.035
+分类置信度：0.965
+判断依据：
+1. 支持非谣言的主要证据：词项'ferguson URL'(贡献0.602)、词项'us'(贡献0.430)、词项'is'(贡献0.368)、词项'that this'(贡献0.332)。
+2. 支持谣言的反向证据：字符片段'men'(贡献0.212)、词项'make'(贡献0.195)、字符片段'thre'(贡献0.168)、字符片段're'(贡献0.140)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+498507730395484160,The shooting in #Ferguson highlights why the federal government should be underwriting body cams for all cops rather than military gear.,0,0,local,0.04480716183125069,"预测标签：0（非谣言）
+谣言概率：0.045
+分类置信度：0.955
+判断依据：
+1. 支持非谣言的主要证据：词项'in hashtag_ferguson'(贡献0.600)、词项'all'(贡献0.536)、词项'should'(贡献0.390)、词项'be'(贡献0.336)。
+2. 支持谣言的反向证据：词项'the shooting'(贡献0.560)、字符片段'sho'(贡献0.364)、词项'body'(贡献0.277)、字符片段'sh'(贡献0.190)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499703033174179840,"Jammers used again. Both livestreams went down again, looks like police is trying to hide something. #Ferguson",0,0,local,0.1478753472161192,"预测标签：0（非谣言）
+谣言概率：0.148
+分类置信度：0.852
+判断依据：
+1. 支持非谣言的主要证据：词项'again'(贡献1.032)、词项'is'(贡献0.309)、词项'like'(贡献0.260)、字符片段'agai'(贡献0.252)。
+2. 支持谣言的反向证据：词项'down'(贡献0.564)、词项'trying to'(贡献0.371)、词项'trying'(贡献0.316)、字符片段'dow'(贡献0.165)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499655869412286464,"Anti-Gunners Donated $500k+ 2 Defeat Pro-Gun Sheriff, He Won Anyway! http://t.co/KdWIsaSDhT #tcot #2A #Ferguson #NRA http://t.co/9LQkU5JOlv",0,0,local,0.14404050426187287,"预测标签：0（非谣言）
+谣言概率：0.144
+分类置信度：0.856
+判断依据：
+1. 支持非谣言的主要证据：词项'URL'(贡献0.228)、词项'anti'(贡献0.215)、词项'ferguson'(贡献0.185)、词项'gun'(贡献0.160)。
+2. 支持谣言的反向证据：词项'he'(贡献0.223)、字符片段'2'(贡献0.220)、词项'URL hashtag_tcot'(贡献0.197)、字符片段'eat'(贡献0.158)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499688532391526400,#Ferguson heavily armed police in military gear arriving on armed personnel carriers now http://t.co/GbGdrhZBlM,0,0,local,0.08028061228059948,"预测标签：0（非谣言）
+谣言概率：0.080
+分类置信度：0.920
+判断依据：
+1. 支持非谣言的主要证据：词项'armed police'(贡献0.597)、词项'armed'(贡献0.517)、词项'ferguson'(贡献0.240)、词项'gear'(贡献0.234)。
+2. 支持谣言的反向证据：词项'now'(贡献0.424)、词项'personnel'(贡献0.415)、字符片段'now'(贡献0.250)、字符片段'ed'(贡献0.214)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499488337338843137,Is that a bag of chips?! #REAL RT @GinoTheGhost: May be the dopest photo of the year #Ferguson http://t.co/ZxF3zhbjHb,0,0,local,0.018267646610388502,"预测标签：0（非谣言）
+谣言概率：0.018
+分类置信度：0.982
+判断依据：
+1. 支持非谣言的主要证据：词项'ferguson URL'(贡献0.571)、词项'photo'(贡献0.482)、词项'rt'(贡献0.439)、词项'be'(贡献0.379)。
+2. 支持谣言的反向证据：字符片段'rea'(贡献0.177)、字符片段':'(贡献0.149)、字符片段're'(贡献0.134)、字符片段'may'(贡献0.126)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499705599454883840,"Looking at #Ferguson and feeling anger, then helplessness, then more anger. They're not even pretending to acknowledge our humanity.",0,0,local,0.096635916148012,"预测标签：0（非谣言）
+谣言概率：0.097
+分类置信度：0.903
+判断依据：
+1. 支持非谣言的主要证据：词项're'(贡献0.671)、词项'our'(贡献0.345)、词项'they re'(贡献0.328)、词项'not'(贡献0.243)。
+2. 支持谣言的反向证据：词项'even'(贡献0.603)、词项'then'(贡献0.471)、词项'they'(贡献0.342)、词项'at'(贡献0.318)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499706059691663360,"Tears streaming down my face as I watch little kids stepping and chanting ""justice for #MikeBrown"" with rifles trained on them. #Ferguson",0,0,local,0.08201828952788273,"预测标签：0（非谣言）
+谣言概率：0.082
+分类置信度：0.918
+判断依据：
+1. 支持非谣言的主要证据：词项'my'(贡献0.568)、字符片段'my'(贡献0.337)、词项'trained'(贡献0.263)、词项'face'(贡献0.232)。
+2. 支持谣言的反向证据：词项'down'(贡献0.516)、词项'watch'(贡献0.237)、字符片段'stre'(贡献0.210)、词项'on them'(贡献0.186)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+498504673339666432,This would help tremendously. #mikebrown #Ferguson http://t.co/FNVnuZLWd1,0,0,local,0.011020050926728841,"预测标签：0（非谣言）
+谣言概率：0.011
+分类置信度：0.989
+判断依据：
+1. 支持非谣言的主要证据：词项'ferguson URL'(贡献0.971)、词项'help'(贡献0.607)、词项'this'(贡献0.429)、词项'would'(贡献0.360)。
+2. 支持谣言的反向证据：字符片段'tre'(贡献0.253)、字符片段'mi'(贡献0.118)、字符片段'men'(贡献0.096)、字符片段'y.'(贡献0.076)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499698357397237762,Those cops on line in #Ferguson don't have riot shields and batons. They have rifles. The only thing they can do with those is shoot people.,0,0,local,0.08008647082918653,"预测标签：0（非谣言）
+谣言概率：0.080
+分类置信度：0.920
+判断依据：
+1. 支持非谣言的主要证据：词项'in hashtag_ferguson'(贡献0.539)、词项'those'(贡献0.392)、词项'don'(贡献0.382)、词项'is'(贡献0.277)。
+2. 支持谣言的反向证据：词项'they'(贡献0.489)、字符片段'they'(贡献0.400)、词项'do with'(贡献0.328)、字符片段'hey'(贡献0.241)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+500320286341099523,"#Ferguson is 60% black, but virtually all its cops are white. http://t.co/U7Yk4s4nyE http://t.co/gHlnoPH4dK",0,0,local,0.023358210384537347,"预测标签：0（非谣言）
+谣言概率：0.023
+分类置信度：0.977
+判断依据：
+1. 支持非谣言的主要证据：词项'all'(贡献0.808)、词项'is'(贡献0.465)、词项'white'(贡献0.428)、词项'URL'(贡献0.316)。
+2. 支持谣言的反向证据：词项'ferguson is'(贡献0.347)、字符片段'lly'(贡献0.147)、字符片段'co'(贡献0.143)、字符片段'all'(贡献0.140)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+500430673099104256,"Wake up. Whenever a black man is killed by police, they try to make him a Saint/Martyr. 99% of the time he's a POS #Thug. #Ferguson",0,0,local,0.18678064791181784,"预测标签：0（非谣言）
+谣言概率：0.187
+分类置信度：0.813
+判断依据：
+1. 支持非谣言的主要证据：词项'wake'(贡献0.397)、字符片段'wake'(贡献0.293)、词项'is'(贡献0.289)、词项'try'(贡献0.258)。
+2. 支持谣言的反向证据：词项'him'(贡献0.537)、词项'time'(贡献0.457)、字符片段'him'(贡献0.401)、词项'is killed'(贡献0.358)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+499665704300191745,"More startling statistics about the segregated population of #Ferguson, Mo. http://t.co/uYrldQHoj7 http://t.co/vgxuLMYDhz",0,0,local,0.020123405712077724,"预测标签：0（非谣言）
+谣言概率：0.020
+分类置信度：0.980
+判断依据：
+1. 支持非谣言的主要证据：词项'about'(贡献0.936)、词项'of hashtag_ferguson'(贡献0.477)、词项'URL'(贡献0.358)、字符片段'mo'(贡献0.344)。
+2. 支持谣言的反向证据：字符片段'stat'(贡献0.243)、字符片段'sta'(贡献0.230)、字符片段'ted'(贡献0.200)、字符片段'ling'(贡献0.193)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+500074069354905600,Times Square right now for #Ferguson #MichaelBrown http://t.co/m0e1eFJet2,0,0,local,0.06482974824557954,"预测标签：0（非谣言）
+谣言概率：0.065
+分类置信度：0.935
+判断依据：
+1. 支持非谣言的主要证据：词项'ferguson hashtag_michaelbrown'(贡献0.479)、词项'right'(贡献0.342)、词项'right now'(贡献0.336)、词项'michaelbrown URL'(贡献0.259)。
+2. 支持谣言的反向证据：词项'now'(贡献0.424)、字符片段'now'(贡献0.288)、字符片段'mich'(贡献0.264)、字符片段'mic'(贡献0.263)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+500186504279625728,4 arrested in Times Square after march supporting #Ferguson http://t.co/I40SlR3Jbm #NMOS14 http://t.co/QRT7VzEiRe,0,0,local,0.07163455247348285,"预测标签：0（非谣言）
+谣言概率：0.072
+分类置信度：0.928
+判断依据：
+1. 支持非谣言的主要证据：词项'ferguson URL'(贡献0.626)、词项'URL'(贡献0.262)、词项'square'(贡献0.224)、词项'ferguson'(贡献0.212)。
+2. 支持谣言的反向证据：字符片段'su'(贡献0.185)、字符片段'ted'(贡献0.155)、词项'in'(贡献0.126)、字符片段'ed'(贡献0.116)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+521358118597689344,Milan have stated that the reports about Essien having Ebola are completely false. http://t.co/Sb9v9ulfTX @MichaelEssien,1,1,llm_explain,0.6923977834749356,文本与相似谣言样本均涉及对埃博拉传闻的辟谣声明，内容高度一致，且本地模型特征如'reports'和'ebola'支持谣言判断。,1,1,0.6924
+529655582882791424,Prince (@3RDEYEGIRL) playing surprise show in Toronto tonight?: http://t.co/BJCMwEagNr,1,1,local,0.9960769904507721,"预测标签：1（谣言）
+谣言概率：0.996
+分类置信度：0.996
+判断依据：
+1. 支持谣言的主要证据：词项'prince'(贡献1.460)、词项'toronto'(贡献1.105)、字符片段'pri'(贡献1.038)、字符片段'prin'(贡献0.720)。
+2. 支持非谣言的反向证据：词项'URL'(贡献0.183)、字符片段'us'(贡献0.111)、字符片段'ris'(贡献0.103)、词项'USER'(贡献0.099)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+529728291545284608,Maybe Massey Hall was just a decoy location and Prince has actually loaded all his gear into the El Mocambo. Maybe he BOUGHT the El Mo.,1,1,local,0.7858073573052414,"预测标签：1（谣言）
+谣言概率：0.786
+分类置信度：0.786
+判断依据：
+1. 支持谣言的主要证据：词项'prince'(贡献0.925)、词项'was'(贡献0.787)、字符片段'was'(贡献0.563)、词项'massey'(贡献0.555)。
+2. 支持非谣言的反向证据：词项'all'(贡献0.511)、词项'location'(贡献0.279)、字符片段'mo'(贡献0.254)、词项'the'(贡献0.215)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+529730550169624579,"UPDATED: Prince not playing Massey Hall, Live Nation says http://t.co/MjRWsEJRWo #PrinceTO #cbcto http://t.co/Gk9DflWJjE",1,1,local,0.9916182537695689,"预测标签：1（谣言）
+谣言概率：0.992
+分类置信度：0.992
+判断依据：
+1. 支持谣言的主要证据：词项'prince'(贡献1.004)、字符片段'pri'(贡献0.880)、字符片段'prin'(贡献0.843)、词项'massey'(贡献0.602)。
+2. 支持非谣言的反向证据：词项'not'(贡献0.237)、词项'URL'(贡献0.215)、字符片段'not'(贡献0.139)、词项'updated'(贡献0.086)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+529399936434327552,can someone get us in 2 the secret prince show in toronto tomorrow,1,1,local,0.9799790563923484,"预测标签：1（谣言）
+谣言概率：0.980
+分类置信度：0.980
+判断依据：
+1. 支持谣言的主要证据：词项'prince'(贡献1.312)、词项'toronto'(贡献0.993)、字符片段'pri'(贡献0.691)、字符片段'prin'(贡献0.661)。
+2. 支持非谣言的反向证据：词项'us'(贡献0.487)、字符片段'us'(贡献0.254)、词项'can someone'(贡献0.207)、词项'the'(贡献0.179)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+529694805010685952,$10 to see Prince tonight in Toronto? I'd be a fool not to.,1,1,local,0.9416887494936031,"预测标签：1（谣言）
+谣言概率：0.942
+分类置信度：0.942
+判断依据：
+1. 支持谣言的主要证据：词项'prince'(贡献1.462)、词项'toronto'(贡献1.106)、字符片段'pri'(贡献0.693)、字符片段'prin'(贡献0.664)。
+2. 支持非谣言的反向证据：词项'be'(贡献0.505)、词项'not'(贡献0.345)、词项'to'(贡献0.315)、字符片段'not'(贡献0.210)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+529674474019651584,Are you in line for Prince's rumoured show in Toronto? http://t.co/vWqaS1wjSp http://t.co/7FzHZsihpY,1,1,local,0.9588427797917985,"预测标签：1（谣言）
+谣言概率：0.959
+分类置信度：0.959
+判断依据：
+1. 支持谣言的主要证据：词项'prince'(贡献1.207)、词项'toronto'(贡献0.914)、字符片段'pri'(贡献0.724)、字符片段'prin'(贡献0.693)。
+2. 支持非谣言的反向证据：字符片段'you'(贡献0.646)、词项'you'(贡献0.462)、字符片段'e's'(贡献0.333)、字符片段'ou'(贡献0.280)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+529776116773298176,"The whole ""secret Prince show in Toronto"" is a joke. How dare they let ppl stand out there all day waiting. Total jerk move. By all involved",1,1,local,0.8283052438772546,"预测标签：1（谣言）
+谣言概率：0.828
+分类置信度：0.828
+判断依据：
+1. 支持谣言的主要证据：词项'prince'(贡献0.902)、词项'toronto'(贡献0.683)、字符片段'pri'(贡献0.447)、字符片段'prin'(贡献0.428)。
+2. 支持非谣言的反向证据：词项'all'(贡献0.844)、词项'how'(贡献0.514)、词项'is'(贡献0.287)、字符片段'all'(贡献0.273)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+529692457337118721,Wish I was going to that secret concert that @3RDEYEGIRL and Prince are performing at @MassyHall in Toronto,1,1,local,0.9747891510506982,"预测标签：1（谣言）
+谣言概率：0.975
+分类置信度：0.975
+判断依据：
+1. 支持谣言的主要证据：词项'prince'(贡献1.088)、词项'was'(贡献0.925)、词项'toronto'(贡献0.824)、字符片段'was'(贡献0.775)。
+2. 支持非谣言的反向证据：词项'are'(贡献0.232)、字符片段'are'(贡献0.222)、字符片段'wish'(贡献0.202)、词项'and'(贡献0.178)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+529652269105815553,Lineup forms outside Massey Hall amid rumours of surprise Prince show http://t.co/J3f8kJpnqF http://t.co/LDAp5zTixz,1,1,local,0.9891144098460289,"预测标签：1（谣言）
+谣言概率：0.989
+分类置信度：0.989
+判断依据：
+1. 支持谣言的主要证据：词项'prince'(贡献0.941)、字符片段'pri'(贡献0.824)、字符片段'prin'(贡献0.572)、词项'massey'(贡献0.564)。
+2. 支持非谣言的反向证据：词项'URL'(贡献0.199)、字符片段'ou'(贡献0.161)、词项'of'(贡献0.124)、字符片段'orm'(贡献0.113)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+529724254183780355,#Breaking @LiveNationON has tweeted out there is no Prince show at Massey Hall tonight.,1,1,local,0.9918111912831028,"预测标签：1（谣言）
+谣言概率：0.992
+分类置信度：0.992
+判断依据：
+1. 支持谣言的主要证据：词项'prince'(贡献1.034)、字符片段'pri'(贡献0.645)、词项'massey'(贡献0.620)、字符片段'prin'(贡献0.618)。
+2. 支持非谣言的反向证据：词项'tweeted'(贡献0.387)、词项'is'(贡献0.328)、字符片段'is'(贡献0.234)、字符片段'twe'(贡献0.227)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+529739968470867968,"Prince not playing Massey Hall tonight, promoter says http://t.co/clVHvM07kx http://t.co/IADirsFOOC",1,1,local,0.9835680623683206,"预测标签：1（谣言）
+谣言概率：0.984
+分类置信度：0.984
+判断依据：
+1. 支持谣言的主要证据：词项'prince'(贡献1.360)、词项'massey'(贡献0.816)、词项'massey hall'(贡献0.809)、词项'hall'(贡献0.774)。
+2. 支持非谣言的反向证据：词项'not'(贡献0.321)、词项'URL'(贡献0.292)、字符片段'not'(贡献0.209)、字符片段'pro'(贡献0.179)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+529695299200360448,Prince rumoured to play secret Toronto show today http://t.co/ODT5L7b8Pi,1,1,local,0.9841116949643371,"预测标签：1（谣言）
+谣言概率：0.984
+分类置信度：0.984
+判断依据：
+1. 支持谣言的主要证据：词项'prince'(贡献1.225)、词项'toronto'(贡献0.927)、字符片段'pri'(贡献0.753)、字符片段'prin'(贡献0.722)。
+2. 支持非谣言的反向证据：词项'today'(贡献0.210)、字符片段'ay'(贡献0.155)、词项'URL'(贡献0.155)、词项'to'(贡献0.155)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+529733645435949056,"There's no Prince show in Toronto tonight ... but there IS an American midterm election on TV ... so, y'know, that's fun too!",1,1,local,0.8836381012009258,"预测标签：1（谣言）
+谣言概率：0.884
+分类置信度：0.884
+判断依据：
+1. 支持谣言的主要证据：词项'prince'(贡献0.949)、词项'toronto'(贡献0.719)、字符片段'pri'(贡献0.502)、字符片段'prin'(贡献0.481)。
+2. 支持非谣言的反向证据：词项'is'(贡献0.301)、字符片段'e's'(贡献0.231)、字符片段'but'(贡献0.195)、字符片段'is'(贡献0.182)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+529720675272249344,So @prince Concert @masseyhall  4 tickets/person &amp; max seating is 3300 Still a chance if you want to brave it! #Prince#Toronto,1,1,local,0.9397731017367712,"预测标签：1（谣言）
+谣言概率：0.940
+分类置信度：0.940
+判断依据：
+1. 支持谣言的主要证据：词项'prince'(贡献0.974)、词项'toronto'(贡献0.738)、字符片段'nce'(贡献0.642)、字符片段'pri'(贡献0.602)。
+2. 支持非谣言的反向证据：字符片段'you'(贡献0.390)、词项'you'(贡献0.372)、词项'want'(贡献0.348)、词项'is'(贡献0.309)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+529749285198655488,WOW. It seems as though #Prince will not be playing at #toronto's #MasseyHall after all. A sad turnout for those who played hooky today!,1,1,local,0.9419489507667551,"预测标签：1（谣言）
+谣言概率：0.942
+分类置信度：0.942
+判断依据：
+1. 支持谣言的主要证据：词项'prince'(贡献0.833)、词项'toronto'(贡献0.630)、字符片段'pri'(贡献0.498)、字符片段'prin'(贡献0.477)。
+2. 支持非谣言的反向证据：词项'all'(贡献0.460)、词项'those who'(贡献0.401)、词项'wow'(贡献0.302)、词项'be'(贡献0.287)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+529729911926583296,TORONTO: In case you missed it @LiveNationON are saying no Prince shows @masseyhall either today or tomorrow.,1,1,local,0.9042961881658108,"预测标签：1（谣言）
+谣言概率：0.904
+分类置信度：0.904
+判断依据：
+1. 支持谣言的主要证据：词项'prince'(贡献0.806)、词项'toronto'(贡献0.610)、字符片段'pri'(贡献0.538)、字符片段'prin'(贡献0.515)。
+2. 支持非谣言的反向证据：字符片段'you'(贡献0.480)、词项'you'(贡献0.309)、词项'or'(贡献0.238)、字符片段'are'(贡献0.200)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+529671440829005825,Is Prince playing a surprise show at Massey Hall tonight? http://t.co/mv0Ca9ro6a,1,1,local,0.9977674077140132,"预测标签：1（谣言）
+谣言概率：0.998
+分类置信度：0.998
+判断依据：
+1. 支持谣言的主要证据：词项'prince'(贡献1.310)、字符片段'pri'(贡献1.038)、词项'massey'(贡献0.786)、词项'massey hall'(贡献0.780)。
+2. 支持非谣言的反向证据：词项'is'(贡献0.416)、字符片段'is'(贡献0.288)、词项'URL'(贡献0.164)、字符片段'ris'(贡献0.103)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+529778109290012673,this nigga Prince got all the unemployed middle aged/retired folk in toronto waiting in purple rain for him,1,1,local,0.9477753121355986,"预测标签：1（谣言）
+谣言概率：0.948
+分类置信度：0.948
+判断依据：
+1. 支持谣言的主要证据：词项'prince'(贡献1.269)、词项'toronto'(贡献0.961)、词项'him'(贡献0.750)、词项'in toronto'(贡献0.520)。
+2. 支持非谣言的反向证据：词项'all'(贡献0.701)、词项'this'(贡献0.291)、字符片段'all'(贡献0.181)、字符片段'this'(贡献0.176)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+529735664347406339,.@3RDEYEGIRL just left #Toronto fans out in the cold. Reaction: http://t.co/qB1TPDPtho #Prince http://t.co/aUxq4wNPKe,1,1,local,0.9407760772321035,"预测标签：1（谣言）
+谣言概率：0.941
+分类置信度：0.941
+判断依据：
+1. 支持谣言的主要证据：词项'prince'(贡献1.150)、词项'toronto'(贡献0.870)、字符片段'pri'(贡献0.755)、字符片段'prin'(贡献0.724)。
+2. 支持非谣言的反向证据：词项'left'(贡献0.578)、字符片段'left'(贡献0.395)、词项'cold'(贡献0.279)、词项'URL'(贡献0.248)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+529735459069788161,Inside Massey Hall in Toronto. Pretty legit. Wish I were there! @3RDEYEGIRL #Prince http://t.co/Z8vRZTSx5W,1,1,local,0.9968387906669901,"预测标签：1（谣言）
+谣言概率：0.997
+分类置信度：0.997
+判断依据：
+1. 支持谣言的主要证据：词项'prince'(贡献1.242)、词项'toronto'(贡献0.940)、词项'were'(贡献0.859)、字符片段'pri'(贡献0.757)。
+2. 支持非谣言的反向证据：字符片段'wish'(贡献0.185)、词项'URL'(贡献0.156)、字符片段'pre'(贡献0.150)、字符片段'le'(贡献0.089)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+529644676333453312,WHAT?  RT @CityNews #BREAKING: Prince reportedly to perform surprise show at Massey Hall tonight http://t.co/jT8Tx5P1Kw #Toronto,1,1,local,0.9987697122724128,"预测标签：1（谣言）
+谣言概率：0.999
+分类置信度：0.999
+判断依据：
+1. 支持谣言的主要证据：词项'prince'(贡献0.959)、词项'toronto'(贡献0.726)、字符片段'pri'(贡献0.676)、词项'massey'(贡献0.575)。
+2. 支持非谣言的反向证据：词项'rt'(贡献0.384)、词项'rt USER'(贡献0.330)、词项'what'(贡献0.319)、字符片段'orm'(贡献0.190)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+529726211241803776,Bad news for the Prince fans in the queue. No show in Toronto unfortunately. (according to Livenation) https://t.co/BbaUOo9k1x,1,1,local,0.9337232915683255,"预测标签：1（谣言）
+谣言概率：0.934
+分类置信度：0.934
+判断依据：
+1. 支持谣言的主要证据：词项'prince'(贡献1.130)、词项'toronto'(贡献0.855)、字符片段'pri'(贡献0.497)、字符片段'prin'(贡献0.476)。
+2. 支持非谣言的反向证据：词项'the'(贡献0.262)、字符片段'ans'(贡献0.208)、字符片段'ns'(贡献0.146)、词项'URL'(贡献0.144)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+580353449721655296,"German Airbus A320 Plane Crashes, 148 People DEAD https://t.co/94oOOSSSVv #4U9525 #germanwings #GermanWingsCrash #Airbus320 #planecrash",1,1,llm_explain,0.6899594285544873,推文使用大写“DEAD”和具体数字“148”具有煽动性，与相似谣言样本的未证实断言话术一致，而非谣言样本则采用客观更新语气。,1,1,0.69
+580333763512705025,#Germanwings latest: http://t.co/8tZopIBYLh - #Airbus A320 crashes in French Alps - Barcelona-to-Dusseldorf flight - 142 passengers &amp; 6 crew,1,1,llm_explain,0.6865436891841233,输入文本包含具体数字'142'和地点'French Alps'，与相似谣言样本（如'#Germanwings update: - #Airbus A320 crashes in French Alps...'）高度相似，且本地模型证据显示词项'142'、'french'等对谣言判断贡献较大，故判断为谣言。,1,1,0.6865
+581404604677660673,#Germanwings Co Pilot New Muslim Convert  Islamic State Praises Their Hero  #WakeUpAmerica 🇺🇸  http://t.co/NYefk5WCPm http://t.co/J195dkGFGU,1,1,local,0.719688808043672,"预测标签：1（谣言）
+谣言概率：0.720
+分类置信度：0.720
+判断依据：
+1. 支持谣言的主要证据：词项'pilot'(贡献1.175)、词项'convert'(贡献0.892)、词项'co'(贡献0.790)、词项'co pilot'(贡献0.755)。
+2. 支持非谣言的反向证据：词项'hashtag_germanwings'(贡献0.358)、词项'hashtag_germanwings germanwings'(贡献0.358)、词项'their'(贡献0.340)、词项'URL'(贡献0.294)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+580330740086243328,The French president has said he believed none of the 148 people on board #Germanwings flight #4U9525 plane survived http://t.co/KC9NBcEzSV,1,1,local,0.8695696852226936,"预测标签：1（谣言）
+谣言概率：0.870
+分类置信度：0.870
+判断依据：
+1. 支持谣言的主要证据：词项'148'(贡献0.973)、字符片段'148'(贡献0.772)、词项'148 people'(贡献0.618)、词项'french'(贡献0.387)。
+2. 支持非谣言的反向证据：词项'hashtag_germanwings'(贡献0.241)、词项'hashtag_germanwings germanwings'(贡献0.241)、词项'the'(贡献0.214)、词项'germanwings flight'(贡献0.177)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+581183387848859648,"The co-pilot who rammed the Germanwings plane into the French Alps had previously ""battled depression"" http://t.co/PSBNTXo5AV",1,1,local,0.8216418722294411,"预测标签：1（谣言）
+谣言概率：0.822
+分类置信度：0.822
+判断依据：
+1. 支持谣言的主要证据：词项'pilot'(贡献0.854)、词项'co'(贡献0.574)、词项'co pilot'(贡献0.548)、词项'french'(贡献0.416)。
+2. 支持非谣言的反向证据：词项'germanwings plane'(贡献0.584)、词项'alps had'(贡献0.364)、词项'the'(贡献0.285)、字符片段'int'(贡献0.224)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+581132461960249344,Doomed Germanwings co-pilot 'suffered burnout or depression' years before crash http://t.co/nkqWoRwKUK http://t.co/QRMJTWGAIr,1,1,local,0.8066722148529945,"预测标签：1（谣言）
+谣言概率：0.807
+分类置信度：0.807
+判断依据：
+1. 支持谣言的主要证据：词项'pilot'(贡献0.975)、词项'co'(贡献0.655)、词项'co pilot'(贡献0.626)、词项'germanwings co'(贡献0.599)。
+2. 支持非谣言的反向证据：词项'crash'(贡献0.628)、词项'or'(贡献0.337)、词项'crash URL'(贡献0.266)、词项'URL'(贡献0.244)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+581386094337474560,RT @khjelmgaard: German media reporting #AndreasLubitz had a 'serious depressive episode' six years ago http://t.co/MUdmHPz2ro #Germanwings,1,1,local,0.8150758486499238,"预测标签：1（谣言）
+谣言概率：0.815
+分类置信度：0.815
+判断依据：
+1. 支持谣言的主要证据：词项'serious'(贡献0.388)、词项'six'(贡献0.373)、词项'german'(贡献0.326)、词项'ago URL'(贡献0.285)。
+2. 支持非谣言的反向证据：词项'rt'(贡献0.357)、词项'rt USER'(贡献0.307)、词项'media'(贡献0.271)、词项'hashtag_germanwings'(贡献0.232)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+580885624883904512,"One pilot in #Germanwings crash was locked out of cockpit, @nytimes reports http://t.co/doZIZCHP4o",1,1,local,0.8991569028934842,"预测标签：1（谣言）
+谣言概率：0.899
+分类置信度：0.899
+判断依据：
+1. 支持谣言的主要证据：词项'pilot'(贡献0.917)、词项'was'(贡献0.912)、字符片段'was'(贡献0.760)、词项'reports'(贡献0.676)。
+2. 支持非谣言的反向证据：词项'crash'(贡献0.590)、词项'in hashtag_germanwings'(贡献0.435)、词项'germanwings crash'(贡献0.315)、词项'hashtag_germanwings'(贡献0.279)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+581063753837481984,"BREAKING: #Germanwings co-pilot's name is Andreas Lubitz, a German national, says Marseilles prosecutor: http://t.co/1o08vXVzP8",1,1,local,0.9669929669959915,"预测标签：1（谣言）
+谣言概率：0.967
+分类置信度：0.967
+判断依据：
+1. 支持谣言的主要证据：词项'pilot'(贡献0.751)、词项'co'(贡献0.504)、词项'andreas'(贡献0.489)、词项'co pilot'(贡献0.481)。
+2. 支持非谣言的反向证据：词项'is'(贡献0.279)、词项'hashtag_germanwings'(贡献0.229)、词项'hashtag_germanwings germanwings'(贡献0.229)、字符片段'is'(贡献0.149)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+580322346508124160,"Germanwings #A320 plane crashes in southern France, French prime minister says. More soon. http://t.co/k6pv4OsCQI",1,1,local,0.8867579225440197,"预测标签：1（谣言）
+谣言概率：0.887
+分类置信度：0.887
+判断依据：
+1. 支持谣言的主要证据：字符片段'pri'(贡献0.510)、词项'french'(贡献0.419)、词项'french prime'(贡献0.362)、词项'france'(贡献0.306)。
+2. 支持非谣言的反向证据：字符片段'mo'(贡献0.176)、词项'plane crashes'(贡献0.147)、词项'URL'(贡献0.127)、词项'germanwings hashtag_a320'(贡献0.085)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+580321350750990336,Hashtags #4U9525 #GermanWings #A320 all useful for latest info on plane crash in southern France.,1,0,llm_explain,0.21192960016694617,推文语气是提供‘最新信息’（latest info），而非断言虚假事件，本地模型非谣言证据强（如词项‘all’和‘crash’得分均高于0.5），且多数相似样本（相似度0.87、0.85、0.84）均标注为非谣言。,0,0,0.78
+580319968484421633,A Germanwings A320 has crashed en route to Dusseldorf. Flight Radar 24 of the last known position. #4U9525 http://t.co/FrI93NrYFF,1,0,local,0.18096336787674341,"预测标签：0（非谣言）
+谣言概率：0.181
+分类置信度：0.819
+判断依据：
+1. 支持非谣言的主要证据：词项'4u9525 URL'(贡献0.516)、词项'route'(贡献0.307)、词项'last known'(贡献0.230)、字符片段'rou'(贡献0.182)。
+2. 支持谣言的反向证据：词项'crashed'(贡献0.247)、词项'radar'(贡献0.227)、词项'has crashed'(贡献0.207)、字符片段'rad'(贡献0.171)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+581066887200694272,"Andreas Lubitz, co-pilot who brought down #Germanwings flight intentionally, recently commended by the FAA: http://t.co/8dAYQ8vAKF",1,1,local,0.7594510599967945,"预测标签：1（谣言）
+谣言概率：0.759
+分类置信度：0.759
+判断依据：
+1. 支持谣言的主要证据：词项'pilot'(贡献1.065)、词项'down'(贡献0.722)、词项'co'(贡献0.716)、词项'andreas'(贡献0.694)。
+2. 支持非谣言的反向证据：词项'intentionally'(贡献0.348)、词项'hashtag_germanwings'(贡献0.324)、词项'hashtag_germanwings germanwings'(贡献0.324)、词项'germanwings flight'(贡献0.238)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+580365368805486592,"150 people were on board plane that crashed in France today, #Germanwings CEO says. http://t.co/HAhU3MmiMf http://t.co/QFCbhPWSJI",1,1,local,0.8332902768579548,"预测标签：1（谣言）
+谣言概率：0.833
+分类置信度：0.833
+判断依据：
+1. 支持谣言的主要证据：词项'were'(贡献0.667)、字符片段'were'(贡献0.456)、词项'in france'(贡献0.455)、词项'ceo'(贡献0.426)。
+2. 支持非谣言的反向证据：词项'that crashed'(贡献0.289)、词项'hashtag_germanwings'(贡献0.252)、词项'hashtag_germanwings germanwings'(贡献0.252)、词项'ceo says'(贡献0.231)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+580326871302316033,IMAGE: .@flightradar24 altitude &amp; speed chart of #4U9525. Aircraft entered a steep but constant descent. http://t.co/MoG0h2Dvaq,1,0,local,0.11539133136497999,"预测标签：0（非谣言）
+谣言概率：0.115
+分类置信度：0.885
+判断依据：
+1. 支持非谣言的主要证据：字符片段'eep'(贡献0.278)、字符片段'.'(贡献0.242)、字符片段'ant'(贡献0.199)、词项'speed'(贡献0.192)。
+2. 支持谣言的反向证据：词项'descent'(贡献0.491)、字符片段'con'(贡献0.242)、字符片段'ed'(贡献0.188)、词项'descent URL'(贡献0.175)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+580885187837325312,"One pilot was locked out of cockpit before #Germanwings flight #4U9525 crashed, killing 150: http://t.co/A7THsq3ea8",1,1,local,0.9133161329373047,"预测标签：1（谣言）
+谣言概率：0.913
+分类置信度：0.913
+判断依据：
+1. 支持谣言的主要证据：词项'pilot'(贡献0.834)、词项'was'(贡献0.830)、字符片段'was'(贡献0.621)、词项'locked out'(贡献0.536)。
+2. 支持非谣言的反向证据：词项'hashtag_germanwings'(贡献0.254)、词项'hashtag_germanwings germanwings'(贡献0.254)、词项'germanwings flight'(贡献0.189)、字符片段'd,'(贡献0.189)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+580379486732066817,"BREAKING: Distress call linked with #Germanwings jet came from air traffic control, not plane -- aviation official. http://t.co/EOKW9FoIJ4",1,1,local,0.8661810811797149,"预测标签：1（谣言）
+谣言概率：0.866
+分类置信度：0.866
+判断依据：
+1. 支持谣言的主要证据：词项'distress'(贡献0.827)、词项'distress call'(贡献0.501)、词项'breaking'(贡献0.433)、词项'call'(贡献0.384)。
+2. 支持非谣言的反向证据：词项'hashtag_germanwings'(贡献0.260)、词项'hashtag_germanwings germanwings'(贡献0.260)、词项'not'(贡献0.237)、词项'from'(贡献0.217)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+580333028624457728,148 on board: - 142 passengers - 2 pilots - 4  flight attendants  @SPIEGEL_English @Corriereit  #Germanwings http://t.co/VT9w6qumJa,1,1,local,0.8600912884965637,"预测标签：1（谣言）
+谣言概率：0.860
+分类置信度：0.860
+判断依据：
+1. 支持谣言的主要证据：词项'148'(贡献1.132)、字符片段'148'(贡献0.862)、词项'142'(贡献0.592)、词项'USER USER'(贡献0.579)。
+2. 支持非谣言的反向证据：词项'hashtag_germanwings'(贡献0.280)、词项'hashtag_germanwings germanwings'(贡献0.280)、词项'germanwings URL'(贡献0.179)、字符片段'-'(贡献0.175)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+580322349569994752,"Germanwings #A320 plane crashes in southern France, French prime minister says. More soon. http://t.co/cBKN5dN40H",1,1,local,0.8867579225440197,"预测标签：1（谣言）
+谣言概率：0.887
+分类置信度：0.887
+判断依据：
+1. 支持谣言的主要证据：字符片段'pri'(贡献0.510)、词项'french'(贡献0.419)、词项'french prime'(贡献0.362)、词项'france'(贡献0.306)。
+2. 支持非谣言的反向证据：字符片段'mo'(贡献0.176)、词项'plane crashes'(贡献0.147)、词项'URL'(贡献0.127)、词项'germanwings hashtag_a320'(贡献0.085)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+581287795991302144,All Muslims are not like that... Okay? RT @DrShobha The co-pilot of the Germanwings Airbus was a convert to Islam,1,1,llm_explain,0.6863491330670898,输入文本引用了一条关于副驾驶是伊斯兰皈依者的断言性推文，与相似谣言样本高度相似，且缺乏证据支持，符合煽动性谣言特征。,1,1,0.7
+580330302251393024,#BREAKING: #Germanwings Airbus A320 crew sent distress signal before French Alps crash - reports http://t.co/JLDCz6AhFR,1,1,local,0.9693478179817582,"预测标签：1（谣言）
+谣言概率：0.969
+分类置信度：0.969
+判断依据：
+1. 支持谣言的主要证据：词项'distress'(贡献0.867)、词项'reports'(贡献0.660)、词项'signal'(贡献0.491)、词项'distress signal'(贡献0.466)。
+2. 支持非谣言的反向证据：词项'crash'(贡献0.578)、词项'hashtag_germanwings'(贡献0.273)、词项'hashtag_germanwings germanwings'(贡献0.273)、词项'URL'(贡献0.133)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+581314363644121088,A German news website claims #Germanwings co-pilot #AndreasLubitz was a Muslim convert http://t.co/4PHWRSrxwu,1,1,local,0.9793154569213804,"预测标签：1（谣言）
+谣言概率：0.979
+分类置信度：0.979
+判断依据：
+1. 支持谣言的主要证据：词项'pilot'(贡献0.875)、词项'was'(贡献0.871)、词项'convert'(贡献0.664)、词项'co'(贡献0.588)。
+2. 支持非谣言的反向证据：词项'hashtag_germanwings'(贡献0.266)、词项'hashtag_germanwings germanwings'(贡献0.266)、词项'muslim'(贡献0.140)、词项'URL'(贡献0.129)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+580366761398239232,Germanwings Airbus A320 plane crash: Two babies and 16 children among 150 dead http://t.co/UGlaM0vpoK http://t.co/9yCcn7Hzz8,1,1,llm_explain,0.502874893826239,该推文具体强调‘两个婴儿和16名儿童’等煽情细节，与相似谣言样本（如‘2 babies among 144 passengers’）的表述一致，而相似非谣言样本则更客观，故判断为谣言。,1,1,0.55
+580351367719591936,Lufthansa and Germanwings have established a telephone hotline. The toll-free 00800 11 33 55 77 number is available to all the families...,0,0,local,0.09737150238801662,"预测标签：0（非谣言）
+谣言概率：0.097
+分类置信度：0.903
+判断依据：
+1. 支持非谣言的主要证据：词项'all'(贡献0.389)、词项'families'(贡献0.304)、词项'is'(贡献0.224)、词项'to all'(贡献0.212)。
+2. 支持谣言的反向证据：词项'number'(贡献0.224)、字符片段'ree'(贡献0.218)、字符片段'ber'(贡献0.200)、字符片段'tol'(贡献0.148)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+580336341080260608,"“If our fears are confirmed, this is a dark day for Lufthansa,” says CEO of Germanwings' parent company after crash http://t.co/tJVCCJSY4G",0,0,local,0.10870233741472109,"预测标签：0（非谣言）
+谣言概率：0.109
+分类置信度：0.891
+判断依据：
+1. 支持非谣言的主要证据：词项'crash'(贡献0.428)、词项'our'(贡献0.260)、词项'is'(贡献0.247)、字符片段'our'(贡献0.230)。
+2. 支持谣言的反向证据：词项'ceo'(贡献0.344)、字符片段'ceo'(贡献0.339)、字符片段'con'(贡献0.272)、字符片段'conf'(贡献0.200)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+580327576218046464,BREAKING NEWS: Germanwings flight GWI18G crashes in French Alps: http://t.co/v8yssTEbHR http://t.co/GA8ZdGUq30,0,0,llm_explain,0.3841933094374341,输入文本与相似非谣言样本（如‘NEWS Germanwings flight crashes’）均包含‘alps URL’等可信来源特征，且本地模型非谣言证据中该项得分最高；尽管语句格式接近相似谣言样本，但整体证据偏向非谣言。,0,0,0.6158
+581257660118491136,A tribute to the lives lost on #Germanwings Flight 9525 next on #AC360 http://t.co/zDHWF3pYN9,0,0,llm_explain,0.24405883222535094,推文是AC360节目对遇难者的致敬预告，无虚假信息，与多数相似样本（非谣言）一致。,0,0,0.8
+580361142666563584,Helicopters and emergency vehicles are arriving in southern France. #Germanwings http://t.co/2Ry7Itpo4L,0,0,llm_explain,0.22381788706482678,推文仅描述救援车辆抵达，未明确提及坠机事件，符合非谣言特征；相似谣言样本均明确提到“crash”，而本推文缺乏直接断言。,0,0,0.78
+580325243631321088,Germanwings Airbus A320 crashes in French Alps: What we do and do not know http://t.co/3xKSCtFFwT http://t.co/ugwghZVbHr,0,0,llm_explain,0.2716297560590893,推文使用“What we do and do not know”总结性句式，缺乏断言或煽动性语言，与相似非谣言样本（如live updates）一致，且本地模型非谣言证据充分。,0,0,0.7284
+580322653472493569,IMAGE: Flightradar24 has this as the plane's last position. #4U9525 http://t.co/CIeAyJ4AOf - @BBCRosAtkins,0,0,local,0.07887979867574564,"预测标签：0（非谣言）
+谣言概率：0.079
+分类置信度：0.921
+判断依据：
+1. 支持非谣言的主要证据：词项'4u9525 URL'(贡献0.615)、字符片段'e's'(贡献0.236)、词项'this'(贡献0.235)、词项'this as'(贡献0.185)。
+2. 支持谣言的反向证据：字符片段'n.'(贡献0.167)、词项'plane'(贡献0.154)、字符片段'fl'(贡献0.140)、字符片段'ion.'(贡献0.135)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+580330454869512192,Everything we know about the Germanwings plane crash in France http://t.co/o0ZSGb1lQq http://t.co/N4TTbxlOY4,0,0,llm_explain,0.2253205213019359,推文为客观的已知信息汇总，与多条高相似度的非谣言样本（如“What we know about the Germanwings crash so far”）一致，无明显虚假或煽动性表述。,0,0,0.7747
+580351083383517185,"BREAKING Emergency units staging in Seyne-les-Alpes, near #4U9525 crash site /@Aviaponcho http://t.co/wFg8KTSve2 http://t.co/NaHq3MIOlz",0,0,llm_explain,0.216201376023602,推文报道应急单位在坠机地点集结，包含具体地点和URL，与真实事件报道相似，非谣言。,0,0,0.7838
+580331071457333248,Airport operator Aena: Crashed #GermanWings jet took off from Barcelona airport at 0855 GMT http://t.co/8UPMsinQkX http://t.co/4IpoDSEy7U,0,0,llm_explain,0.28530555030379917,推文来自官方机场运营商，描述坠机事件的事实性起飞时间，且相似训练样本多为非谣言，无夸大或虚假线索。,0,0,0.7147
+580354367796166656,Rescue teams near #4U9525 crash site http://t.co/zU6hn03xzU (pics via @ActuSecours) #Germanwings http://t.co/IDeO1SpaM4,0,0,local,0.0594524326598018,"预测标签：0（非谣言）
+谣言概率：0.059
+分类置信度：0.941
+判断依据：
+1. 支持非谣言的主要证据：词项'crash'(贡献0.657)、词项'site'(贡献0.617)、词项'crash site'(贡献0.410)、词项'hashtag_germanwings'(贡献0.311)。
+2. 支持谣言的反向证据：词项'near'(贡献0.175)、字符片段'esc'(贡献0.151)、字符片段'man'(贡献0.138)、词项'via USER'(贡献0.135)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+580332232121933824,BREAKING: A Germanwings jet crashed in France as it traveled from Barcelona to Dusseldorf http://t.co/vqUUuspIFk http://t.co/mwguIFT1iu,0,1,local,0.7012103846475394,"预测标签：1（谣言）
+谣言概率：0.701
+分类置信度：0.701
+判断依据：
+1. 支持谣言的主要证据：词项'in france'(贡献0.587)、词项'breaking'(贡献0.538)、词项'breaking germanwings'(贡献0.519)、词项'crashed in'(贡献0.397)。
+2. 支持非谣言的反向证据：词项'from'(贡献0.276)、词项'URL'(贡献0.265)、词项'dusseldorf URL'(贡献0.195)、词项'from barcelona'(贡献0.180)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+580319983676313601,#Últimahora Es tracta d'un aparell de Germanwings amb 152 passatgers a bord http://t.co/hT5BhpuGuv,0,0,llm_explain,0.33655704459164265,推文仅客观描述‘一架德国之翼飞机载有152名乘客’，未涉及坠毁或伤亡等煽动性断言，与相似非谣言（如祈祷和定位）一样语气平和，而相似谣言则使用‘feared dead’等恐慌措辞。,0,0,0.72
+580328565255852032,#A320 Germanwings plane crash: Majority of victims likely to be German says French President http://t.co/U4yg4ndyBo http://t.co/eHb2UetmxI,0,0,llm_explain,0.28530426368969214,推文引用法国总统言论，内容客观且与官方报道一致，无明显虚假或误导性信息，本地模型非谣言证据（如‘germanwings plane’、‘crash’）得分较高。,0,0,0.7147
+580329219646988289,Last position of the #GermanWings Airbus A320 passenger jet that crashed in the French Alps http://t.co/8UPMsinQkX http://t.co/K3etnEPmxk,0,0,llm_explain,0.4926038250508155,该推文客观陈述航班最后位置，与相似的真实新闻样本（如‘Last position Germanwings A320 via @flightradar24’）结构一致，无煽动性词汇或未证实断言，因此判断为非谣言。,0,0,0.85
+580335608477982720,Germanwings  flight 4U9525 crashes in French Alps: a 'dark day' for Lufthansa if #4U9525 fears realised - live http://t.co/9la7dYRcUz,0,0,llm_explain,0.2417381625632394,推文为媒体报道Germanwings航班坠机事件，使用'crashes'和'live'等正常新闻用语，且与多数相似非谣言样本一致，无夸张或虚假表述。,0,0,0.8
+580326744357515264,"Here is the speed and altitude graph of #4U9525 from @flightradar24. Scary stuff, shows it impacted ground at 400kts http://t.co/2ZYbh4MIih",0,0,local,0.0802915632471146,"预测标签：0（非谣言）
+谣言概率：0.080
+分类置信度：0.920
+判断依据：
+1. 支持非谣言的主要证据：词项'4u9525 from'(贡献0.502)、词项'is'(贡献0.326)、词项'from'(贡献0.225)、字符片段'gr'(贡献0.200)。
+2. 支持谣言的反向证据：词项'at'(贡献0.316)、字符片段'sho'(贡献0.237)、词项'is the'(贡献0.224)、字符片段'ed'(贡献0.199)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+580328297462140928,#Germanwings Airbus A320 flight was travelling from Spain to Germany when it crashed. http://t.co/EDoH4hAD7w http://t.co/ODxFHTAWY9,0,0,llm_explain,0.38270728460594783,推文以中性事实描述飞机坠毁过程，没有煽动性措辞或未证实断言，与相似的非谣言样本（提供背景事实）风格一致，因此判断为非谣言。,0,0,0.6173
+580324804403818496,"An Airbus A320 plane operated by Germanwings crashed in France near Digne les Bains, French Prime Minister says. http://t.co/iWeLBpmiHS",0,1,local,0.9513397230381188,"预测标签：1（谣言）
+谣言概率：0.951
+分类置信度：0.951
+判断依据：
+1. 支持谣言的主要证据：字符片段'pri'(贡献0.489)、词项'digne'(贡献0.462)、词项'near digne'(贡献0.388)、词项'in france'(贡献0.375)。
+2. 支持非谣言的反向证据：字符片段'les'(贡献0.157)、词项'france near'(贡献0.129)、词项'URL'(贡献0.101)、字符片段'ne'(贡献0.098)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+580340024736116736,"""No survivors"" from #Germanwings crash in the Alps, French transport minister says http://t.co/iw1QLzJQKW http://t.co/Q0ssqcSKp2",0,1,llm_override,0.3295081880575829,输入文本与两个高相似度的谣言样本几乎一致，均引用法国官员声称“无人生还”，且本地模型也捕捉到“french”等特征，整体话语模式偏向谣言样本。,0,1,0.75
+580330690807394304,"Lufthansa CEO Spohr: “If our fears are confirmed, this is a dark day for Lufthansa. We hope to find survivors.” #4U9525",0,0,local,0.1496707596060891,"预测标签：0（非谣言）
+谣言概率：0.150
+分类置信度：0.850
+判断依据：
+1. 支持非谣言的主要证据：词项'we'(贡献0.358)、词项'hope'(贡献0.306)、词项'our'(贡献0.274)、词项'is'(贡献0.261)。
+2. 支持谣言的反向证据：词项'ceo'(贡献0.363)、字符片段'ceo'(贡献0.277)、字符片段'surv'(贡献0.236)、字符片段'con'(贡献0.222)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+580346858846822400,This picture from a helicopter sent to the #Germanwings Alps plane crash site shows how remote the area is http://t.co/Fo6h66ZehE,0,0,local,0.05460245856098874,"预测标签：0（非谣言）
+谣言概率：0.055
+分类置信度：0.945
+判断依据：
+1. 支持非谣言的主要证据：词项'how'(贡献0.512)、词项'crash'(贡献0.494)、词项'site'(贡献0.464)、词项'crash site'(贡献0.308)。
+2. 支持谣言的反向证据：词项'picture'(贡献0.271)、字符片段'sho'(贡献0.246)、字符片段'sen'(贡献0.203)、词项'sent'(贡献0.192)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+580328582993616896,A320 search &amp; rescue teams are said to be heading to the crash site at Méolans-Revel in the French Alps #Germanwings http://t.co/gkBze2MTkx,0,0,local,0.12192356477433307,"预测标签：0（非谣言）
+谣言概率：0.122
+分类置信度：0.878
+判断依据：
+1. 支持非谣言的主要证据：词项'crash'(贡献0.533)、词项'site'(贡献0.500)、词项'be'(贡献0.334)、词项'crash site'(贡献0.332)。
+2. 支持谣言的反向证据：词项'french'(贡献0.404)、词项'the french'(贡献0.395)、词项'search'(贡献0.326)、词项'at'(贡献0.298)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544333172180537344,Sydney Opera House among buildings evacuated due to #SydneySiege: http://t.co/xQtgKojdnC http://t.co/LPOz3sxOI7,1,1,llm_explain,0.681856001873228,输入文本与相似谣言样本高度一致，均直接描述“悉尼歌剧院因悉尼围困事件被疏散”，且本地模型词项证据偏向谣言。对比相似非谣言样本的客观措辞（如“取消表演”），输入文本更接近谣言的话术特征，故维持本地模型判断。,1,1,0.6819
+544338575240609792,#BREAKING: Flag w/ Islamic writing held up to window of #Sydney cafe. Police say up to 50 hostages. #Australia PM convenes security team.,1,1,local,0.9492196605389808,"预测标签：1（谣言）
+谣言概率：0.949
+分类置信度：0.949
+判断依据：
+1. 支持谣言的主要证据：词项'flag'(贡献0.515)、词项'hashtag_sydney'(贡献0.480)、词项'hashtag_sydney sydney'(贡献0.480)、词项'window'(贡献0.411)。
+2. 支持非谣言的反向证据：字符片段'alia'(贡献0.235)、字符片段'ia'(贡献0.190)、词项'australia'(贡献0.184)、词项'cafe police'(贡献0.182)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544516381031792642,"BREAKING  @SkyBusiness: @campricenews: ""At least 1 pol officer injured/4 hostages taken away on stretchers"" #sydneysiege (@carsonscottLIVE)",1,1,local,0.9226731651450083,"预测标签：1（谣言）
+谣言概率：0.923
+分类置信度：0.923
+判断依据：
+1. 支持谣言的主要证据：词项'injured'(贡献0.638)、词项'officer'(贡献0.545)、词项'USER USER'(贡献0.545)、词项'breaking USER'(贡献0.458)。
+2. 支持非谣言的反向证据：词项'away'(贡献0.331)、词项'officer injured'(贡献0.297)、字符片段'way'(贡献0.244)、字符片段'away'(贡献0.238)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544275597464444929,Australian police cordon off Sydney street; reports say hostages held in a cafe. Flag in window similar to those used by #ISIS militants,1,1,local,0.973075834937549,"预测标签：1（谣言）
+谣言概率：0.973
+分类置信度：0.973
+判断依据：
+1. 支持谣言的主要证据：词项'reports'(贡献0.583)、词项'flag'(贡献0.570)、词项'isis'(贡献0.481)、词项'window'(贡献0.454)。
+2. 支持非谣言的反向证据：词项'those'(贡献0.246)、词项'to those'(贡献0.242)、字符片段'don'(贡献0.168)、字符片段'tho'(贡献0.152)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544511130249744384,#sydneysiege: A series of loud blasts and bursts of ammunition have been heard at the cafe. http://t.co/IxPuyIrNy2 http://t.co/olteaN8zjH,1,0,llm_explain,0.3143122346092613,输入文本客观描述事件经过，与相似非谣言样本一致，无煽动性或未证实断言，符合客观新闻表述。,0,0,0.69
+544282449388519424,"Hostages held in Sydney cafe, Islamic flag seen in window: local TV http://t.co/BF78HpFgWh",1,1,local,0.9686847705453093,"预测标签：1（谣言）
+谣言概率：0.969
+分类置信度：0.969
+判断依据：
+1. 支持谣言的主要证据：词项'flag'(贡献0.621)、字符片段'flag'(贡献0.597)、词项'window'(贡献0.495)、词项'held'(贡献0.492)。
+2. 支持非谣言的反向证据：字符片段'seen'(贡献0.133)、词项'URL'(贡献0.127)、词项'seen'(贡献0.108)、字符片段'see'(贡献0.097)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544289880805605376,The PM's office releases a statement about  #sydneysiege. http://t.co/7NdqPYhwcY http://t.co/jeYdlwywO7,1,0,local,0.16465151103388034,"预测标签：0（非谣言）
+谣言概率：0.165
+分类置信度：0.835
+判断依据：
+1. 支持非谣言的主要证据：词项'about'(贡献0.767)、词项'sydneysiege URL'(贡献0.372)、词项'office'(贡献0.353)、字符片段'bout'(贡献0.345)。
+2. 支持谣言的反向证据：词项'statement'(贡献0.724)、词项'pm'(贡献0.366)、字符片段'stat'(贡献0.275)、字符片段'offi'(贡献0.189)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544367462012432384,"MORE: Police confirm 3 hostages escape Sydney cafe, unknown number remain inside http://t.co/pcAt91LIdS #Sydneysiege",1,1,local,0.9755447982495001,"预测标签：1（谣言）
+谣言概率：0.976
+分类置信度：0.976
+判断依据：
+1. 支持谣言的主要证据：词项'escape'(贡献0.572)、词项'inside'(贡献0.531)、词项'cafe'(贡献0.452)、词项'hostages'(贡献0.431)。
+2. 支持非谣言的反向证据：字符片段'mo'(贡献0.183)、词项'remain inside'(贡献0.179)、字符片段'rem'(贡献0.133)、词项'URL'(贡献0.127)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544317165965303808,Ugh: Uber introduces $100 minimum surge pricing during #SydneySiege http://t.co/9YZ9WKo7D2 via @jennijenni http://t.co/9Xk76P4S3V,1,1,local,0.7450101387899454,"预测标签：1（谣言）
+谣言概率：0.745
+分类置信度：0.745
+判断依据：
+1. 支持谣言的主要证据：词项'uber'(贡献0.762)、字符片段'pri'(贡献0.496)、字符片段'uber'(贡献0.484)、词项'pricing'(贡献0.383)。
+2. 支持非谣言的反向证据：词项'sydneysiege URL'(贡献0.309)、词项'URL'(贡献0.245)、字符片段'int'(贡献0.230)、字符片段'ia'(贡献0.139)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544274585697280000,Sydney cafe siege: Martin Place is in lockdown and surrounding buildings evacuated as a serious siege situation unfolds at the Lindt cafe.,1,1,local,0.7975465503864774,"预测标签：1（谣言）
+谣言概率：0.798
+分类置信度：0.798
+判断依据：
+1. 支持谣言的主要证据：词项'cafe'(贡献0.695)、字符片段'cafe'(贡献0.428)、词项'evacuated'(贡献0.411)、词项'serious'(贡献0.399)。
+2. 支持非谣言的反向证据：词项'at the'(贡献0.507)、词项'is'(贡献0.291)、字符片段'surr'(贡献0.179)、字符片段'is'(贡献0.161)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544511151900753921,#BREAKING: Police have stormed the Lindt Chocolate Cafe in Martin Place #sydneysiege #ABCNews24,1,1,local,0.7666773488057285,"预测标签：1（谣言）
+谣言概率：0.767
+分类置信度：0.767
+判断依据：
+1. 支持谣言的主要证据：词项'cafe'(贡献0.425)、词项'breaking'(贡献0.410)、词项'cafe in'(贡献0.409)、字符片段'abc'(贡献0.262)。
+2. 支持非谣言的反向证据：词项'breaking police'(贡献0.562)、词项'stormed the'(贡献0.541)、词项'stormed'(贡献0.285)、字符片段'storm'(贡献0.238)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544377046030635008,"BREAKING: 2 more hostages escape Sydney cafe, local media report",1,1,local,0.9891179819962465,"预测标签：1（谣言）
+谣言概率：0.989
+分类置信度：0.989
+判断依据：
+1. 支持谣言的主要证据：词项'report'(贡献0.798)、词项'escape'(贡献0.680)、字符片段'repo'(贡献0.551)、字符片段'rep'(贡献0.539)。
+2. 支持非谣言的反向证据：词项'media'(贡献0.365)、字符片段'mo'(贡献0.254)、字符片段'medi'(贡献0.218)、字符片段'edia'(贡献0.213)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544516427827249153,#BREAKING: Police confirm that #SydneySiege is over. A bomb robot is to enter the front door of the care shortly.,1,1,llm_explain,0.5596642396278888,推文包含未证实的断言“炸弹机器人即将进入”，这与相似谣言样本（如 id 为0.8664的推文）更相似，而相似真实新闻仅确认事件结束，缺少这类煽动性细节。,1,1,0.65
+544280873806610433,UPDATE: Reports the Sydney Opera House has also been evacuated. #9News,1,1,local,0.9812338090036494,"预测标签：1（谣言）
+谣言概率：0.981
+分类置信度：0.981
+判断依据：
+1. 支持谣言的主要证据：词项'reports'(贡献0.635)、词项'sydney opera'(贡献0.591)、词项'house'(贡献0.495)、词项'opera'(贡献0.482)。
+2. 支持非谣言的反向证据：词项'the sydney'(贡献0.673)、字符片段'hou'(贡献0.262)、词项'also'(贡献0.160)、词项'the'(贡献0.137)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544307161589772290,"Islamist militants take hostages in Sydney café, display black jihadist flag http://t.co/Audo3xS9w3 #sydneysiege http://t.co/mDWczVjCNc",1,1,llm_explain,0.6488869437460201,输入文本与相似谣言样本高度一致（如'Islamist militants take hostages'、'black jihadist flag'），并包含未证实的断言性描述，符合谣言特征；本地模型也判定为谣言，故维持判断。,1,1,0.6
+544512108885725184,Paramedics are currently carrying out a number of hostages in #MartinPl. #SydneySiege #9News,1,1,local,0.9518782601122249,"预测标签：1（谣言）
+谣言概率：0.952
+分类置信度：0.952
+判断依据：
+1. 支持谣言的主要证据：词项'number of'(贡献0.451)、词项'hostages'(贡献0.443)、词项'of hostages'(贡献0.383)、词项'sydneysiege hashtag_9news'(贡献0.378)。
+2. 支持非谣言的反向证据：词项'are'(贡献0.218)、词项'are currently'(贡献0.190)、字符片段'are'(贡献0.158)、字符片段'.'(贡献0.141)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544387967037763584,#sydneysiege: There are reports the hostage-taker claims to have up to four bombs. http://t.co/1gMsZkOTjC http://t.co/hrMncBhLy5,1,1,local,0.8319563586346815,"预测标签：1（谣言）
+谣言概率：0.832
+分类置信度：0.832
+判断依据：
+1. 支持谣言的主要证据：词项'hostage'(贡献0.779)、词项'reports'(贡献0.674)、字符片段'repo'(贡献0.430)、词项'four'(贡献0.430)。
+2. 支持非谣言的反向证据：词项'hostage taker'(贡献0.235)、词项'taker'(贡献0.235)、词项'URL'(贡献0.231)、词项'to'(贡献0.231)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544509086998749186,Update - five more hostages have escaped from the Lindt cafe in Sydney city centre,1,1,local,0.9698578042822712,"预测标签：1（谣言）
+谣言概率：0.970
+分类置信度：0.970
+判断依据：
+1. 支持谣言的主要证据：词项'centre'(贡献0.708)、词项'five'(贡献0.626)、词项'cafe'(贡献0.510)、字符片段'five'(贡献0.503)。
+2. 支持非谣言的反向证据：字符片段'city'(贡献0.311)、字符片段'ity'(贡献0.275)、词项'city'(贡献0.270)、词项'from'(贡献0.252)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544268637134393344,UPDATE: An ISIS flag is being displayed in the window of a café under siege in Sydney’s Martin Place. #9News,1,1,local,0.9494246865625856,"预测标签：1（谣言）
+谣言概率：0.949
+分类置信度：0.949
+判断依据：
+1. 支持谣言的主要证据：词项'flag'(贡献0.594)、词项'isis'(贡献0.502)、词项'window'(贡献0.474)、词项'siege in'(贡献0.443)。
+2. 支持非谣言的反向证据：词项'is'(贡献0.307)、词项'displayed'(贡献0.300)、字符片段'is'(贡献0.259)、词项'the window'(贡献0.211)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544511558173601792,BREAKING @SkyBusiness : multiple gunshots fired into Lindt cafe #sydneysiege http://t.co/ZuJMZKfJKT (@carsonscottLIVE),1,1,local,0.7037593460432355,"预测标签：1（谣言）
+谣言概率：0.704
+分类置信度：0.704
+判断依据：
+1. 支持谣言的主要证据：词项'breaking USER'(贡献0.611)、词项'cafe'(贡献0.607)、词项'breaking'(贡献0.584)、字符片段'cafe'(贡献0.384)。
+2. 支持非谣言的反向证据：词项'sydneysiege URL'(贡献0.367)、词项'multiple gunshots'(贡献0.305)、字符片段'int'(贡献0.271)、词项'multiple'(贡献0.227)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544272701108797440,"JUST IN: Two gunmen, dozen hostages inside cafe in Sydney, Australia. ISIS flags remain on display. - @KristyMayr7 http://t.co/p4GyCRobSa",1,1,local,0.8882892509899122,"预测标签：1（谣言）
+谣言概率：0.888
+分类置信度：0.888
+判断依据：
+1. 支持谣言的主要证据：词项'two'(贡献0.793)、字符片段'two'(贡献0.733)、词项'inside'(贡献0.477)、词项'isis'(贡献0.471)。
+2. 支持非谣言的反向证据：词项'inside cafe'(贡献0.261)、词项'just in'(贡献0.222)、字符片段'disp'(贡献0.201)、词项'australia'(贡献0.199)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544451181754744832,#sydneysiege: Up to 20 hostages are being held in darkness in a cafe in Sydney. http://t.co/5jtd36wFOU http://t.co/Gmt7PAuHzb,1,1,local,0.9240217575142625,"预测标签：1（谣言）
+谣言概率：0.924
+分类置信度：0.924
+判断依据：
+1. 支持谣言的主要证据：词项'hostages are'(贡献0.783)、词项'are being'(贡献0.599)、词项'held'(贡献0.552)、词项'in cafe'(贡献0.513)。
+2. 支持非谣言的反向证据：字符片段'are'(贡献0.254)、词项'URL'(贡献0.241)、词项'are'(贡献0.238)、字符片段'dark'(贡献0.201)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544341406094213121,Deserted grounds of the evacuated #Sydney Opera House - More on our LIVE page: http://t.co/VaKt3ZpRZR #sydneysiege http://t.co/pKWvDgpOle,1,0,llm_override,0.5584995781244544,推文使用“More on our LIVE page”等直播引导语，与相似非谣言样本（如BBC新闻直播更新）话术一致，属于正常事件报道，无煽动性或未证实断言。,1,0,0.85
+544272561266503681,BREAKING a hostage siege in Sydney with a man with an IS flag or similar - live reports from @bkjabour http://t.co/VWugbceCAR,1,1,local,0.9762434758888067,"预测标签：1（谣言）
+谣言概率：0.976
+分类置信度：0.976
+判断依据：
+1. 支持谣言的主要证据：词项'hostage siege'(贡献0.810)、词项'hostage'(贡献0.809)、词项'reports'(贡献0.699)、词项'flag'(贡献0.682)。
+2. 支持非谣言的反向证据：词项'is'(贡献0.352)、词项'or'(贡献0.327)、字符片段'is'(贡献0.254)、词项'from'(贡献0.244)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544510827433558016,A loud bang was reportedly heard moments before a group of hostages fled the cafe http://t.co/IxPuyIrNy2 #sydneysiege http://t.co/PjH3lFYdNW,1,1,local,0.8946441855974424,"预测标签：1（谣言）
+谣言概率：0.895
+分类置信度：0.895
+判断依据：
+1. 支持谣言的主要证据：词项'was'(贡献0.867)、字符片段'was'(贡献0.691)、词项'cafe'(贡献0.456)、词项'hostages'(贡献0.435)。
+2. 支持非谣言的反向证据：词项'cafe URL'(贡献0.513)、词项'sydneysiege URL'(贡献0.276)、词项'group'(贡献0.247)、词项'URL'(贡献0.218)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544351969658564608,"UPDATE: Reports the gunman has released three hostages, with the six hour #siege unravelling. Details to come. #9News",1,1,local,0.9838284861080231,"预测标签：1（谣言）
+谣言概率：0.984
+分类置信度：0.984
+判断依据：
+1. 支持谣言的主要证据：词项'three'(贡献0.770)、词项'reports'(贡献0.593)、词项'gunman'(贡献0.455)、词项'the gunman'(贡献0.429)。
+2. 支持非谣言的反向证据：字符片段'hour'(贡献0.254)、词项'the'(贡献0.218)、字符片段'hou'(贡献0.199)、词项'hashtag_siege'(贡献0.181)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544492843499540480,BREAKING: Now free to confirm that radical cleric Sheikh Man Monis has been named as gunman behind #SydneySiege. http://t.co/siHXBFN6RS,1,1,local,0.9670728475321514,"预测标签：1（谣言）
+谣言概率：0.967
+分类置信度：0.967
+判断依据：
+1. 支持谣言的主要证据：词项'named'(贡献0.491)、词项'man monis'(贡献0.459)、词项'gunman'(贡献0.395)、字符片段'man'(贡献0.380)。
+2. 支持非谣言的反向证据：词项'sydneysiege URL'(贡献0.221)、字符片段'mon'(贡献0.220)、字符片段'mo'(贡献0.168)、字符片段'.'(贡献0.160)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544301900682629121,Police take down suspect in #MartinPlace. Unclear whether related to siege http://t.co/mHXj4Hbmr9 #Sydney http://t.co/udwnmov1Lb,1,1,local,0.8125356923467738,"预测标签：1（谣言）
+谣言概率：0.813
+分类置信度：0.813
+判断依据：
+1. 支持谣言的主要证据：词项'suspect'(贡献0.737)、词项'down'(贡献0.618)、词项'hashtag_sydney'(贡献0.612)、词项'hashtag_sydney sydney'(贡献0.612)。
+2. 支持非谣言的反向证据：词项'whether'(贡献0.374)、词项'URL'(贡献0.231)、字符片段'.'(贡献0.162)、字符片段'unc'(贡献0.144)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544377700677615616,Total number of people who have left the cafe in Sydney up to 5. The latest: http://t.co/Nl3BNlFidA #SydneySiege http://t.co/TgZkYFNlR9,1,1,llm_override,0.39455620968577304,输入文本的格式（具体人数+'left the cafe'+#SydneySiege）与相似谣言高度一致（如'5 people so far have fled Sydney cafe'），属于典型的未证实断言，而相似非谣言为视频/图片分享，无此特征。,0,1,0.72
+544286537299787777,"Heya @espn can you put ""Hostage crisis in Sydney. Islamist flag held in window"" on your crawl so Obama sees it? Thanks.",1,1,local,0.7628866722659272,"预测标签：1（谣言）
+谣言概率：0.763
+分类置信度：0.763
+判断依据：
+1. 支持谣言的主要证据：词项'hostage'(贡献0.733)、词项'flag'(贡献0.619)、词项'window'(贡献0.494)、词项'held'(贡献0.489)。
+2. 支持非谣言的反向证据：字符片段'you'(贡献0.637)、词项'you'(贡献0.386)、词项'put'(贡献0.345)、词项'obama'(贡献0.293)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544382892378714113,Five Hostages Escape Sydney Cafe Siege — Live Updates From @BuzzFeedOz http://t.co/aFHirytbFH http://t.co/BiLJuBBc5R,1,1,local,0.9401914477465136,"预测标签：1（谣言）
+谣言概率：0.940
+分类置信度：0.940
+判断依据：
+1. 支持谣言的主要证据：词项'escape'(贡献0.640)、词项'five'(贡献0.621)、字符片段'five'(贡献0.550)、词项'cafe'(贡献0.506)。
+2. 支持非谣言的反向证据：词项'live updates'(贡献0.276)、词项'from'(贡献0.249)、词项'URL'(贡献0.240)、字符片段'from'(贡献0.226)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544511112654618624,#BREAKING: Heavily armed police look to be storming the Lindt Café. #SydneySiege #9News,1,1,local,0.7418008118999792,"预测标签：1（谣言）
+谣言概率：0.742
+分类置信度：0.742
+判断依据：
+1. 支持谣言的主要证据：词项'breaking'(贡献0.435)、词项'sydneysiege hashtag_9news'(贡献0.368)、词项'9news'(贡献0.360)、词项'hashtag_9news'(贡献0.315)。
+2. 支持非谣言的反向证据：词项'storming'(贡献0.488)、词项'armed police'(贡献0.442)、词项'be'(贡献0.348)、字符片段'storm'(贡献0.298)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544511676088066048,"What we know about Sheikh Haron, the suspected hostage taker in #SydneySiege http://t.co/KUEe3Bl2tp http://t.co/ZRzH6vunkh",1,0,local,0.181604674871513,"预测标签：0（非谣言）
+谣言概率：0.182
+分类置信度：0.818
+判断依据：
+1. 支持非谣言的主要证据：词项'about'(贡献0.642)、词项'know about'(贡献0.604)、词项'we'(贡献0.506)、词项'suspected hostage'(贡献0.453)。
+2. 支持谣言的反向证据：词项'hostage'(贡献0.843)、字符片段'sus'(贡献0.385)、字符片段'host'(贡献0.382)、字符片段'susp'(贡献0.372)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544291619084959744,BREAKINGNEWS: One of the perpetrators have demanded to speak to President Tony Abbott. Threatens to blow explosives every 30min #sydneysiege,1,1,llm_explain,0.6078197858799976,文本包含未证实的威胁细节（每30分钟引爆炸药），与相似谣言样本中枪手要求对话的煽动性话术一致，而非官方通报的平静陈述。,1,1,0.6078
+544292670336925696,UPDATE: 13 hostages inside Sydney coffee shop near Sydney Opera House; Abbott will deliver a statement shortly. #ISISAttacks #sydneyseige,1,1,local,0.9753487886940602,"预测标签：1（谣言）
+谣言概率：0.975
+分类置信度：0.975
+判断依据：
+1. 支持谣言的主要证据：词项'sydney opera'(贡献0.576)、词项'inside'(贡献0.518)、词项'statement'(贡献0.516)、词项'house'(贡献0.484)。
+2. 支持非谣言的反向证据：词项'coffee'(贡献0.271)、字符片段'hou'(贡献0.157)、词项'shop'(贡献0.130)、字符片段'ks'(贡献0.102)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544355924224532481,JUST IN: Police: 3 people were able to run from Sydney cafe during ongoing hostage situation - @9NewsAUS http://t.co/wFfwbG9Gg6,1,1,local,0.8096373804290771,"预测标签：1（谣言）
+谣言概率：0.810
+分类置信度：0.810
+判断依据：
+1. 支持谣言的主要证据：词项'ongoing hostage'(贡献0.778)、词项'hostage'(贡献0.674)、词项'were'(贡献0.639)、字符片段'were'(贡献0.502)。
+2. 支持非谣言的反向证据：词项'just in'(贡献0.227)、词项'ongoing'(贡献0.223)、词项'from'(贡献0.203)、词项'from sydney'(贡献0.188)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544294402366394369,CEO of Lindt cafe says 40-50 hostages held by 2 gunmen. Significantly higher number than initially thought #MartinPlace #sydneysiege,1,1,local,0.9706170845211601,"预测标签：1（谣言）
+谣言概率：0.971
+分类置信度：0.971
+判断依据：
+1. 支持谣言的主要证据：词项'held'(贡献0.462)、词项'cafe'(贡献0.425)、词项'ceo'(贡献0.419)、词项'hostages'(贡献0.406)。
+2. 支持非谣言的反向证据：词项'than'(贡献0.322)、字符片段'thou'(贡献0.153)、词项'lindt cafe'(贡献0.153)、字符片段'tho'(贡献0.127)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544343410849886209,Updated: An armed person took hostages in a Sydney cafe and displayed a black flag with Arabic script http://t.co/P42f29rnK1,1,1,local,0.8235759733704152,"预测标签：1（谣言）
+谣言概率：0.824
+分类置信度：0.824
+判断依据：
+1. 支持谣言的主要证据：词项'flag'(贡献0.633)、词项'took'(贡献0.476)、词项'cafe'(贡献0.461)、字符片段'flag'(贡献0.444)。
+2. 支持非谣言的反向证据：词项'displayed'(贡献0.319)、词项'person'(贡献0.315)、词项'armed'(贡献0.231)、字符片段'disp'(贡献0.206)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544296671950020609,From @guardian on Ray Hadley's speculative reports: #sydneysiege http://t.co/qRXKjmJZyq,1,0,llm_explain,0.3360829124025597,文本明确标注了Ray Hadley的报道是“speculative”(推测性的)，并引用《卫报》作为来源，这与相似的非谣言样本中质疑谣言特征一致，无煽动或未证实断言。,0,0,0.7
+544369667096477696,"Police Surround Sydney Cafe, Where Armed Person Holds Hostages http://t.co/CPrsOcTuis",1,0,llm_override,0.5477485544545658,输入文本措辞客观，无煽动性表述，与相似真实新闻（如警察包围、冲入咖啡馆）的描述风格一致，更接近非谣言样本。,1,0,0.65
+544462330105712640,Sydney airspace wasn't closed. A second terror suspect wasn't arrested. Myths around #sydneysiege debunked. http://t.co/yTLKLUKnFd,1,1,local,0.7543680290936172,"预测标签：1（谣言）
+谣言概率：0.754
+分类置信度：0.754
+判断依据：
+1. 支持谣言的主要证据：词项'suspect'(贡献0.844)、词项'airspace'(贡献0.644)、词项'wasn'(贡献0.592)、词项'second'(贡献0.459)。
+2. 支持非谣言的反向证据：词项'terror'(贡献0.249)、字符片段'n't'(贡献0.205)、字符片段'deb'(贡献0.174)、词项'URL'(贡献0.157)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544518841020473345,"#BREAKING @CNN reports #sydneysiege appears to be over. Two people are confirmed dead, three in serious condition.",1,1,local,0.97593057260409,"预测标签：1（谣言）
+谣言概率：0.976
+分类置信度：0.976
+判断依据：
+1. 支持谣言的主要证据：词项'two'(贡献0.763)、词项'three'(贡献0.713)、字符片段'two'(贡献0.694)、词项'reports'(贡献0.549)。
+2. 支持非谣言的反向证据：词项'over'(贡献0.570)、字符片段'ove'(贡献0.363)、词项'be'(贡献0.301)、字符片段'over'(贡献0.282)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544340091615715329,hostages in Sydney right now... my thoughts and prayers are with you guys.   so much hatred in the world. this isn't the way.. #sydneysiege,1,0,local,0.13602155723482504,"预测标签：0（非谣言）
+谣言概率：0.136
+分类置信度：0.864
+判断依据：
+1. 支持非谣言的主要证据：词项'my'(贡献0.550)、字符片段'you'(贡献0.422)、字符片段'my'(贡献0.403)、词项'way'(贡献0.354)。
+2. 支持谣言的反向证据：词项'prayers are'(贡献0.630)、词项'so much'(贡献0.466)、词项'hostages'(贡献0.369)、词项'hostages in'(贡献0.315)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544515097625108480,"CPR being performed on at least 2 after Sydney siege, which has now ended, Australia's ABC reports http://t.co/Y62bZ2YYa5",1,1,llm_explain,0.6333491187286971,该推文引用ABC报道声称悉尼围困后至少2人正在接受CPR，话术与已知谣言样本‘2死3重伤’高度相似，均依赖未经核实的第三方报道，缺乏官方警方确认，具有谣言特征。,1,1,0.6333
+544352874969698305,#SYDNEYSIEGE: 3 people escape gunman-held Lindt Café http://t.co/1ZlzKDjvSf http://t.co/DJCj55u6qk,1,1,local,0.8974155568060649,"预测标签：1（谣言）
+谣言概率：0.897
+分类置信度：0.897
+判断依据：
+1. 支持谣言的主要证据：词项'escape'(贡献0.808)、词项'held'(贡献0.694)、词项'gunman'(贡献0.690)、字符片段'esca'(贡献0.418)。
+2. 支持非谣言的反向证据：词项'sydneysiege people'(贡献0.338)、词项'URL'(贡献0.307)、词项'hashtag_sydneysiege'(贡献0.123)、词项'hashtag_sydneysiege sydneysiege'(贡献0.123)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544287991959539713,ABC understands the national security committee of cabinet has just wrapped up a meeting about the #sydneysiege http://t.co/7NdqPYhwcY,1,0,llm_explain,0.20134439640714355,推文使用“ABC understands”等客观措辞报道会议结束，未包含夸大或未经证实信息；本地模型非谣言证据更强，且虽相似样本有谣言但文本内容更接近中性报道。,0,0,0.75
+544288799711592448,Hostages taken in Sydney cafe as Islamic flag is reportedly flown http://t.co/OD9gOTGh2w,1,1,local,0.9728186919671712,"预测标签：1（谣言）
+谣言概率：0.973
+分类置信度：0.973
+判断依据：
+1. 支持谣言的主要证据：词项'flag'(贡献0.775)、字符片段'flag'(贡献0.632)、词项'cafe'(贡献0.564)、词项'hostages'(贡献0.538)。
+2. 支持非谣言的反向证据：词项'is'(贡献0.400)、词项'is reportedly'(贡献0.351)、字符片段'is'(贡献0.310)、词项'URL'(贡献0.160)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544374018661687296,Sydney in lockdown as at least one gunman holds several people hostage in a café http://t.co/qgq2xmaVUt #sydneysiege http://t.co/qTYpQM9snG,1,1,local,0.9438841640252852,"预测标签：1（谣言）
+谣言概率：0.944
+分类置信度：0.944
+判断依据：
+1. 支持谣言的主要证据：词项'several'(贡献0.802)、词项'hostage'(贡献0.743)、词项'gunman'(贡献0.492)、字符片段'host'(贡献0.359)。
+2. 支持非谣言的反向证据：词项'sydneysiege URL'(贡献0.276)、词项'URL'(贡献0.217)、词项'lockdown as'(贡献0.179)、字符片段'ast'(贡献0.158)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544319832486064128,"Hostage situation erupts in Sydney cafe, Australian prime minister says it may be ""politically motivated"" http://t.co/439C1MkRWf",1,0,llm_override,0.6859537455721291,该推文引用了澳大利亚总理的谨慎措辞（'may be'），与相似非谣言样本（如'PM says unclear'）风格一致，而非煽动性断言；尽管含有'hostage'等词，但整体为客观报道，缺乏谣言典型特征。,1,0,0.75
+544518033902149632,"Stretchers taken from Sydney cafe after police storm building; fate of hostage-taker unknown - @NBCNews, @7NewsSydney http://t.co/N5mmnilz4Z",1,0,llm_explain,0.3280307875236958,文本引用NBCNews等权威来源，采用新闻格式报道事件进展，与相似非谣言样本的官方描述更接近；尽管‘fate unknown’有不确定性，但缺乏煽动性语言，因此保持非谣言判断。,0,0,0.6
+544278985249550337,Geoblock lifted on #ABCNews24. Streaming coverage of the Martin Place siege in Sydney here  http://t.co/HvQuvP4SIb.,1,0,llm_override,0.6915975164640195,推文来自官方账号且语言客观，是解除地理封锁后提供报道链接，与相似真实新闻样本（如警方更新）的格式和语气一致，而非煽动性陈述。,1,0,0.75
+544296158206894081,Breaking: Sydney On Lockdown as Dramatic Siege Unfolds http://t.co/Xpjpgbf2Pb #sydneysiege http://t.co/31KmD0zuIx,1,1,llm_explain,0.5312032354682485,输入文本使用“Breaking”、“dramatic siege unfolds”等煽动性措辞，与相似谣言样本（如“dramatic moment three hostages escaped”）风格一致，均缺乏官方来源并强调戏剧性进展，而相似真实新闻则引用警方等权威声明。,1,1,0.62
+544477404342018048,#IllRideWithYou  Sydney Stands Up To Racism &amp; Bigotry With One Beautiful Hashtag  http://t.co/Ajaa1AQmG5 http://t.co/BQN4rBxhYK,0,0,local,0.01673097670491926,"预测标签：0（非谣言）
+谣言概率：0.017
+分类置信度：0.983
+判断依据：
+1. 支持非谣言的主要证据：字符片段'you'(贡献0.393)、字符片段'hyou'(贡献0.317)、词项'hashtag_illridewithyou'(贡献0.309)、词项'hashtag_illridewithyou illridewithyou'(贡献0.309)。
+2. 支持谣言的反向证据：词项'one'(贡献0.285)、词项'up'(贡献0.229)、字符片段'bea'(贡献0.218)、词项'up to'(贡献0.163)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544446269968908289,Thousands tweet declaring their solidarity with Muslims #IllRideWithYou #sydneysiege http://t.co/4REoJBzPxD http://t.co/zAQvgvzF9G,0,0,local,0.00473488223063075,"预测标签：0（非谣言）
+谣言概率：0.005
+分类置信度：0.995
+判断依据：
+1. 支持非谣言的主要证据：词项'muslims'(贡献0.438)、词项'solidarity'(贡献0.365)、字符片段'you'(贡献0.361)、词项'hashtag_illridewithyou'(贡献0.337)。
+2. 支持谣言的反向证据：字符片段'sol'(贡献0.286)、字符片段'rin'(贡献0.149)、字符片段'ill'(贡献0.140)、字符片段'so'(贡献0.117)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544432946841538560,"Mosques, synagogues, churches hold unity prayers #sydneysiege http://t.co/AQHlrOe3UW http://t.co/doMdGfLWeg",0,0,local,0.04126703987382537,"预测标签：0（非谣言）
+谣言概率：0.041
+分类置信度：0.959
+判断依据：
+1. 支持非谣言的主要证据：词项'sydneysiege URL'(贡献0.379)、词项'mosques'(贡献0.324)、词项'URL'(贡献0.305)、字符片段'es,'(贡献0.244)。
+2. 支持谣言的反向证据：词项'hold'(贡献0.479)、字符片段'hold'(贡献0.326)、字符片段'hol'(贡献0.244)、字符片段'old'(贡献0.210)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544399649025433601,RT RT RT @ZeeGingaNinja: because it seems that some people here need this clarification #sydneysiege #NotInMyName http://t.co/perQGp5yro,0,0,local,0.07536348691043164,"预测标签：0（非谣言）
+谣言概率：0.075
+分类置信度：0.925
+判断依据：
+1. 支持非谣言的主要证据：词项'rt'(贡献0.671)、词项'need'(贡献0.370)、字符片段'need'(贡献0.284)、词项'rt USER'(贡献0.275)。
+2. 支持谣言的反向证据：字符片段'name'(贡献0.206)、字符片段'nam'(贡献0.160)、字符片段'ame'(贡献0.112)、字符片段'so'(贡献0.103)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544343625069379584,Two young guys have arrived and are swigging from bottles of white wine. This is a hostage situation #sydneysiege http://t.co/nwGAIcqt3S,0,0,llm_explain,0.3355246174603654,输入文本以客观描述现场为主（如喝白葡萄酒），没有明显煽动性或未经证实断言，与相似非谣言样本的冷静报道风格相近；本地模型也偏向非谣言，且更高相似度的非谣言样本支持这一判断。,0,0,0.66
+544370072018378752,Can we add Daily Telegraph to suspected terror cells within Aus? Their 2pm edition did more damage than any gunman ever could #sydneysiege,0,1,llm_explain,0.549882269493737,该推文使用煽动性类比将媒体比作恐怖组织，并夸大其造成的伤害，与相似谣言样本（如对《每日电讯报》特别版的质疑）一致，具有典型的未证实断言和情绪化特征。,1,1,0.62
+544497307933474816,"#SydneySiege UPDATE: Gunman identified as local resident Man Monis, has police records http://t.co/6bXGBh0qHD http://t.co/3vw2bF1Ojo",0,1,llm_explain,0.5846293976939493,文本表述与相似谣言样本高度一致（如直接称“枪手被识别为Man Monis”），缺乏权威来源或具体细节，具有未证实断言的谣言特征。,1,1,0.7
+544447054034919424,Channel 9 now showing footage of 9/11. You've gotta gotta gotta be kidding me. #sydneysiege,0,0,local,0.18784171674368166,"预测标签：0（非谣言）
+谣言概率：0.188
+分类置信度：0.812
+判断依据：
+1. 支持非谣言的主要证据：词项'you'(贡献0.436)、词项'be'(贡献0.392)、词项'footage'(贡献0.239)、字符片段'you'(贡献0.236)。
+2. 支持谣言的反向证据：词项'now'(贡献0.353)、字符片段'sho'(贡献0.233)、字符片段'now'(贡献0.228)、词项'footage of'(贡献0.217)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544338622422335489,"Things getting ugly... A racist bloke yelling at rest of the crowd, ""Muhammed is a pedophile, rapist"" #sydneysiege http://t.co/q2TPg0In5Q",0,0,local,0.17333779998011148,"预测标签：0（非谣言）
+谣言概率：0.173
+分类置信度：0.827
+判断依据：
+1. 支持非谣言的主要证据：词项'things'(贡献0.445)、词项'is'(贡献0.407)、词项'crowd'(贡献0.351)、词项'sydneysiege URL'(贡献0.343)。
+2. 支持谣言的反向证据：词项'yelling'(贡献0.422)、词项'at'(贡献0.394)、词项'ugly'(贡献0.244)、字符片段'at'(贡献0.170)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544309497041133568,My fellow Australians. Let's stand together against the #sydneysiege as well as the hatred against innocent Muslim #Australians.,0,0,local,0.02992797143291213,"预测标签：0（非谣言）
+谣言概率：0.030
+分类置信度：0.970
+判断依据：
+1. 支持非谣言的主要证据：词项'my'(贡献0.599)、词项'australians'(贡献0.345)、字符片段'my'(贡献0.317)、字符片段'ians'(贡献0.300)。
+2. 支持谣言的反向证据：词项'well as'(贡献0.166)、词项'as well'(贡献0.162)、字符片段'red'(贡献0.144)、词项'against'(贡献0.135)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544417650680823808,I love reading the #illridewithyou tweets from Australians in response to anti-Muslim hatred in the midst of #sydneysiege. Lovely humanity.,0,0,local,0.0039286038996668845,"预测标签：0（非谣言）
+谣言概率：0.004
+分类置信度：0.996
+判断依据：
+1. 支持非谣言的主要证据：词项'of hashtag_sydneysiege'(贡献0.607)、词项'hashtag_illridewithyou'(贡献0.333)、词项'hashtag_illridewithyou illridewithyou'(贡献0.333)、词项'illridewithyou'(贡献0.333)。
+2. 支持谣言的反向证据：词项'in'(贡献0.179)、字符片段'red'(贡献0.141)、字符片段'tre'(贡献0.132)、字符片段'in'(贡献0.132)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544415616753745920,Australians offering support to Muslims on public transport who fear racist abuse using the #illridewithyou hashtag. #sydneysiege,0,0,local,0.004520576858607486,"预测标签：0（非谣言）
+谣言概率：0.005
+分类置信度：0.995
+判断依据：
+1. 支持非谣言的主要证据：词项'public'(贡献0.484)、词项'support'(贡献0.445)、词项'muslims'(贡献0.393)、字符片段'you'(贡献0.324)。
+2. 支持谣言的反向证据：字符片段'su'(贡献0.156)、字符片段'rin'(贡献0.133)、字符片段'port'(贡献0.130)、字符片段'por'(贡献0.128)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544449039433883650,#illridewithyou reflects the true #aussiespirit during the undesirable actions of the few! Stand tall in the face of adversity! #SydneySiege,0,0,local,0.030683832136946993,"预测标签：0（非谣言）
+谣言概率：0.031
+分类置信度：0.969
+判断依据：
+1. 支持非谣言的主要证据：词项'few'(贡献0.461)、词项'hashtag_illridewithyou'(贡献0.371)、词项'hashtag_illridewithyou illridewithyou'(贡献0.371)、词项'illridewithyou'(贡献0.371)。
+2. 支持谣言的反向证据：词项'during'(贡献0.273)、词项'during the'(贡献0.196)、字符片段'tal'(贡献0.191)、字符片段'iri'(贡献0.187)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544373945206460416,The #SydneySiege only works to sabotage the message Islam.,0,0,local,0.06759037025127752,"预测标签：0（非谣言）
+谣言概率：0.068
+分类置信度：0.932
+判断依据：
+1. 支持非谣言的主要证据：词项'islam'(贡献0.865)、词项'the'(贡献0.478)、词项'message'(贡献0.465)、词项'works'(贡献0.371)。
+2. 支持谣言的反向证据：字符片段'age'(贡献0.318)、字符片段'tage'(贡献0.302)、词项'the hashtag_sydneysiege'(贡献0.277)、字符片段'm.'(贡献0.108)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544520344976232449,#BREAKING: Australian police confirm Sydney siege is over,0,0,llm_explain,0.36025517359967746,文本明确使用“confirm”和“is over”，语气肯定，与相似非谣言样本（警方确认结束）一致；而相似谣言样本含有未证实信息（如“cannot confirm”），因此更偏向非谣言。,0,0,0.85
+544435176479027200,a thousand words in one picture. the police have been absolutely amazing today #sydneysiege http://t.co/w9Gt6rlYes,0,0,llm_explain,0.2012544487183919,推文称赞警方表现并附有图片链接，与多个相似训练样本（均为非谣言）内容一致，本地模型证据也支持非谣言判断。,0,0,0.85
+544435685864660992,"A Muslim,a Jew &amp; a Christian walk into a bar.Except it's an interfaith solidarity stand against bigotry in Sydney. ❤️ http://t.co/rp5jRN5uPp",0,0,local,0.09117819841395054,"预测标签：0（非谣言）
+谣言概率：0.091
+分类置信度：0.909
+判断依据：
+1. 支持非谣言的主要证据：词项'solidarity'(贡献0.450)、字符片段'int'(贡献0.346)、词项'stand'(贡献0.289)、词项'christian'(贡献0.277)。
+2. 支持谣言的反向证据：词项'walk'(贡献0.447)、词项'in sydney'(贡献0.335)、字符片段'sol'(贡献0.293)、字符片段'cept'(贡献0.254)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544379787246981122,Their faces say it all. #Sydneysiege continues more&gt;http://t.co/6EAaEKw4n9 http://t.co/NkzVcf9mxv,0,1,llm_override,0.2249741359006363,推文与相似度高达0.82的谣言样本（'These hostages' faces say so much...'）高度一致，且'faces say it all'暗示情感，结合事件易被误传。,0,1,0.72
+544512465099587584,Thoughts are with you Sydney 😔,0,0,local,0.005197478187643365,"预测标签：0（非谣言）
+谣言概率：0.005
+分类置信度：0.995
+判断依据：
+1. 支持非谣言的主要证据：字符片段'you'(贡献1.210)、词项'thoughts are'(贡献1.063)、词项'you'(贡献0.775)、词项'thoughts'(贡献0.695)。
+2. 支持谣言的反向证据：字符片段'ey'(贡献0.152)、字符片段're'(贡献0.135)、词项'sydney'(贡献0.117)、字符片段's'(贡献0.057)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544495737770618880,Australians use #IllRideWithYou hashtag in solidarity with Muslims during Sydney siege http://t.co/5h3kWfwnyL,0,0,local,0.00572715779263598,"预测标签：0（非谣言）
+谣言概率：0.006
+分类置信度：0.994
+判断依据：
+1. 支持非谣言的主要证据：词项'muslims'(贡献0.468)、字符片段'you'(贡献0.407)、词项'solidarity'(贡献0.389)、词项'hashtag_illridewithyou'(贡献0.360)。
+2. 支持谣言的反向证据：字符片段'sol'(贡献0.322)、词项'siege URL'(贡献0.294)、词项'during'(贡献0.266)、词项'during sydney'(贡献0.192)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544515174376701952,If Sydney had been Texas 10 customers would have drawn guns the moment the ISIS terrorist walked in... #2A,0,0,llm_explain,0.25489625331194393,推文是假设性评论，比较悉尼与得州对ISIS的反应，并非对真实事件的陈述，且本地模型明确支持非谣言判断。,0,0,0.7
+544444189078208512,I just found this and never have I ever seen such a thing. Sending all my love and support to Sydney. #illridewithyou http://t.co/8zOBdjUYLs,0,0,local,0.004681523770123591,"预测标签：0（非谣言）
+谣言概率：0.005
+分类置信度：0.995
+判断依据：
+1. 支持非谣言的主要证据：词项'my'(贡献0.579)、词项'all'(贡献0.503)、词项'support'(贡献0.439)、字符片段'my'(贡献0.377)。
+2. 支持谣言的反向证据：字符片段'su'(贡献0.302)、词项'this and'(贡献0.239)、字符片段'sen'(贡献0.187)、字符片段'ding'(贡献0.146)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544508313220567041,All my thoughts &amp; prayers are with the people of Sydney.,0,0,local,0.01875631339009345,"预测标签：0（非谣言）
+谣言概率：0.019
+分类置信度：0.981
+判断依据：
+1. 支持非谣言的主要证据：词项'my'(贡献0.840)、字符片段'my'(贡献0.774)、词项'all'(贡献0.727)、词项'thoughts'(贡献0.450)。
+2. 支持谣言的反向证据：词项'prayers are'(贡献0.970)、词项'of sydney'(贡献0.583)、词项'with the'(贡献0.281)、字符片段'ney.'(贡献0.262)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544443377643954176,Watch: Escaped hostages are helping police create 'peaceful outcome' for #Sydneysiege http://t.co/TzSlNsgTip http://t.co/0O3kEAf7Pt,0,1,llm_explain,0.5648447575626827,文本包含‘人质已逃脱并帮助警方创造和平结局’这一未证实断言，且相似的谣言样本也有类似的事件进展描述；而非谣言样本仅表达祈祷或支持，不涉及具体行动，因此更符合谣言特征。,1,1,0.5648
+544357264333615104,This is well written and comforting as well. #sydneysiege #SydneyHostageCrisis http://t.co/mdJvf6NEdf,0,0,llm_explain,0.3009957602384284,该推文表达正面情感（写得很好、安慰人心），类似相似的非谣言样本，没有煽动性或未证实断言，谣言特征较弱。,0,0,0.85
+544307589245587457,"Please, please, please read these tips for major news stories, especially when lives are at stake. #sydneysiege http://t.co/QgToJNV2b1",0,0,local,0.15576534363484393,"预测标签：0（非谣言）
+谣言概率：0.156
+分类置信度：0.844
+判断依据：
+1. 支持非谣言的主要证据：词项'please'(贡献0.872)、词项'major'(贡献0.426)、词项'sydneysiege URL'(贡献0.301)、词项'are'(贡献0.238)。
+2. 支持谣言的反向证据：词项'at'(贡献0.345)、词项'news'(贡献0.172)、字符片段'se,'(贡献0.169)、字符片段'at'(贡献0.166)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544305672372772865,A post of what we actually do know about the #Lindt Sydney siege. It is not very long. http://t.co/QLRHSjYdib,0,0,local,0.08898822746524222,"预测标签：0（非谣言）
+谣言概率：0.089
+分类置信度：0.911
+判断依据：
+1. 支持非谣言的主要证据：词项'about'(贡献0.536)、词项'know about'(贡献0.505)、词项'we'(贡献0.421)、词项'what'(贡献0.322)。
+2. 支持谣言的反向证据：字符片段'ost'(贡献0.362)、字符片段'ery'(贡献0.361)、字符片段'post'(贡献0.319)、字符片段'lin'(贡献0.292)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544372384690872321,"To people taking selfies at #SydneySiege, When you return home, look at your selfie &amp; see what an unconscious, blithering idiot looks like.",0,0,local,0.06860988649660071,"预测标签：0（非谣言）
+谣言概率：0.069
+分类置信度：0.931
+判断依据：
+1. 支持非谣言的主要证据：字符片段'you'(贡献0.493)、词项'selfies'(贡献0.458)、词项'taking'(贡献0.414)、词项'you'(贡献0.364)。
+2. 支持谣言的反向证据：词项'at'(贡献0.496)、字符片段'at'(贡献0.282)、词项'at hashtag_sydneysiege'(贡献0.276)、词项'selfies at'(贡献0.196)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544462438310375425,"""Sydney Siege: Australians Rally Against Islamophobia With #illridewithyou Hashtag"" http://t.co/kXBVRxOFID",0,0,local,0.007100640268860756,"预测标签：0（非谣言）
+谣言概率：0.007
+分类置信度：0.993
+判断依据：
+1. 支持非谣言的主要证据：词项'hashtag_illridewithyou'(贡献0.401)、词项'hashtag_illridewithyou illridewithyou'(贡献0.401)、词项'illridewithyou'(贡献0.401)、字符片段'you'(贡献0.376)。
+2. 支持谣言的反向证据：词项'siege'(贡献0.167)、字符片段'ill'(贡献0.145)、词项'against'(贡献0.103)、字符片段'lly'(贡献0.099)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544287332061298688,"DO NOT TWEET POLICE MOVEMENTS. Don't tweet photos of police, their faces, their location, anything. Seriously. It's simple #sydneysiege",0,0,local,0.01894594391769183,"预测标签：0（非谣言）
+谣言概率：0.019
+分类置信度：0.981
+判断依据：
+1. 支持非谣言的主要证据：词项'don'(贡献0.394)、词项'their'(贡献0.378)、词项'of police'(贡献0.285)、词项'do'(贡献0.276)。
+2. 支持谣言的反向证据：词项'anything'(贡献0.337)、词项'faces'(贡献0.221)、词项'police their'(贡献0.182)、字符片段'seri'(贡献0.124)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544518337498058753,Sydney siege is over. More details to follow.,0,0,local,0.10529014997992088,"预测标签：0（非谣言）
+谣言概率：0.105
+分类置信度：0.895
+判断依据：
+1. 支持非谣言的主要证据：词项'is over'(贡献1.436)、词项'over'(贡献0.896)、字符片段'ove'(贡献0.616)、字符片段'over'(贡献0.478)。
+2. 支持谣言的反向证据：词项'to follow'(贡献0.584)、字符片段'ow.'(贡献0.199)、词项'details to'(贡献0.196)、词项'siege'(贡献0.186)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544427461136502784,To any American tweeting about how #sydneysiege could have been averted if we carried guns. No -- imagine how much worse it could have been.,0,0,local,0.06553573592280255,"预测标签：0（非谣言）
+谣言概率：0.066
+分类置信度：0.934
+判断依据：
+1. 支持非谣言的主要证据：词项'how'(贡献0.875)、词项'about'(贡献0.503)、词项'we'(贡献0.397)、字符片段'how'(贡献0.380)。
+2. 支持谣言的反向证据：词项'been'(贡献0.375)、词项'about how'(贡献0.208)、字符片段'gun'(贡献0.179)、字符片段'ed'(贡献0.177)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544495167836016640,"At least 5 dead as gunman goes on rampage in PA, suspect reportedly barricaded in a home http://t.co/aCLslANGxu http://t.co/H4Mhm1cyOm",0,1,local,0.8474919966406831,"预测标签：1（谣言）
+谣言概率：0.847
+分类置信度：0.847
+判断依据：
+1. 支持谣言的主要证据：词项'suspect'(贡献0.858)、词项'dead'(贡献0.633)、词项'gunman'(贡献0.600)、字符片段'repo'(贡献0.401)。
+2. 支持非谣言的反向证据：词项'least dead'(贡献0.509)、词项'barricaded'(贡献0.394)、词项'home'(贡献0.333)、词项'URL'(贡献0.268)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544411561205301248,The Lebanese Muslim Association has issued a statement condemning #sydneysiege and calling for calm. http://t.co/z2hCIBPaha,0,0,llm_explain,0.48626002677139923,推文是官方组织发布的声明，内容包含谴责和呼吁冷静，无明显煽动性或未证实断言，与相似的非谣言样本（如澳大利亚大穆夫提声明）在话术和情感上更接近。,0,0,0.55
+544299273664593920,Australian prime minister Tony Abbott to hold news conference live on Sky News at 1.30am GMT about ongoing Sydney hostage situation,0,1,local,0.8551283340966492,"预测标签：1（谣言）
+谣言概率：0.855
+分类置信度：0.855
+判断依据：
+1. 支持谣言的主要证据：词项'hostage'(贡献0.656)、词项'news conference'(贡献0.521)、词项'hostage situation'(贡献0.485)、字符片段'pri'(贡献0.472)。
+2. 支持非谣言的反向证据：词项'about'(贡献0.499)、字符片段'bout'(贡献0.245)、字符片段'abo'(贡献0.240)、字符片段'abou'(贡献0.235)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544396608704901120,Subscribe to our #sydneysiege Twitter list for more updates: http://t.co/3eg2WK3wxu http://t.co/QhRxcGQNbM,0,0,local,0.06368860832892119,"预测标签：0（非谣言）
+谣言概率：0.064
+分类置信度：0.936
+判断依据：
+1. 支持非谣言的主要证据：词项'twitter'(贡献0.471)、词项'our'(贡献0.399)、字符片段'our'(贡献0.281)、词项'URL'(贡献0.258)。
+2. 支持谣言的反向证据：字符片段'su'(贡献0.242)、字符片段'ore'(贡献0.137)、字符片段'ate'(贡献0.125)、词项'updates URL URL'(贡献0.124)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544447757860483072,#IllRideWithYou: Australians show solidarity with Muslims amid the Sydney siege http://t.co/5hFgbIp2C3 http://t.co/czDCx7OdM4,0,0,local,0.0048925491485994265,"预测标签：0（非谣言）
+谣言概率：0.005
+分类置信度：0.995
+判断依据：
+1. 支持非谣言的主要证据：词项'the sydney'(贡献0.747)、词项'muslims'(贡献0.475)、字符片段'you'(贡献0.411)、词项'solidarity'(贡献0.395)。
+2. 支持谣言的反向证据：词项'show'(贡献0.336)、字符片段'sol'(贡献0.325)、词项'siege URL'(贡献0.299)、字符片段'sho'(贡献0.251)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544458445764968448,"hope they'll be safe. I'm at the opposite of the world but I'll pray for you, Sydney #illridewithyou #PrayForSydney http://t.co/VEcdVkGnRP",0,0,local,0.005924300792422412,"预测标签：0（非谣言）
+谣言概率：0.006
+分类置信度：0.994
+判断依据：
+1. 支持非谣言的主要证据：词项'safe'(贡献0.589)、词项'at the'(贡献0.465)、字符片段'you'(贡献0.435)、词项'you'(贡献0.323)。
+2. 支持谣言的反向证据：词项'they'(贡献0.278)、词项'at'(贡献0.259)、词项'opposite'(贡献0.162)、字符片段'i'm'(贡献0.155)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544469768745398272,you don't realise what a privilege it is to be sleeping comfortably in your own bed until such horrific things are happening #sydneysiege,0,0,local,0.032531629590753446,"预测标签：0（非谣言）
+谣言概率：0.033
+分类置信度：0.967
+判断依据：
+1. 支持非谣言的主要证据：字符片段'you'(贡献0.505)、词项'don'(贡献0.451)、词项'you'(贡献0.400)、词项'things'(贡献0.358)。
+2. 支持谣言的反向证据：字符片段'pri'(贡献0.403)、字符片段'su'(贡献0.163)、词项'horrific'(贡献0.156)、字符片段'ing'(贡献0.121)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544520586576547840,Video: The moment the police stormed the Sydney cafe. Police confirm the siege is now over. http://t.co/E7RSvVibiu http://t.co/u6dVtuoAUc,0,0,local,0.17055144928122354,"预测标签：0（非谣言）
+谣言概率：0.171
+分类置信度：0.829
+判断依据：
+1. 支持非谣言的主要证据：词项'the sydney'(贡献0.666)、词项'over'(贡献0.652)、词项'stormed the'(贡献0.567)、字符片段'ove'(贡献0.503)。
+2. 支持谣言的反向证据：词项'the police'(贡献1.049)、词项'cafe'(贡献0.447)、词项'confirm'(贡献0.403)、字符片段'con'(贡献0.357)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544378232624410624,A radical Muslim wants to chop off your head.  A moderate Muslim wants a radical Muslim to chop off your head.  #sydneysiege,0,0,local,0.14877406621134578,"预测标签：0（非谣言）
+谣言概率：0.149
+分类置信度：0.851
+判断依据：
+1. 支持非谣言的主要证据：字符片段'you'(贡献0.342)、词项'muslim'(贡献0.293)、字符片段'musl'(贡献0.242)、字符片段'yo'(贡献0.223)。
+2. 支持谣言的反向证据：词项'wants to'(贡献0.394)、词项'radical muslim'(贡献0.275)、字符片段'ad.'(贡献0.263)、字符片段'rad'(贡献0.241)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544503425082613761,"The man believed to be holding hostages in Sydney is Man Haron Monis, known as Sheikh Haron, source says http://t.co/6T7xVdcwdD",0,0,llm_override,0.6215268984826224,文本使用“believed to be”和“source says”等报道性语言，与相似真实新闻样本（如“Man Haron Monis is believed to be...his former lawyer says”）的客观表述高度一致，缺乏谣言常见的煽动性特征。,1,0,0.7
+544338676835041280,"An argument breaks out in crowd watching #sydneysiege after one man goes on anti-Islamic rant. He's told ""Muslims are welcome here mate!""",0,0,llm_explain,0.20826075485228943,推文描述的是现场争吵中一人反伊斯兰言论被回应，内容具体且无虚假指控；本地模型特征中非谣言词项（如'muslims'）得分较高，且相似样本中也有非谣言描述，因此推断为非谣言。,0,0,0.7917
+544391790615605249,"""Profoundly shocking"" -Australia PM Tony Abbott delivers second  #sydneysiege statement. MORE: http://t.co/VaKt3ZpRZR http://t.co/I9VOzKLcET",0,0,llm_explain,0.3938966030462465,推文以引用短语和正式报道语气陈述总理第二次声明，结构类似于相似的非谣言新闻更新样本，而非具有煽动性或不实断言特征的谣言样本。,0,0,0.65
+544316684736028673,"Man what on Earth is going on in Sydney. Despicable. Life in prison no parole for the idiots responsible, set a hard line, no tolerance.",0,0,llm_explain,0.42101147495510033,文本中“Despicable”和“life in prison”与相似非谣言样本高度一致，主要是对悉尼事件的愤怒评论，缺乏未证实的断言，符合非谣言特征。,0,0,0.579
+544337283801829376,"My thoughts are with the hostages, their families and everyone in Sydney right now.",0,0,local,0.026071698439282306,"预测标签：0（非谣言）
+谣言概率：0.026
+分类置信度：0.974
+判断依据：
+1. 支持非谣言的主要证据：词项'my'(贡献0.698)、字符片段'my'(贡献0.579)、词项'thoughts are'(贡献0.575)、词项'families'(贡献0.470)。
+2. 支持谣言的反向证据：词项'hostages'(贡献0.469)、词项'the hostages'(贡献0.462)、字符片段'host'(贡献0.427)、字符片段'hos'(贡献0.412)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544376469279875072,"""You never see non-Muslims do things like this."" #SydneySiege http://t.co/nPxTMBmK11",0,0,local,0.01588516237289329,"预测标签：0（非谣言）
+谣言概率：0.016
+分类置信度：0.984
+判断依据：
+1. 支持非谣言的主要证据：词项'muslims'(贡献0.603)、词项'you'(贡献0.545)、词项'things'(贡献0.491)、词项'do'(贡献0.433)。
+2. 支持谣言的反向证据：字符片段'ee'(贡献0.167)、字符片段'ms'(贡献0.135)、字符片段'er'(贡献0.110)、字符片段'li'(贡献0.088)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544419416578850818,"hats off to you guys, you're awesome, faith in humanity restored  #sydneysiege #illridewithyou http://t.co/iazCcTca6H",0,0,local,0.006786367697251945,"预测标签：0（非谣言）
+谣言概率：0.007
+分类置信度：0.993
+判断依据：
+1. 支持非谣言的主要证据：字符片段'you'(贡献0.722)、词项're'(贡献0.600)、词项'you'(贡献0.600)、词项'you re'(贡献0.427)。
+2. 支持谣言的反向证据：词项'hats'(贡献0.243)、词项'guys'(贡献0.203)、词项'you guys'(贡献0.172)、字符片段'red'(贡献0.167)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544280391226761218,"What's happening in Sydney will happen in the uk it's inevitable, and our political leaders will have blood on their hands",0,0,local,0.06702892681510068,"预测标签：0（非谣言）
+谣言概率：0.067
+分类置信度：0.933
+判断依据：
+1. 支持非谣言的主要证据：字符片段'happ'(贡献0.413)、字符片段'hap'(贡献0.372)、词项'our'(贡献0.313)、词项'what'(贡献0.312)。
+2. 支持谣言的反向证据：词项'on their'(贡献0.493)、词项'blood on'(贡献0.275)、词项'in sydney'(贡献0.249)、字符片段'ill'(贡献0.191)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544499780479893504,A Muslim lady took off her scarf out of fear after the Sydney Siege &amp; is comforted by strangers. #illridewithyou http://t.co/JJbPhn0YKh,0,0,local,0.028515052836711033,"预测标签：0（非谣言）
+谣言概率：0.029
+分类置信度：0.971
+判断依据：
+1. 支持非谣言的主要证据：词项'the sydney'(贡献0.565)、字符片段'you'(贡献0.359)、字符片段'hyou'(贡献0.289)、字符片段'ou'(贡献0.284)。
+2. 支持谣言的反向证据：词项'out of'(贡献0.394)、词项'took'(贡献0.392)、字符片段'took'(贡献0.307)、词项'out'(贡献0.216)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544503881527742464,Suspected jihadist in #Sydney standoff ID'd as Iranian sex offender as ordeal enters 15th hour http://t.co/WrPVZSJHlX http://t.co/dJuzEHM1hX,0,0,local,0.16549907560772542,"预测标签：0（非谣言）
+谣言概率：0.165
+分类置信度：0.835
+判断依据：
+1. 支持非谣言的主要证据：词项'iranian'(贡献0.472)、字符片段'hour'(贡献0.258)、词项'standoff'(贡献0.251)、词项'iranian sex'(贡献0.234)。
+2. 支持谣言的反向证据：词项'in hashtag_sydney'(贡献0.592)、词项'hashtag_sydney'(贡献0.559)、词项'hashtag_sydney sydney'(贡献0.559)、字符片段'sus'(贡献0.283)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544434192478519297,A female hostage stands by the front entrance of the cafe as she turns the lights off in Sydney. #sydneysiege http://t.co/qNfCMv9yZt,0,0,llm_explain,0.45788463154558373,该文本客观描述人质关灯的动作，与相似非谣言中的“枪手关灯”描述风格一致，无煽动性或未证实断言，更接近非谣言特征。,0,0,0.62
+544496648445890561,Australia's reaction to the #sydneysiege is magnificent. #illridewithyou http://t.co/Lq0VjkWreY http://t.co/7k7o55TkYE,0,0,local,0.0117456710512536,"预测标签：0（非谣言）
+谣言概率：0.012
+分类置信度：0.988
+判断依据：
+1. 支持非谣言的主要证据：字符片段'you'(贡献0.377)、词项'hashtag_illridewithyou'(贡献0.367)、词项'hashtag_illridewithyou illridewithyou'(贡献0.367)、词项'illridewithyou'(贡献0.367)。
+2. 支持谣言的反向证据：字符片段'a's'(贡献0.161)、词项'the hashtag_sydneysiege'(贡献0.154)、字符片段'ill'(贡献0.146)、字符片段'cent'(贡献0.106)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544388259359387648,"You can't condemn an entire race, nation or religion based on the actions of a few radicals, please keep that in mind #sydneysiege",0,0,local,0.03488470524822982,"预测标签：0（非谣言）
+谣言概率：0.035
+分类置信度：0.965
+判断依据：
+1. 支持非谣言的主要证据：词项'few'(贡献0.392)、字符片段'you'(贡献0.391)、词项'you'(贡献0.370)、词项'on the'(贡献0.364)。
+2. 支持谣言的反向证据：词项'nation'(贡献0.357)、字符片段'con'(贡献0.243)、字符片段'nat'(贡献0.210)、字符片段'cond'(贡献0.177)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544461947882586112,'Sick' people are actually taking selfies at the site of the #sydneysiege http://t.co/DebSinfhyH http://t.co/rHDxHczlWc,0,0,local,0.034368225755557556,"预测标签：0（非谣言）
+谣言概率：0.034
+分类置信度：0.966
+判断依据：
+1. 支持非谣言的主要证据：词项'at the'(贡献0.578)、词项'site'(贡献0.539)、词项'selfies'(贡献0.503)、词项'taking'(贡献0.455)。
+2. 支持谣言的反向证据：词项'at'(贡献0.322)、字符片段'at'(贡献0.227)、词项'selfies at'(贡献0.218)、词项'the hashtag_sydneysiege'(贡献0.142)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544439077756755969,I suggest all people planning on going to the city in Sydney on New Years Eve to not. It's too risky at this point! http://t.co/UgJq3mlFES,0,0,local,0.1278724490880512,"预测标签：0（非谣言）
+谣言概率：0.128
+分类置信度：0.872
+判断依据：
+1. 支持非谣言的主要证据：词项'all'(贡献0.506)、字符片段'est'(贡献0.248)、字符片段'city'(贡献0.237)、词项'at this'(贡献0.233)。
+2. 支持谣言的反向证据：词项'on new'(贡献0.301)、词项'at'(贡献0.282)、词项'in sydney'(贡献0.242)、词项'sydney on'(贡献0.208)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544423869981802496,We condemn the actions of the criminals at #martinsplace #sydneysiege   Islam is free from terrorism. Visit: http://t.co/fsBE3gEuYH,0,0,local,0.08614199561431012,"预测标签：0（非谣言）
+谣言概率：0.086
+分类置信度：0.914
+判断依据：
+1. 支持非谣言的主要证据：词项'we'(贡献0.474)、词项'islam'(贡献0.455)、词项'is'(贡献0.345)、词项'islam is'(贡献0.274)。
+2. 支持谣言的反向证据：词项'at'(贡献0.335)、字符片段'ree'(贡献0.264)、字符片段'con'(贡献0.244)、字符片段'cond'(贡献0.177)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544515215576948736,"Sydney siege on all day, but we haven't seen any TV reporters hyperventilating, or using words like exclusive, breaking news. Lazy Aussies?",0,0,local,0.1867127942400355,"预测标签：0（非谣言）
+谣言概率：0.187
+分类置信度：0.813
+判断依据：
+1. 支持非谣言的主要证据：词项'all'(贡献0.534)、词项'we'(贡献0.424)、词项'breaking news'(贡献0.375)、词项'haven'(贡献0.305)。
+2. 支持谣言的反向证据：词项'breaking'(贡献0.418)、字符片段'repo'(贡献0.315)、字符片段'rep'(贡献0.308)、字符片段'repor'(贡献0.190)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544497405237161984,"Man Haron Monis, named as the #sydneysiege gunman, may have a ""fetish for self-publicity"". http://t.co/UdkysqURCT http://t.co/vNDbnOkdt8",0,0,llm_explain,0.20662523929045118,推文使用“may have”推测语气，与相似非谣言样本（如CNN报道）一致，且本地模型非谣言证据（如'man haron'、'haron'）得分较高。,0,0,0.7934
+544332610097676288,Just in: U.S. Consulate near the scene in Sydney has accounted for all of its personnel: http://t.co/0h2F8SVCS2 @CNN http://t.co/UUiuFBi01A,0,0,local,0.18769452636474404,"预测标签：0（非谣言）
+谣言概率：0.188
+分类置信度：0.812
+判断依据：
+1. 支持非谣言的主要证据：词项'all'(贡献0.563)、词项'scene'(贡献0.257)、词项'just in'(贡献0.248)、词项'URL'(贡献0.220)。
+2. 支持谣言的反向证据：词项'sydney has'(贡献0.418)、词项'personnel'(贡献0.310)、字符片段'con'(贡献0.299)、字符片段'acc'(贡献0.287)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544336572141694976,#SYDNEYSIEGE: Crowd gathers at police cordon in anticipation of news on hostage situation  http://t.co/2zFjvlPC1n http://t.co/YW5zGPMEWS,0,0,llm_explain,0.3492436939936335,文本描述人群聚集等待消息，与相似非谣言样本（如“A crowd gathers near Martin Place”）高度一致，属于事实陈述，无煽动性或未证实断言。,0,0,0.92
+544410900854091776,Australian Muslim community releases statement in response to #sydneysiege. http://t.co/KE9UFxdXuD,0,0,local,0.04689499154818163,"预测标签：0（非谣言）
+谣言概率：0.047
+分类置信度：0.953
+判断依据：
+1. 支持非谣言的主要证据：词项'community'(贡献0.392)、词项'australian muslim'(贡献0.386)、词项'sydneysiege URL'(贡献0.305)、词项'muslim community'(贡献0.293)。
+2. 支持谣言的反向证据：词项'statement'(贡献0.590)、字符片段'stat'(贡献0.237)、字符片段're'(贡献0.189)、字符片段'sta'(贡献0.132)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544464445787750401,RT @mina_ysf: Religious leaders meet at Lakemba mosque in Sydney to pray for hostages  #sydneysiege http://t.co/D0nQRWwz5D,0,0,local,0.060990076905530495,"预测标签：0（非谣言）
+谣言概率：0.061
+分类置信度：0.939
+判断依据：
+1. 支持非谣言的主要证据：词项'rt'(贡献0.351)、词项'rt USER'(贡献0.302)、词项'hostages hashtag_sydneysiege'(贡献0.260)、词项'sydneysiege URL'(贡献0.238)。
+2. 支持谣言的反向证据：词项'hostages'(贡献0.375)、字符片段'host'(贡献0.323)、字符片段'hos'(贡献0.312)、词项'at'(贡献0.271)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544286688436969472,"thinking of the people in Martin Place in Sydney right now, and for the police, etc having to deal with the situation. so terrifying",0,0,llm_explain,0.37829801905999044,推文使用“thinking of”等情感表达，与同情类非谣言样本一致，未包含具体指控或煽动性断言，符合非谣言特征。,0,0,0.65
+544348392944463872,BREAKING: Australian National Imams Council condemns Sydney siege http://t.co/qFdU4gHjAE,0,0,llm_explain,0.35790820712942617,该推文与相似非谣言样本结构一致，均为权威机构（如Australian Muslim groups）正式谴责事件，语气客观，无煽动性断言；而相似谣言样本虽也使用'condemns'但带有更个人化或标签化表述（如#Sydneysiege），本推文更偏向非谣言特征。,0,0,0.7
+544515072203444224,Breaking News: Police Storm Sydney Cafe Where Hostages Are Held http://t.co/P3f2OV2Gmz,0,1,local,0.7820316659524251,"预测标签：1（谣言）
+谣言概率：0.782
+分类置信度：0.782
+判断依据：
+1. 支持谣言的主要证据：词项'hostages are'(贡献0.807)、词项'held'(贡献0.569)、字符片段'cafe'(贡献0.541)、字符片段'held'(贡献0.529)。
+2. 支持非谣言的反向证据：词项'storm'(贡献0.801)、字符片段'torm'(贡献0.681)、词项'police storm'(贡献0.671)、字符片段'storm'(贡献0.581)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+544478625383608320,"Indians : OMG OMG. Can't believe this. God is Cruel. #sydneysiege  Today, Bomb Blast in Imphal. Indians: Where is Imphal?",0,0,local,0.16172241448454108,"预测标签：0（非谣言）
+谣言概率：0.162
+分类置信度：0.838
+判断依据：
+1. 支持非谣言的主要证据：词项'is'(贡献0.491)、字符片段'is'(贡献0.239)、字符片段'ians'(贡献0.224)、字符片段'ans'(贡献0.222)。
+2. 支持谣言的反向证据：词项'believe this'(贡献0.334)、词项'believe'(贡献0.324)、字符片段'l.'(贡献0.267)、词项'god'(贡献0.243)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+544298334354411521,"“This is obviously a deeply concerning incident,” Australian Prime Minister says on unfolding situation in Sydney. http://t.co/02SVSxOrFt",0,0,llm_explain,0.43308577137367443,推文直接引用澳大利亚总理的官方评论，语气正式客观，与相似非谣言样本（如总理对悉尼人质事件的声明）高度一致，没有煽动性或未证实断言。,0,0,0.72
+544301589931241472,"Australian PM Abbott expected to speak soon on ""reported hostage-taking incident"" in Sydney, @9NewsAUS reports - @WorldNews",0,1,local,0.9495992622413958,"预测标签：1（谣言）
+谣言概率：0.950
+分类置信度：0.950
+判断依据：
+1. 支持谣言的主要证据：词项'hostage'(贡献0.695)、词项'reports'(贡献0.600)、字符片段'repo'(贡献0.471)、字符片段'rep'(贡献0.460)。
+2. 支持非谣言的反向证据：词项'taking'(贡献0.415)、词项'hostage taking'(贡献0.362)、字符片段'aus'(贡献0.124)、字符片段'us'(贡献0.122)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+524975847846203393,NHL says date of rescheduled game TBD. NHL  ``wishes to express its sympathy and prayers to all affected by the tragic events in Ottawa'',1,0,local,0.1082567661891722,"预测标签：0（非谣言）
+谣言概率：0.108
+分类置信度：0.892
+判断依据：
+1. 支持非谣言的主要证据：词项'all'(贡献0.497)、词项'events'(贡献0.496)、词项'to all'(贡献0.271)、词项'wishes'(贡献0.243)。
+2. 支持谣言的反向证据：词项'nhl'(贡献0.452)、字符片段'nhl'(贡献0.260)、字符片段'ed'(贡献0.186)、词项'says'(贡献0.171)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+524965786059026432,"BREAKING NEWS: ONE SOLDIER HAS DIED AFTER OTTAWA SHOOTING, SUSPECT(S) STILL AT LARGE - http://t.co/lXFiYaVImZ",1,1,local,0.9865995733476844,"预测标签：1（谣言）
+谣言概率：0.987
+分类置信度：0.987
+判断依据：
+1. 支持谣言的主要证据：词项'soldier'(贡献1.131)、词项'suspect'(贡献0.760)、字符片段'dier'(贡献0.494)、字符片段'ier'(贡献0.488)。
+2. 支持非谣言的反向证据：词项'breaking news'(贡献0.428)、词项'shooting'(贡献0.332)、字符片段'ng,'(贡献0.192)、词项'URL'(贡献0.139)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+524975642379816960,The NHL announces tonight's game between the #Leafs and #Sens in Ottawa has been postponed,1,1,local,0.8155069906451337,"预测标签：1（谣言）
+谣言概率：0.816
+分类置信度：0.816
+判断依据：
+1. 支持谣言的主要证据：词项'leafs'(贡献0.387)、词项'has been'(贡献0.366)、词项'tonight'(贡献0.355)、字符片段'sen'(贡献0.279)。
+2. 支持非谣言的反向证据：字符片段'ned'(贡献0.221)、字符片段'ns'(贡献0.218)、词项'the'(贡献0.211)、字符片段'ens'(贡献0.185)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+524987990524047361,Ottawa police chief confirms that both gunman and soldier at war memorial are dead.,1,1,local,0.9938052721841144,"预测标签：1（谣言）
+谣言概率：0.994
+分类置信度：0.994
+判断依据：
+1. 支持谣言的主要证据：词项'soldier'(贡献1.352)、词项'dead'(贡献0.669)、词项'gunman'(贡献0.635)、词项'police chief'(贡献0.603)。
+2. 支持非谣言的反向证据：词项'are'(贡献0.278)、字符片段'are'(贡献0.246)、词项'and'(贡献0.214)、字符片段'th'(贡献0.135)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+524955304199352320,"Police confirming a 3rd shooting at Rideau Center here in Ottawa, a popular shopping mall downtown - very tense in city #OttawaStrong",1,1,llm_explain,0.6447539333845377,输入文本与相似谣言样本高度一致，均直接声称“警察确认第3起枪击”，带有未证实断言和紧张语气，而相似非谣言样本仅为祈福表态，缺乏事件细节。,1,1,0.65
+524949021744713728,Ottawa Police report a third shooting incident at the Rideau Centre. No word on injuries.,1,1,local,0.9506883200900152,"预测标签：1（谣言）
+谣言概率：0.951
+分类置信度：0.951
+判断依据：
+1. 支持谣言的主要证据：词项'report'(贡献0.637)、词项'centre'(贡献0.596)、词项'rideau centre'(贡献0.565)、词项'rideau'(贡献0.507)。
+2. 支持非谣言的反向证据：词项'at the'(贡献0.531)、词项'shooting'(贡献0.289)、词项'shooting incident'(贡献0.216)、字符片段'thi'(贡献0.163)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+524995771587108864,This afternoon we've lowered our flags to half mast in honour of the Canadian Reservist who lost his life in Ottawa. http://t.co/3oTF5sd2Lf,1,0,llm_explain,0.2221109912612076,推文描述降半旗纪念渥太华遇难军人，与相似的非谣言样本（如麦克马斯特大学降半旗）内容一致，文本无虚假迹象，本地模型判断可靠。,0,0,0.7779
+525067500447612929,RIP Cpl. Nathan Cirillo today's tragic events put all in perspective #OttawaShooting #HeroesInLife @CanadianForces http://t.co/B7ggJBbZvE,1,1,llm_explain,0.6141543067116667,文本用词与相似谣言样本高度一致，如直接提及“RIP Cpl. Nathan Cirillo”，其措辞和情感模式（哀悼+事件放置）更接近已标记为谣言的悼念推文，而非非谣言样本中概括性表述。,1,1,0.6142
+524944544681705472,Ottawa police: Actively looking for one or more suspects in Canadian parliament shooting. http://t.co/UQ4xo5jvhF,1,1,local,0.7014174091768354,"预测标签：1（谣言）
+谣言概率：0.701
+分类置信度：0.701
+判断依据：
+1. 支持谣言的主要证据：词项'canadian parliament'(贡献0.409)、字符片段'sus'(贡献0.374)、字符片段'susp'(贡献0.362)、词项'one or'(贡献0.348)。
+2. 支持非谣言的反向证据：词项'shooting URL'(贡献0.633)、词项'shooting'(贡献0.343)、词项'or'(贡献0.335)、词项'parliament shooting'(贡献0.316)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+524953604717686784,CANADIAN OFFICIALS NOW CALLING TODAY'S PARLIAMENT SHOOTING A TERRORIST ATTACK - http://t.co/5VYMWGWyx3 http://t.co/jQn39E7hTA,1,1,llm_explain,0.5094968815417252,文本使用大写断言‘CANADIAN OFFICIALS NOW CALLING’类似相似谣言样本的‘#BREAKING’风格，具有煽动性；而相似非谣言样本为客观描述，如‘What we know so far’，因此更倾向于谣言。,1,1,0.55
+524956294395224064,Here are the 3 locations of shootings in #Ottawa around Parliament Hill (GoofleEarth) From: @CNNJason http://t.co/DSyNgBC02U,1,0,llm_explain,0.2675059359074947,推文引用了CNN来源并提供了链接，虽然提到了多地点枪击事件，但最相似的训练样本是提醒行为（非谣言），且本地模型倾向非谣言，因此判断为事实报道而非谣言。,0,0,0.8
+524935085863481344,Witnesses say several dozen shots fired inside Parliament buildings after Canadian soldier shot at nearby War Memorial. #Ottawa #cdnpoli,1,1,local,0.9848031933534905,"预测标签：1（谣言）
+谣言概率：0.985
+分类置信度：0.985
+判断依据：
+1. 支持谣言的主要证据：词项'soldier'(贡献0.923)、词项'several'(贡献0.706)、字符片段'shot'(贡献0.567)、词项'shot'(贡献0.555)。
+2. 支持非谣言的反向证据：字符片段'ses'(贡献0.145)、字符片段'sses'(贡献0.121)、词项'dozen'(贡献0.098)、词项'witnesses'(贡献0.087)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+525058976376193024,Our thoughts and prayers go out to Nathan Cirillo who died today in Ottawa while protecting his country at age 24 http://t.co/PfwasSALPX,1,0,llm_explain,0.43006378980435356,推文表达对牺牲士兵的哀悼，与相似非谣言样本高度一致，无煽动性或未证实断言，因此为非谣言。,0,0,0.72
+524949315245322241,Gun fire exchange in Parliament Hill building #Ottawa #parliament #shooting #Canada #BeSafeOttawa -https://t.co/9RDjNvVkJW via @martinvass2,1,1,local,0.7949608554245748,"预测标签：1（谣言）
+谣言概率：0.795
+分类置信度：0.795
+判断依据：
+1. 支持谣言的主要证据：词项'in parliament'(贡献0.524)、词项'parliament'(贡献0.359)、词项'hill building'(贡献0.293)、字符片段'fire'(贡献0.247)。
+2. 支持非谣言的反向证据：词项'shooting'(贡献0.292)、字符片段'bes'(贡献0.200)、字符片段'saf'(贡献0.183)、字符片段'safe'(贡献0.183)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+524926279309860864,"Shots are fired outside Canadian parliament in Ottawa and a soldier is wounded, local media report http://t.co/Ygpjna1CRG",1,1,local,0.9635852686733211,"预测标签：1（谣言）
+谣言概率：0.964
+分类置信度：0.964
+判断依据：
+1. 支持谣言的主要证据：词项'soldier'(贡献1.087)、词项'report'(贡献0.703)、词项'shots'(贡献0.555)、字符片段'dier'(贡献0.448)。
+2. 支持非谣言的反向证据：词项'is'(贡献0.336)、词项'media'(贡献0.321)、字符片段'd,'(贡献0.229)、词项'are'(贡献0.224)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+524943812339437569,Global News camera man reporting shots fired by Chateau Laurier hotel #ottawa,1,1,local,0.8125261758981202,"预测标签：1（谣言）
+谣言概率：0.813
+分类置信度：0.813
+判断依据：
+1. 支持谣言的主要证据：词项'shots'(贡献0.684)、词项'shots fired'(贡献0.435)、字符片段'ier'(贡献0.401)、字符片段'repo'(贡献0.390)。
+2. 支持非谣言的反向证据：词项'hotel'(贡献0.299)、词项'global'(贡献0.180)、词项'chateau'(贡献0.158)、词项'chateau laurier'(贡献0.158)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+524947424482435073,"#BREAKING: Shooter is dead, according to sources on Parliament Hill",1,1,local,0.9802805889305285,"预测标签：1（谣言）
+谣言概率：0.980
+分类置信度：0.980
+判断依据：
+1. 支持谣言的主要证据：词项'shooter'(贡献1.090)、词项'dead'(贡献0.728)、词项'breaking'(贡献0.618)、词项'shooter is'(贡献0.554)。
+2. 支持非谣言的反向证据：词项'is'(贡献0.454)、字符片段'd,'(贡献0.242)、字符片段'is'(贡献0.220)、词项'to'(贡献0.182)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+525026715123601408,"Cpl. Nathan Cirillo identified as soldier shot, killed in Ottawa today, aunt says - @globeandmail http://t.co/oVrp10U6uG",1,1,local,0.9939299592770242,"预测标签：1（谣言）
+谣言概率：0.994
+分类置信度：0.994
+判断依据：
+1. 支持谣言的主要证据：词项'soldier'(贡献1.149)、词项'killed in'(贡献0.839)、词项'nathan cirillo'(贡献0.799)、词项'cirillo'(贡献0.796)。
+2. 支持非谣言的反向证据：词项'identified as'(贡献0.284)、词项'shot killed'(贡献0.247)、词项'today'(贡献0.190)、字符片段'ay,'(贡献0.170)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+524983146266505216,Ottawa police confirm 1 male shooting suspect died; no one in custody - @OttawaPolice http://t.co/9emMsGE1FZ,1,1,local,0.85882863655652,"预测标签：1（谣言）
+谣言概率：0.859
+分类置信度：0.859
+判断依据：
+1. 支持谣言的主要证据：词项'suspect'(贡献0.858)、词项'confirm'(贡献0.502)、字符片段'sus'(贡献0.401)、字符片段'susp'(贡献0.388)。
+2. 支持非谣言的反向证据：词项'shooting'(贡献0.374)、词项'URL'(贡献0.157)、词项'male'(贡献0.139)、词项'USER URL'(贡献0.130)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+525055879545380864,Our thoughts are with the family and friends of Cpl. Nathan Cirillo and all those affected by the events in Ottawa today. #OttawaStrong,1,0,llm_explain,0.2179259486095532,推文表达对Ottawa事件的哀悼和慰问，属于事实陈述，没有不实信息；相似训练样本均为非谣言，与本地模型判断一致。,0,0,0.78
+524965775036387329,"Hero. @affanchowdhry: Kevin Vickers, head of security in parliament, being credited for taking down shooter #Ottawa http://t.co/rVYetE0KYq""",1,1,llm_explain,0.6917939114284426,推文话术与相似谣言样本一致，使用'hero'和'shooter'等煽动性词汇，强调未证实英雄行为，具有典型谣言特征。,1,1,0.69
+525026592788348929,Ottawa shooting suspect named as Michael Zehaf-Bibeau – 2 U.S. sources tell ABC News.,1,1,local,0.990138295587022,"预测标签：1（谣言）
+谣言概率：0.990
+分类置信度：0.990
+判断依据：
+1. 支持谣言的主要证据：词项'suspect'(贡献0.777)、词项'named'(贡献0.674)、词项'bibeau'(贡献0.563)、词项'michael'(贡献0.545)。
+2. 支持非谣言的反向证据：词项'shooting'(贡献0.339)、字符片段's.'(贡献0.124)、词项'ottawa'(贡献0.101)、字符片段'ne'(贡献0.090)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+524966904885428226,BREAKING UPDATE: Canadian soldier injured at Parliament Hill shooting dies http://t.co/Zp9AKplH9p  #Ottawa,1,1,local,0.9931475628106075,"预测标签：1（谣言）
+谣言概率：0.993
+分类置信度：0.993
+判断依据：
+1. 支持谣言的主要证据：词项'soldier'(贡献1.218)、词项'injured'(贡献0.747)、词项'canadian soldier'(贡献0.532)、词项'breaking'(贡献0.512)。
+2. 支持非谣言的反向证据：词项'shooting'(贡献0.357)、词项'URL'(贡献0.150)、词项'ottawa'(贡献0.106)、词项'hill shooting'(贡献0.098)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+525039208139087872,DEVELOPING: #Canada officials identify dead gunman in Parliament shooting as Michael Zehaf-Bibeau. http://t.co/pfaAxISVyR,1,1,local,0.9868274405593379,"预测标签：1（谣言）
+谣言概率：0.987
+分类置信度：0.987
+判断依据：
+1. 支持谣言的主要证据：词项'in parliament'(贡献0.581)、词项'dead'(贡献0.546)、词项'bibeau'(贡献0.538)、词项'michael'(贡献0.520)。
+2. 支持非谣言的反向证据：词项'shooting'(贡献0.324)、词项'parliament shooting'(贡献0.299)、词项'URL'(贡献0.136)、词项'canada'(贡献0.128)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+524931110279852032,"Soldier shot, Parliament locked down after gunfire erupts at war memorial. Developing story: http://t.co/ULAKX3dYO1 http://t.co/o5P3RDYb8C",1,1,local,0.9923800993995263,"预测标签：1（谣言）
+谣言概率：0.992
+分类置信度：0.992
+判断依据：
+1. 支持谣言的主要证据：词项'soldier'(贡献1.165)、词项'shot'(贡献0.701)、词项'down'(贡献0.657)、词项'gunfire'(贡献0.511)。
+2. 支持非谣言的反向证据：词项'URL'(贡献0.244)、词项'locked down'(贡献0.089)、字符片段'me'(贡献0.078)、字符片段'stor'(贡献0.077)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+525036214286815232,Gut-wrenching to hear the soldier guarding our national war memorial has died. Rest in peace Cpl Nathan Cirillo #OttawaShooting #NeverForget,1,1,local,0.9647457195261026,"预测标签：1（谣言）
+谣言概率：0.965
+分类置信度：0.965
+判断依据：
+1. 支持谣言的主要证据：词项'soldier'(贡献0.846)、词项'nathan cirillo'(贡献0.589)、词项'cirillo'(贡献0.586)、词项'nathan'(贡献0.585)。
+2. 支持非谣言的反向证据：词项'our'(贡献0.275)、字符片段'est'(贡献0.181)、字符片段'our'(贡献0.173)、字符片段'ching'(贡献0.126)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+524957647653863424,"Harper to make statement today after gunman shot dead in #Parliament. PM safe, not on Parliament Hill, being briefed by security officials.",1,1,local,0.8412356917404057,"预测标签：1（谣言）
+谣言概率：0.841
+分类置信度：0.841
+判断依据：
+1. 支持谣言的主要证据：词项'shot'(贡献0.532)、词项'statement'(贡献0.452)、词项'dead'(贡献0.439)、词项'gunman'(贡献0.416)。
+2. 支持非谣言的反向证据：词项'safe'(贡献0.604)、词项'briefed'(贡献0.328)、字符片段'saf'(贡献0.270)、字符片段'safe'(贡献0.270)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+524952883343925249,Watch video showing gunfire inside Canada's parliament in Ottawa http://t.co/CJpXNAk8nS http://t.co/hxwr2NEr2K,1,1,local,0.9217829412858464,"预测标签：1（谣言）
+谣言概率：0.922
+分类置信度：0.922
+判断依据：
+1. 支持谣言的主要证据：词项'inside'(贡献0.707)、词项'canada parliament'(贡献0.707)、词项'gunfire'(贡献0.606)、词项'parliament in'(贡献0.565)。
+2. 支持非谣言的反向证据：词项'ottawa URL'(贡献0.454)、词项'URL'(贡献0.287)、词项'watch video'(贡献0.212)、词项'canada'(贡献0.161)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+524956372199555072,"Map of areas where Ottawa shootings were reported: National War Memorial, near the Rideau Centre and Parliament Hill. http://t.co/NcfNCR5VCV",1,1,local,0.9741107286710915,"预测标签：1（谣言）
+谣言概率：0.974
+分类置信度：0.974
+判断依据：
+1. 支持谣言的主要证据：词项'were'(贡献0.635)、词项'centre'(贡献0.572)、词项'rideau centre'(贡献0.541)、词项'rideau'(贡献0.486)。
+2. 支持非谣言的反向证据：词项'map of'(贡献0.297)、词项'memorial near'(贡献0.164)、词项'and'(贡献0.149)、词项'the'(贡献0.125)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+525021083892994049,Rest in peace Cpl. Nathan Cirillo via @globeandmail #ottawashooting http://t.co/voEK2MZpfR http://t.co/sMpeSGv4HY,1,1,local,0.8859162320306119,"预测标签：1（谣言）
+谣言概率：0.886
+分类置信度：0.886
+判断依据：
+1. 支持谣言的主要证据：词项'nathan cirillo'(贡献0.798)、词项'cirillo'(贡献0.794)、词项'nathan'(贡献0.793)、词项'cpl'(贡献0.712)。
+2. 支持非谣言的反向证据：字符片段'est'(贡献0.303)、词项'URL'(贡献0.237)、字符片段'ia'(贡献0.174)、字符片段'peac'(贡献0.158)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+525040408653754368,"BREAKING NEWS: Suspected Ottawa gunman identified as Michael Joseph Hall, an #ISIS sympathizer. #OttawaShooting",1,1,local,0.8948328774333419,"预测标签：1（谣言）
+谣言概率：0.895
+分类置信度：0.895
+判断依据：
+1. 支持谣言的主要证据：词项'hall'(贡献0.524)、词项'isis'(贡献0.479)、词项'michael'(贡献0.446)、词项'gunman'(贡献0.445)。
+2. 支持非谣言的反向证据：词项'breaking news'(贡献0.359)、词项'identified as'(贡献0.234)、词项'gunman identified'(贡献0.228)、词项'suspected'(贡献0.148)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+524980744658382848,"#RCMP to hold news conference on #Ottawa shootings at 2 pm ET, 11 am PT. Watch live coverage @ http://t.co/kngapKTSCe",1,1,local,0.8308836630436688,"预测标签：1（谣言）
+谣言概率：0.831
+分类置信度：0.831
+判断依据：
+1. 支持谣言的主要证据：词项'news conference'(贡献0.511)、字符片段'hold'(贡献0.343)、字符片段'nce'(贡献0.337)、词项'hold'(贡献0.301)。
+2. 支持非谣言的反向证据：词项'coverage URL'(贡献0.326)、字符片段'11'(贡献0.287)、字符片段'ove'(贡献0.220)、词项'coverage'(贡献0.192)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+524959836778536961,UPDATE: Ottawa police confirm gunman in Canada shooting shot and killed. Search on for possible additional gunmen. http://t.co/sV7ZH50tlf,1,1,local,0.9660794020692659,"预测标签：1（谣言）
+谣言概率：0.966
+分类置信度：0.966
+判断依据：
+1. 支持谣言的主要证据：词项'shot'(贡献0.716)、词项'gunman'(贡献0.559)、字符片段'shot'(贡献0.495)、字符片段'gunm'(贡献0.474)。
+2. 支持非谣言的反向证据：词项'shooting'(贡献0.349)、词项'on for'(贡献0.212)、词项'and'(贡献0.189)、词项'URL'(贡献0.146)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+524991844292521984,Ottawa Police won't say if there are still suspects at large; say it is still an active operation - live video http://t.co/aF9HyT9BgX,1,1,llm_explain,0.6035538703905808,推文使用“won't say”等不确定措辞，与相似谣言样本中“still at large”等未证实断言相似，且本地模型倾向谣言。,1,1,0.55
+525039876366798849,Let #NathanCirillo be remembered like this.The part time soldier doing his job &amp; bringing a little happiness #Ottawa http://t.co/GPCfrq1uI3,1,1,local,0.7858986485460301,"预测标签：1（谣言）
+谣言概率：0.786
+分类置信度：0.786
+判断依据：
+1. 支持谣言的主要证据：词项'soldier'(贡献1.164)、词项'time'(贡献0.568)、词项'his'(贡献0.370)、字符片段'illo'(贡献0.367)。
+2. 支持非谣言的反向证据：词项'be'(贡献0.391)、词项'ottawa URL'(贡献0.382)、词项'like'(贡献0.303)、词项'this'(贡献0.260)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+524981513637888000,UPDATE: This morning’s shooting incidents occurred at the National War Memorial and on Parliament Hill.  Not Rideau Centre. #ottnews,1,1,local,0.9328061372548117,"预测标签：1（谣言）
+谣言概率：0.933
+分类置信度：0.933
+判断依据：
+1. 支持谣言的主要证据：词项'centre'(贡献0.602)、词项'rideau centre'(贡献0.570)、词项'rideau'(贡献0.511)、词项'memorial and'(贡献0.327)。
+2. 支持非谣言的反向证据：词项'at the'(贡献0.535)、词项'shooting'(贡献0.291)、词项'not'(贡献0.228)、词项'this'(贡献0.222)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+524958227768020992,BREAKING: Two new patients coming to Ottawa hospital civic campus. One with gunshot wounds. Just confirmed #ottnews,1,1,local,0.9393485377766746,"预测标签：1（谣言）
+谣言概率：0.939
+分类置信度：0.939
+判断依据：
+1. 支持谣言的主要证据：词项'two'(贡献0.807)、字符片段'two'(贡献0.651)、词项'ottawa hospital'(贡献0.442)、词项'hospital'(贡献0.401)。
+2. 支持非谣言的反向证据：字符片段'ents'(贡献0.168)、词项'new'(贡献0.145)、字符片段'com'(贡献0.132)、字符片段'nts'(贡献0.121)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+524932935137628160,The gunman in Ottawa has been shot and killed. I'm at a loss for words this morning. That isn't my Canada.,1,1,local,0.7590389989104843,"预测标签：1（谣言）
+谣言概率：0.759
+分类置信度：0.759
+判断依据：
+1. 支持谣言的主要证据：词项'shot'(贡献0.621)、字符片段'shot'(贡献0.551)、词项'gunman'(贡献0.485)、词项'the gunman'(贡献0.458)。
+2. 支持非谣言的反向证据：词项'my'(贡献0.639)、字符片段'my'(贡献0.482)、词项'this'(贡献0.231)、字符片段'this'(贡献0.198)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+525005886272843776,Kevin Vickers hailed as hero who took down attacker at Parliament Hill: http://t.co/sG70iQtfSM #cbcOTT #OTTnews http://t.co/zuSOkiOzck,1,1,local,0.8957141119455102,"预测标签：1（谣言）
+谣言概率：0.896
+分类置信度：0.896
+判断依据：
+1. 支持谣言的主要证据：词项'down'(贡献0.457)、词项'took'(贡献0.365)、字符片段'took'(贡献0.306)、词项'hero'(贡献0.305)。
+2. 支持非谣言的反向证据：词项'URL'(贡献0.167)、词项'URL hashtag_cbcott'(贡献0.138)、字符片段'att'(贡献0.106)、字符片段'ers'(贡献0.085)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+525028522361114625,"Ottawa shooting: Nathan Cirillo, reservist from Hamilton, killed in attack http://t.co/cUzepktlxx http://t.co/hqR6R0q9jl",1,1,local,0.9399991825552294,"预测标签：1（谣言）
+谣言概率：0.940
+分类置信度：0.940
+判断依据：
+1. 支持谣言的主要证据：词项'killed in'(贡献0.925)、词项'nathan cirillo'(贡献0.883)、词项'cirillo'(贡献0.880)、词项'nathan'(贡献0.879)。
+2. 支持非谣言的反向证据：词项'shooting'(贡献0.372)、词项'from'(贡献0.270)、词项'URL'(贡献0.265)、词项'attack'(贡献0.213)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+525062993898635264,Rest In Peace Corporal Nathan Cirillo.   #Respect  #Ottawa  #Canada  #tcot http://t.co/1mIBOBohd4,1,1,local,0.8491368626418442,"预测标签：1（谣言）
+谣言概率：0.849
+分类置信度：0.849
+判断依据：
+1. 支持谣言的主要证据：词项'nathan cirillo'(贡献0.723)、词项'cirillo'(贡献0.719)、词项'nathan'(贡献0.718)、字符片段'pect'(贡献0.329)。
+2. 支持非谣言的反向证据：字符片段'est'(贡献0.213)、字符片段'res'(贡献0.153)、词项'respect'(贡献0.151)、词项'URL'(贡献0.127)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+524976486902951936,Map of three #Ottawa locations where police say shots have been fired http://t.co/QrP5bauJcR http://t.co/nutT2VYvpD,1,1,llm_explain,0.6320369450420446,推文与谣言样本高度相似（如'Shots were fired at three separate locations'），均包含'three'和'shots'等煽动性词项且断言未经证实，具有明显谣言特征。,1,1,0.632
+524947964620701696,Some Leaf players say they heard shots this morning from the Tomb of the Unknown Soldier. Scary events in Ottawa,1,1,local,0.7046370415215738,"预测标签：1（谣言）
+谣言概率：0.705
+分类置信度：0.705
+判断依据：
+1. 支持谣言的主要证据：词项'soldier'(贡献1.062)、词项'shots'(贡献0.542)、字符片段'sold'(贡献0.380)、字符片段'shot'(贡献0.343)。
+2. 支持非谣言的反向证据：词项'events'(贡献0.570)、词项'the'(贡献0.239)、词项'this'(贡献0.237)、词项'from'(贡献0.226)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+525040509937795072,RIP Corporal Nathan Cirillo Thank you for serving our country. Gone but never forgotten #OttawaShooting http://t.co/51dY4VTp2K,1,1,local,0.7366912553104995,"预测标签：1（谣言）
+谣言概率：0.737
+分类置信度：0.737
+判断依据：
+1. 支持谣言的主要证据：词项'nathan cirillo'(贡献0.659)、词项'cirillo'(贡献0.656)、词项'nathan'(贡献0.655)、词项'rip'(贡献0.613)。
+2. 支持非谣言的反向证据：字符片段'you'(贡献0.383)、词项'you'(贡献0.353)、词项'our'(贡献0.308)、字符片段'ou'(贡献0.225)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+525045145079533568,.@pmharper and I have been speaking to some of our allies around the world. The PM will address the nation this evening. #OttawaShooting,1,0,local,0.17892549112211123,"预测标签：0（非谣言）
+谣言概率：0.179
+分类置信度：0.821
+判断依据：
+1. 支持非谣言的主要证据：词项'around the'(贡献0.385)、词项'our'(贡献0.324)、词项'the'(贡献0.278)、字符片段'our'(贡献0.224)。
+2. 支持谣言的反向证据：词项'address'(贡献0.442)、词项'nation'(贡献0.355)、词项'pm'(贡献0.255)、词项'been'(贡献0.236)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+525025279803424768,The soldier shot dead in Wednesday's Ottawa attacks has been named as Cpl. Nathan Cirillo of #HamOnt #ottawashooting http://t.co/MxLMptnlWw,1,1,local,0.9936827259429876,"预测标签：1（谣言）
+谣言概率：0.994
+分类置信度：0.994
+判断依据：
+1. 支持谣言的主要证据：词项'soldier'(贡献0.875)、词项'nathan cirillo'(贡献0.609)、词项'cirillo'(贡献0.606)、词项'nathan'(贡献0.605)。
+2. 支持非谣言的反向证据：字符片段'mon'(贡献0.173)、词项'the'(贡献0.115)、词项'of'(贡献0.112)、词项'URL'(贡献0.107)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+524981689781870593,One shooting victim succumbed to injuries. He was a member of the Canadian Forces. Our thoughts and prayers are with him and his loved ones.,1,0,llm_explain,0.2473922506169208,推文内容为陈述事实并表达慰问，没有夸张或矛盾；本地模型和相似样本均支持非谣言。,0,0,0.7526
+525040492388823041,"Kurdistan is with you Canada &amp; Israel, we are fighting ISIS right now. #TwitterKurds #Ottawa #Jerusalem #Kobane ISIL http://t.co/X8bW6SIeFD",0,0,local,0.135589953580092,"预测标签：0（非谣言）
+谣言概率：0.136
+分类置信度：0.864
+判断依据：
+1. 支持非谣言的主要证据：词项'we'(贡献0.563)、词项'you'(贡献0.494)、词项'is'(贡献0.409)、词项'we are'(贡献0.389)。
+2. 支持谣言的反向证据：词项'isis'(贡献0.669)、词项'now'(贡献0.401)、字符片段'isi'(贡献0.313)、词项'jerusalem'(贡献0.234)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+524969431534153728,Ottawa youth: If you need to talk: 24/7 Crisis Line 613-260-2360 or 1-877-377-7775 (toll free for Eastern Ontario) crisis@ysb.on.ca,0,0,local,0.11999902512108224,"预测标签：0（非谣言）
+谣言概率：0.120
+分类置信度：0.880
+判断依据：
+1. 支持非谣言的主要证据：字符片段'you'(贡献0.551)、词项'need'(贡献0.423)、词项'you'(贡献0.351)、字符片段'need'(贡献0.333)。
+2. 支持谣言的反向证据：词项'talk'(贡献0.496)、词项'to talk'(贡献0.303)、字符片段'isis'(贡献0.273)、字符片段'ree'(贡献0.263)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+525063393309630464,VIDEO: Key moments in today's Parliament Hill shootings. http://t.co/kR1mIPoJJg http://t.co/6gYfgPTH7q,0,0,llm_explain,0.43205252536036404,输入文本与相似谣言样本高度一致（相似度0.58、0.51），均使用‘shootings’、‘Video’等未证实断言词，且语气相比非谣言样本更具煽动性，故判断为谣言。,0,1,0.62
+524968185016360960,"#Leafs Joffrey Lupul praises officers in Ottawa, as team remains in lock down http://t.co/OPooNxTsiv http://t.co/yBjIu2JaaP",0,0,llm_explain,0.4344093961595457,该推文描述猛龙队成员赞扬渥太华官员以及球队封锁状态，语言客观，与相似的非谣言样本（如“Leafs are currently in lockdown mode”）一致，缺乏煽动性或未证实断言。,0,0,0.5656
+524979070288019456,"Prayers for those in Ottawa, hope all is resolved soon...",0,0,local,0.10564728683972947,"预测标签：0（非谣言）
+谣言概率：0.106
+分类置信度：0.894
+判断依据：
+1. 支持非谣言的主要证据：词项'all'(贡献0.737)、词项'hope'(贡献0.496)、词项'is'(贡献0.424)、词项'those'(贡献0.354)。
+2. 支持谣言的反向证据：词项'resolved'(贡献0.274)、词项'soon'(贡献0.267)、字符片段'sol'(贡献0.228)、字符片段'reso'(贡献0.195)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+525068253341970432,"What an awful day in Ottawa. Thoughts and prayers are with our @Senators family, the entire city of Ottawa and all of Canada.",0,0,local,0.01835176807367624,"预测标签：0（非谣言）
+谣言概率：0.018
+分类置信度：0.982
+判断依据：
+1. 支持非谣言的主要证据：词项'all'(贡献0.470)、词项'thoughts'(贡献0.291)、词项'our'(贡献0.284)、词项'what'(贡献0.283)。
+2. 支持谣言的反向证据：词项'prayers are'(贡献0.623)、词项'thoughts and'(贡献0.241)、字符片段'ire'(贡献0.179)、词项'of ottawa'(贡献0.173)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+524924987774631936,#BREAKING: Shooting reported at the War Memorial in Ottawa,0,1,local,0.9063354426973625,"预测标签：1（谣言）
+谣言概率：0.906
+分类置信度：0.906
+判断依据：
+1. 支持谣言的主要证据：词项'breaking'(贡献0.658)、字符片段'repo'(贡献0.583)、字符片段'rep'(贡献0.570)、词项'at'(贡献0.470)。
+2. 支持非谣言的反向证据：词项'at the'(贡献0.844)、词项'shooting'(贡献0.458)、词项'the war'(贡献0.285)、词项'the'(贡献0.207)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
+524974900017373184,"Just hearing the news, thoughts today are back home with the citizens and dedicated public servants in Ottawa and across the country.",0,0,local,0.02775242316782922,"预测标签：0（非谣言）
+谣言概率：0.028
+分类置信度：0.972
+判断依据：
+1. 支持非谣言的主要证据：词项'public'(贡献0.511)、词项'thoughts'(贡献0.335)、词项'the'(贡献0.280)、词项'across'(贡献0.273)。
+2. 支持谣言的反向证据：词项'hearing'(贡献0.257)、词项'with the'(贡献0.201)、字符片段'rin'(贡献0.153)、字符片段'ted'(贡献0.150)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+524950455743291392,Thinking about everyone in Ottawa right now. Please be careful and stay safe until the situation is under control.,0,0,local,0.015425565987887977,"预测标签：0（非谣言）
+谣言概率：0.015
+分类置信度：0.985
+判断依据：
+1. 支持非谣言的主要证据：词项'safe'(贡献0.649)、词项'about'(贡献0.514)、词项'situation is'(贡献0.507)、字符片段'safe'(贡献0.427)。
+2. 支持谣言的反向证据：词项'now'(贡献0.288)、字符片段'con'(贡献0.278)、词项'and stay'(贡献0.209)、字符片段'l.'(贡献0.208)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+525050193360613376,"Sad about #OttawaShooting. Worse, shooter might b guy who calls himself Muslim. Pls world dont judge 1.5 billion Muslims by some extremists.",0,0,local,0.13056259929467687,"预测标签：0（非谣言）
+谣言概率：0.131
+分类置信度：0.869
+判断依据：
+1. 支持非谣言的主要证据：词项'about'(贡献0.540)、词项'muslims'(贡献0.414)、词项'world'(贡献0.219)、字符片段'bout'(贡献0.191)。
+2. 支持谣言的反向证据：词项'shooter'(贡献0.741)、词项'calls'(贡献0.363)、词项'might'(贡献0.320)、字符片段'sho'(贡献0.286)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+524955388190662657,Shot from inside caucus room after shooting @ctvottawa #ottawashooting. http://t.co/JjEWpnbUW7,0,0,llm_explain,0.23379411807211659,文本描述事件现场照片，与多个相似训练样本（均为非谣言）一致，且本地模型偏向非谣言，无显著文本线索表明是虚假信息。,0,0,0.85
+524985046198157313,Stay safe Ottawa...world is getting worse by the minute...like seriously society needs to figure it out #PrayForOttawa,0,0,local,0.07040151536340387,"预测标签：0（非谣言）
+谣言概率：0.070
+分类置信度：0.930
+判断依据：
+1. 支持非谣言的主要证据：词项'safe'(贡献0.652)、字符片段'safe'(贡献0.328)、词项'is'(贡献0.296)、字符片段'saf'(贡献0.252)。
+2. 支持谣言的反向证据：词项'out'(贡献0.237)、字符片段'oro'(贡献0.233)、词项'minute'(贡献0.156)、字符片段'fi'(贡献0.136)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+524934897367285760,To those asking - yes I'm OK. Awful events here in Ottawa.,0,0,local,0.0495025044128671,"预测标签：0（非谣言）
+谣言概率：0.050
+分类置信度：0.950
+判断依据：
+1. 支持非谣言的主要证据：词项'events'(贡献0.840)、词项'asking'(贡献0.534)、词项'ok'(贡献0.483)、词项'those'(贡献0.404)。
+2. 支持谣言的反向证据：字符片段'i'm'(贡献0.315)、词项'here in'(贡献0.249)、字符片段'ere'(贡献0.193)、字符片段'hos'(贡献0.191)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+525030331775463424,"Atlantic #cadet programs cancelled, other cadets advised to not wear uniform but show up in business casual. #OttawaShooting",0,0,llm_explain,0.31192700072937907,该推文表述为具体事件通知（cadet programs取消及着装建议），语气客观，与相似非谣言样本（如提醒提醒类）一致，未发现煽动性或未证实断言。,0,0,0.6881
+524980483479076864,"Harden, Howard again named best at position in 2014-15 NBA GM Survey. Story: http://t.co/rX94nO5V60 http://t.co/MXQayqVPlT",0,0,llm_explain,0.32503191004990223,推文为客观体育新闻，类似于非谣言样本的报道语气，无煽动性或未证实断言，因此判断为非谣言。,0,0,0.675
+524967231902318592,Our thoughts and prayers are with those affected by the shootings in Ottawa. Stay safe! #PrayForOttawa,0,0,local,0.1074624045273379,"预测标签：0（非谣言）
+谣言概率：0.107
+分类置信度：0.893
+判断依据：
+1. 支持非谣言的主要证据：词项'safe'(贡献0.658)、词项'thoughts'(贡献0.320)、词项'our'(贡献0.312)、字符片段'pray'(贡献0.311)。
+2. 支持谣言的反向证据：词项'prayers are'(贡献0.687)、词项'shootings in'(贡献0.409)、字符片段'oro'(贡献0.278)、词项'thoughts and'(贡献0.267)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+524948710812581888,"Easty for me to say from where I am, but what should happen, tomorrow or when this is over, is for people to assemble on Parliament HIll…",0,0,local,0.043944317402135856,"预测标签：0（非谣言）
+谣言概率：0.044
+分类置信度：0.956
+判断依据：
+1. 支持非谣言的主要证据：词项'is over'(贡献0.931)、词项'over'(贡献0.582)、词项'is'(贡献0.480)、词项'to say'(贡献0.390)。
+2. 支持谣言的反向证据：词项'on parliament'(贡献0.294)、词项'am'(贡献0.255)、字符片段'sho'(贡献0.240)、词项'parliament'(贡献0.194)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+524987263835721728,Prayers to Ottawa. #PrayForOttawa http://t.co/HOaNBdifHf,0,0,llm_explain,0.22530933671090703,推文仅表达祈祷和爱心标签，无具体事件指控；本地模型非谣言证据得分高，且相似样本多为非谣言祈祷类文本。,0,0,0.7747
+525034457086959616,True north STRONG and free. Stay safe Ottawa. #PrayForOttawa #CanadaStrong 📕🍁📕 http://t.co/q5doY0TQ72,0,0,local,0.14285114251659925,"预测标签：0（非谣言）
+谣言概率：0.143
+分类置信度：0.857
+判断依据：
+1. 支持非谣言的主要证据：词项'safe'(贡献0.670)、字符片段'safe'(贡献0.334)、字符片段'rong'(贡献0.286)、字符片段'saf'(贡献0.257)。
+2. 支持谣言的反向证据：字符片段'oro'(贡献0.239)、字符片段'tru'(贡献0.121)、词项'hashtag_prayforottawa'(贡献0.117)、词项'hashtag_prayforottawa prayforottawa'(贡献0.117)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+524979179235069952,Remembrance Day ceremony in Ottawa is emotional every year. Can't imagine what it will be like this year. The entire country may be there.,0,0,local,0.0858011674762037,"预测标签：0（非谣言）
+谣言概率：0.086
+分类置信度：0.914
+判断依据：
+1. 支持非谣言的主要证据：词项'be'(贡献0.511)、词项'what'(贡献0.291)、词项'is'(贡献0.277)、词项'like'(贡献0.234)。
+2. 支持谣言的反向证据：字符片段'nce'(贡献0.263)、字符片段'ery'(贡献0.251)、字符片段'ce'(贡献0.188)、字符片段'ry'(贡献0.142)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+524958741259886592,BREAKING: Four Blackwater guards convicted of voluntary manslaughter in 2007 Baghdad shooting http://t.co/hR7xe18RJ2,0,0,llm_explain,0.32766629088974764,推文内容与相似真实新闻高度一致，均报道黑水安保人员2007年巴格达枪击案被定罪的事实，无煽动或未证实断言。本地模型非谣言证据充分，因此判断为非谣言。,0,0,0.95
+524976313766273025,"Thinking of Layton's words: ""Love is better than anger. Hope is better than fear. Optimism is better than despair."" #ottawashooting",0,0,local,0.08305884336429271,"预测标签：0（非谣言）
+谣言概率：0.083
+分类置信度：0.917
+判断依据：
+1. 支持非谣言的主要证据：词项'than'(贡献0.666)、词项'is'(贡献0.625)、词项'thinking'(贡献0.355)、词项'hope'(贡献0.349)。
+2. 支持谣言的反向证据：字符片段'than'(贡献0.209)、词项'better'(贡献0.167)、字符片段'was'(贡献0.157)、字符片段'sho'(贡献0.152)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+524970142719963136,Our prayers go to victims of the #Ottawa shooting.,0,0,local,0.057220910225276034,"预测标签：0（非谣言）
+谣言概率：0.057
+分类置信度：0.943
+判断依据：
+1. 支持非谣言的主要证据：词项'our'(贡献0.457)、词项'shooting'(贡献0.412)、字符片段'our'(贡献0.381)、词项'prayers go'(贡献0.309)。
+2. 支持谣言的反向证据：字符片段'sho'(贡献0.419)、字符片段'sh'(贡献0.224)、词项'ottawa shooting'(贡献0.213)、字符片段'ms'(贡献0.186)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+524978196589334529,Thoughts are with Ottawa today. What is happening is terrible.. #StaySafeOttawa,0,0,local,0.0617519715472841,"预测标签：0（非谣言）
+谣言概率：0.062
+分类置信度：0.938
+判断依据：
+1. 支持非谣言的主要证据：词项'is'(贡献0.619)、词项'thoughts are'(贡献0.603)、词项'thoughts'(贡献0.394)、词项'what'(贡献0.383)。
+2. 支持谣言的反向证据：词项'hashtag_staysafeottawa'(贡献0.205)、词项'hashtag_staysafeottawa staysafeottawa'(贡献0.205)、词项'staysafeottawa'(贡献0.205)、字符片段'sta'(贡献0.157)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+524943226948820992,MORE: Royal Canadian Mounted Police warned people in downtown Ottawa to stay away from windows and rooftops: http://t.co/CMjaq7scJt,0,0,local,0.12383288088213551,"预测标签：0（非谣言）
+谣言概率：0.124
+分类置信度：0.876
+判断依据：
+1. 支持非谣言的主要证据：词项'away'(贡献0.320)、词项'to stay'(贡献0.313)、词项'from windows'(贡献0.291)、字符片段'mo'(贡献0.276)。
+2. 支持谣言的反向证据：字符片段'ro'(贡献0.259)、字符片段'dow'(贡献0.258)、词项'canadian'(贡献0.257)、字符片段'ed'(贡献0.204)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+524923403183333376,After today we will officially be done shooting for the #SurrenderMusicVideo !! It's looking AMAZING so far btw! #cantwait,0,0,llm_explain,0.2636038784058854,推文内容为音乐视频拍摄完成，语气积极且包含非谣言特征词如'we'、'shooting'和'far'，与本地模型中的非谣言证据一致，同时相似样本中非谣言样本更为相关。,0,0,0.85
+524958516822671360,"If your first response to the #ottawashooting is to make a political point, your humanity is sadly and sorely lacking.",0,0,local,0.06984495790170679,"预测标签：0（非谣言）
+谣言概率：0.070
+分类置信度：0.930
+判断依据：
+1. 支持非谣言的主要证据：词项'is'(贡献0.549)、词项'the hashtag_ottawashooting'(贡献0.442)、字符片段'you'(贡献0.391)、字符片段'is'(贡献0.273)。
+2. 支持谣言的反向证据：字符片段'fir'(贡献0.230)、词项'first'(贡献0.186)、字符片段'was'(贡献0.183)、词项'to make'(贡献0.182)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+524939347699585025,[Episode] #BTS 'War of Hormone' MV &amp; Concept Photo shooting (with Eng sub.) (http://t.co/EwS342rpl8)  #호르몬전쟁 #Hello_hello,0,0,local,0.08652577332500701,"预测标签：0（非谣言）
+谣言概率：0.087
+分类置信度：0.913
+判断依据：
+1. 支持非谣言的主要证据：词项'photo'(贡献0.299)、词项'shooting'(贡献0.205)、字符片段'ello'(贡献0.145)、字符片段'phot'(贡献0.131)。
+2. 支持谣言的反向证据：字符片段'llo'(贡献0.196)、字符片段'cept'(贡献0.172)、字符片段'con'(贡献0.165)、字符片段'sho'(贡献0.153)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+524985092343889920,I'm appalled by today's attack in Ottawa. I offer my full support to @pmharper and the Canadian people as they deal with this incident.,0,0,llm_explain,0.21160501697539758,推文表达对袭击事件的震惊和支持，没有传播虚假信息，本地模型和相似样本均一致判断为非谣言。,0,0,0.88
+524929559909916672,Parliament Hill is never going to be the same.,0,0,local,0.17256275706616228,"预测标签：0（非谣言）
+谣言概率：0.173
+分类置信度：0.827
+判断依据：
+1. 支持非谣言的主要证据：词项'be'(贡献0.500)、词项'is'(贡献0.460)、词项'the same'(贡献0.419)、词项'to be'(贡献0.325)。
+2. 支持谣言的反向证据：词项'parliament'(贡献0.318)、词项'parliament hill'(贡献0.237)、词项'hill'(贡献0.233)、字符片段'ill'(贡献0.224)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+525052976562712576,"Coverage of the Ottawa shooting, in one very revealing screenshot http://t.co/CE8bvaKO8F http://t.co/GqOHyg0tUD",0,0,llm_explain,0.2734886671038223,推文内容为转发渥太华枪击事件的报道截图，包含'coverage of'和'shooting'等非谣言特征词，且本地模型和多数相似训练样本均判断为非谣言。,0,0,0.7265
+524954161054756864,"Simply shocked at what's unfolding in Canada's capital. Thinking of you, Ottawa.",0,0,llm_explain,0.3059083892048853,推文表达震惊和关心，类似于相似的非谣言样本（如“Thinking of everyone in Sydney today x”），缺乏具体事件断言或煽动性语言，符合非谣言特征。,0,0,0.69
+524946461621235712,RAW VIDEO War Memorial shooting. http://t.co/c9wCpS2Af9 #cbcnews,0,0,llm_explain,0.3529107242810623,输入文本以'RAW VIDEO'开头，与相似谣言样本完全一致，而相似非谣言样本无此修辞；这种声称原始视频的话语具有煽动性，且最高相似样本为谣言，故判断为谣言。,0,1,0.6
+525026066944262144,"Anyone with photos or videos from today's shootings, send to @RCMP_Nat_Div at this link http://t.co/srCYMTL2tX #ottawa",0,0,local,0.053509392966640944,"预测标签：0（非谣言）
+谣言概率：0.054
+分类置信度：0.946
+判断依据：
+1. 支持非谣言的主要证据：词项'to USER'(贡献0.388)、字符片段'os'(贡献0.311)、词项'or'(贡献0.274)、字符片段'phot'(贡献0.252)。
+2. 支持谣言的反向证据：字符片段'sho'(贡献0.294)、词项'at'(贡献0.286)、词项'shootings'(贡献0.258)、字符片段'sen'(贡献0.242)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+524939818347028480,Alert thru press gallery email: RCMP advises if u r in downtown Ottawa to stay away from windows &amp; off roofs due to ongoing police incident,0,0,local,0.06184885479567242,"预测标签：0（非谣言）
+谣言概率：0.062
+分类置信度：0.938
+判断依据：
+1. 支持非谣言的主要证据：词项'press'(贡献0.325)、词项'away'(贡献0.261)、词项'to stay'(贡献0.256)、词项'from windows'(贡献0.238)。
+2. 支持谣言的反向证据：字符片段'inc'(贡献0.274)、字符片段'ery'(贡献0.271)、字符片段'dow'(贡献0.236)、字符片段'ler'(贡献0.171)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+524964166936068097,Public servants being asked to stay inside their buildings as the active shooter investigation continues in Ottawa. #cbcOTT# OTTnews,0,0,llm_explain,0.4497034359875442,该推文以客观语气报道公务人员被要求留在室内，与相似的非谣言样本（如描述封锁中的客观报道）风格一致，缺乏煽动性或未证实断言，因此判断为非谣言。,0,0,0.5503
+524979881525137409,Image from @kellyhobson shows police running to search buildings in downtown Ottawa. http://t.co/lLtW5skkJe,0,0,local,0.12106144458423711,"预测标签：0（非谣言）
+谣言概率：0.121
+分类置信度：0.879
+判断依据：
+1. 支持非谣言的主要证据：词项'ottawa URL'(贡献0.396)、词项'downtown'(贡献0.304)、词项'shows police'(贡献0.267)、词项'from'(贡献0.257)。
+2. 支持谣言的反向证据：词项'search'(贡献0.397)、字符片段'sho'(贡献0.311)、字符片段'dow'(贡献0.231)、字符片段'ldi'(贡献0.225)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+524950159160250368,JUST IN: White House official: Pres. Obama has been briefed on shooting incidents in Canadian capital - @marykbruce,0,0,llm_explain,0.3148187837011583,该推文格式和内容与相似非谣言（如奥巴马简报悉尼人质事件）高度一致，均为官方及时通报，未包含煽动性语言或未经证实的断言，因此判断为非谣言。,0,0,0.85
+524970444156571648,Our thoughts are with our friends in Ottawa. Stay safe everyone.,0,0,local,0.007366558936800118,"预测标签：0（非谣言）
+谣言概率：0.007
+分类置信度：0.993
+判断依据：
+1. 支持非谣言的主要证据：词项'safe'(贡献0.813)、词项'our'(贡献0.653)、词项'thoughts are'(贡献0.607)、字符片段'safe'(贡献0.603)。
+2. 支持谣言的反向证据：字符片段'ery'(贡献0.200)、字符片段'sta'(贡献0.163)、字符片段'in'(贡献0.147)、词项'in'(贡献0.121)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+524977767688200192,"UPDATE: #uOttawa courses + exams officially cancelled for the whole day. Lockdown still in effect. Stay indoors, stay safe #Ottawa #ottcity",0,0,llm_explain,0.4242900886944542,推文使用'UPDATE'和'officially cancelled'等官方通报用语，语气客观，与相似非谣言样本（提醒不要泄漏警察位置）的谨慎风格更接近，而相似谣言样本虽内容相似但煽动性更强；本地模型证据中'stay safe'等安全提示得分较高，支持非谣言判断。,0,0,0.55
+524956007324082177,Doors barricaded RT @grahamctv: Shot from inside caucus room after shooting @ctvottawa #ottawashooting. http://t.co/OpERH3GiMu,0,0,local,0.11243025229916725,"预测标签：0（非谣言）
+谣言概率：0.112
+分类置信度：0.888
+判断依据：
+1. 支持非谣言的主要证据：词项'rt'(贡献0.399)、词项'rt USER'(贡献0.343)、词项'barricaded'(贡献0.316)、词项'shooting'(贡献0.300)。
+2. 支持谣言的反向证据：词项'shot'(贡献0.615)、词项'inside'(贡献0.523)、字符片段'sho'(贡献0.509)、字符片段'shot'(贡献0.480)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+524978422188376064,Hearts and prayers go out to everyone affected by the shootings in Ottawa today.,0,0,local,0.12477619965390768,"预测标签：0（非谣言）
+谣言概率：0.125
+分类置信度：0.875
+判断依据：
+1. 支持非谣言的主要证据：词项'everyone'(贡献0.402)、字符片段'pray'(贡献0.240)、词项'prayers go'(贡献0.232)、字符片段'pra'(贡献0.232)。
+2. 支持谣言的反向证据：词项'shootings in'(贡献0.442)、字符片段'sho'(贡献0.346)、词项'everyone affected'(贡献0.342)、词项'shootings'(贡献0.282)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+535270217689993216,According to psychiatric evaluation #Gurlitt not mentally fit to write will bequeathing paintings to museum http://t.co/EF3WSuyVPT,1,0,llm_explain,0.362892147202043,输入文本引用了精神评估作为事实依据，与相似非谣言样本（如对Gurlitt藏品按原则处理的客观陈述）更为接近，而非相似谣言样本的断言式标题，因此保持非谣言判断。,0,0,0.6371
+536835011941396481,#Gurlitt Bern museum accepts controversial art hoard - SWI swissinfo.ch http://t.co/B0udLwiK1J @swisscenter @fteuscher,1,0,llm_explain,0.27622566174941987,推文来源为正规新闻机构swissinfo.ch，且相似训练样本均为非谣言，内容无夸张或虚假表述，故判断为非谣言。,0,0,0.7238
+535721996391178242,"Swiss museum close to accepting #Gurlitt bequest, returning any #Nazi-looted pieces http://t.co/eCo07tfpkF via @WSJ",1,0,llm_explain,0.34727471533151033,文本采用‘close to accepting’等谨慎措辞，并附带来源链接，与相似非谣言样本的客观叙述风格一致，缺乏谣言常见的确定性断言或煽动性语气。,0,0,0.7
+536844923774205952,.@fastFT: Swiss museum accepts Gurlitt art bequest http://t.co/0U8i5scqWb,1,1,llm_explain,0.5330303470080202,推文使用肯定断言直接陈述博物馆已接受遗产，与相似谣言样本（如‘Swiss museum will accept Gurlitt art trove’）话术一致，而相似非谣言样本多采用未确定或决策中的措辞，因此偏向谣言。,1,1,0.533
+536848139836481536,Gurlitt collection accepted by Kunstmuseum Bern @artnet http://t.co/d2n5Im5qWs,1,1,llm_explain,0.5633464156826334,推文直接断言'collection accepted'，与相似谣言样本话术一致（如'Gurlitt Collection Accepted by Kunstmuseum Bern'），而非使用'等待决定'等谨慎措辞，具有未证实断言的谣言特征。,1,1,0.5633
+536845753394536448,Swiss museum will accept Gurlitt art trove http://t.co/PJVU6DJXTW,1,1,llm_explain,0.6422103747691847,该推文使用'will accept'的肯定性断言，与相似谣言样本'Swiss museum will accept Gurlitt art trove'完全一致，而相似真实新闻均使用'deciding on'的谨慎措辞，具备谣言特征。,1,1,0.6422
+535952893589725184,GMLive: ArtsBeat: Cousin of Cornelius Gurlitt Challenges Will That Leaves Collection to Swiss Museum: A cousin... http://t.co/7jogktByJU,0,0,local,0.04561702678460989,"预测标签：0（非谣言）
+谣言概率：0.046
+分类置信度：0.954
+判断依据：
+1. 支持非谣言的主要证据：词项'cousin'(贡献0.429)、词项'cornelius'(贡献0.231)、词项'cornelius gurlitt'(贡献0.231)、词项'of cornelius'(贡献0.189)。
+2. 支持谣言的反向证据：字符片段'co'(贡献0.210)、词项'museum'(贡献0.161)、字符片段'bea'(贡献0.109)、字符片段'ill'(贡献0.101)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+536333336353193985,Last-minute lawsuit filed by relative of Cornelius Gurlitt over Nazi-era art hoard http://t.co/cWPAxyaCB2 Pls RT @ Seb_Kirby,0,0,local,0.046219067552020245,"预测标签：0（非谣言）
+谣言概率：0.046
+分类置信度：0.954
+判断依据：
+1. 支持非谣言的主要证据：词项'over'(贡献0.470)、字符片段'over'(贡献0.343)、字符片段'ove'(贡献0.311)、词项'rt'(贡献0.287)。
+2. 支持谣言的反向证据：字符片段'ard'(贡献0.231)、字符片段'ive'(贡献0.156)、字符片段'na'(贡献0.143)、词项'art'(贡献0.141)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+535450182142672897,Former top judge thinks #Nazi-stolen art 'belongs in a museum' #indianajones #Gurlitt #Germany http://t.co/kqyjtGun9r http://t.co/xNxGpg7RAQ,0,0,local,0.14035914224934454,"预测标签：0（非谣言）
+谣言概率：0.140
+分类置信度：0.860
+判断依据：
+1. 支持非谣言的主要证据：词项'former'(贡献0.265)、词项'gurlitt'(贡献0.241)、词项'URL'(贡献0.239)、词项'germany URL'(贡献0.178)。
+2. 支持谣言的反向证据：词项'art'(贡献0.219)、词项'museum'(贡献0.210)、字符片段'na'(贡献0.184)、词项'germany'(贡献0.179)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+536810390739755009,"Swiss museum, German officials to announce fate of  #Gurlitt art collection at 11CET. http://t.co/7NlXiG4hcz",0,0,llm_explain,0.29836912759308903,推文内容为瑞士博物馆和德国官员宣布艺术收藏命运，与多条相似的非谣言训练样本（如‘Swiss museum to decide future of Gurlitt art trove’）一致，且本地模型证据支持非谣言判断。,0,0,0.7016
+536830979714056192,"Berlin, Munich and Kunstmuseum Bern have signed an agreement on the management of Gurlitt's estate.",0,0,local,0.18908637489254887,"预测标签：0（非谣言）
+谣言概率：0.189
+分类置信度：0.811
+判断依据：
+1. 支持非谣言的主要证据：词项'on the'(贡献0.482)、词项'of gurlitt'(贡献0.346)、词项'munich'(贡献0.337)、词项'gurlitt'(贡献0.276)。
+2. 支持谣言的反向证据：字符片段'ber'(贡献0.333)、词项'agreement'(贡献0.265)、词项'bern'(贡献0.186)、词项'an'(贡献0.173)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+536835870293512192,Gurlitt press release concludes. Many questions being raised by attendees on state of task force investigation and limbo nazi loot objects.,0,0,local,0.09277779846441218,"预测标签：0（非谣言）
+谣言概率：0.093
+分类置信度：0.907
+判断依据：
+1. 支持非谣言的主要证据：词项'press'(贡献0.262)、词项'force'(贡献0.220)、词项'press release'(贡献0.179)、字符片段'est'(贡献0.175)。
+2. 支持谣言的反向证据：字符片段'con'(贡献0.207)、词项'release'(贡献0.191)、词项'raised'(贡献0.156)、字符片段'stat'(贡献0.154)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+535919972439322624,Gurlitt’s Museum Bequest Is Challenged http://t.co/I8chboixpD,0,0,local,0.10757957229453503,"预测标签：0（非谣言）
+谣言概率：0.108
+分类置信度：0.892
+判断依据：
+1. 支持非谣言的主要证据：词项'is'(贡献0.423)、词项'bequest is'(贡献0.375)、字符片段'est'(贡献0.325)、词项'gurlitt'(贡献0.288)。
+2. 支持谣言的反向证据：字符片段'ged'(贡献0.406)、词项'museum'(贡献0.253)、字符片段'ed'(贡献0.170)、字符片段'hall'(贡献0.153)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+500417151346696192,Americans are 8 times more likely to be killed by a police officer than by a terrorist. #Ferguson,1,0,local,0.12280292213019679,"预测标签：0（非谣言）
+谣言概率：0.123
+分类置信度：0.877
+判断依据：
+1. 支持非谣言的主要证据：词项'be'(贡献0.416)、词项'than'(贡献0.409)、词项'to be'(贡献0.271)、词项'are'(贡献0.255)。
+2. 支持谣言的反向证据：词项'officer'(贡献0.648)、词项'police officer'(贡献0.455)、字符片段'icer'(贡献0.276)、字符片段'cer'(贡献0.264)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",0,,
+500296158476906496,"Witness to #Ferguson shooting atty confirms Brown took cigars from store.  Client told FBI he ""did take cigarillos"" http://t.co/j9BARBU0c7",1,1,local,0.8863852413973504,"预测标签：1（谣言）
+谣言概率：0.886
+分类置信度：0.886
+判断依据：
+1. 支持谣言的主要证据：词项'cigars'(贡献1.012)、词项'store'(贡献0.897)、词项'fbi'(贡献0.555)、词项'took'(贡献0.550)。
+2. 支持非谣言的反向证据：词项'ferguson shooting'(贡献0.476)、词项'shooting'(贡献0.358)、词项'from'(贡献0.261)、词项'ferguson'(贡献0.210)。
+3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中谣言方向证据整体更强，因此判为谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。",1,,
