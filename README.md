@@ -38,7 +38,10 @@
 ├── docs/
 │   ├── data_quality_and_iteration_notes.md
 │   ├── generalization_experiments.md
-│   └── fn_recall_review_experiment.md
+│   ├── fn_recall_review_experiment.md
+│   ├── dense_embedding.md
+│   ├── experiment_logs.md
+│   └── llm_strategy_evolution.md
 ├── report.pdf
 └── requirements.txt
 ```
@@ -124,6 +127,10 @@ python scripts/run_fn_recall_review_experiment.py
 - `results/fn_recall_review_summary.json`
 
 当前结果：复核 79 条候选样本，最终只覆盖 1 条，救回 1 个 false negative，没有新增 false positive。Accuracy 从 `0.8803` 提升到 `0.8828`，Rumor F1 从 `0.8519` 提升到 `0.8554`。详细记录在 `docs/fn_recall_review_experiment.md`。
+
+## 探索记录
+
+`docs/dense_embedding.md`、`docs/experiment_logs.md` 和 `docs/llm_strategy_evolution.md` 记录了若干未进入最终主线的探索实验，包括稠密语义特征、event 特征、阈值扫描、L1 正则化和 LLM Prompt 迭代。这些内容用于说明项目迭代过程和取舍依据；最终可复现主线仍以当前 TF-IDF 集成模型、清洗训练集、保守 LLM 复核和高置信覆盖策略为准。
 
 ## 评估
 
