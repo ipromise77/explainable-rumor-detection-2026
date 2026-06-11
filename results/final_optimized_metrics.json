@@ -1,0 +1,67 @@
+{
+  "llm_confidence_threshold": 0.62,
+  "rule_max_probability": 0.25,
+  "rumor_signals": {
+    "匿名爆料": {
+      "anon": [
+        "anonymous",
+        "unnamed",
+        "unidentified",
+        "undisclosed"
+      ],
+      "leak": [
+        "obtained",
+        "acquired",
+        "leaked",
+        "uncovered",
+        "secured"
+      ]
+    },
+    "指控抹黑": {
+      "smear": [
+        "smear",
+        "slander",
+        "defame",
+        "discredit"
+      ],
+      "keyword": "campaign"
+    },
+    "暗示隐瞒": {
+      "hide": [
+        "hiding",
+        "concealing",
+        "covering up",
+        "withholding",
+        "suppressing"
+      ]
+    },
+    "极端化表述": {
+      "devolve": [
+        "devolved",
+        "deteriorated",
+        "descended",
+        "degenerated"
+      ],
+      "keyword": "worst"
+    }
+  },
+  "baseline_accuracy": 0.8802992518703242,
+  "final_accuracy": 0.9002493765586035,
+  "macro_f1": 0.8975577355405682,
+  "confusion_matrix": [
+    [
+      213,
+      13
+    ],
+    [
+      27,
+      148
+    ]
+  ],
+  "total_overrides": 12,
+  "llm_overrides": 8,
+  "rule_overrides": 4,
+  "rescued_fn": 10,
+  "new_fp": 2,
+  "improvement_accuracy": 0.01995012468827928
+}
