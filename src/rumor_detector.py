@@ -10,7 +10,9 @@ import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import FeatureUnion, Pipeline
-
+from sklearn.base import BaseEstimator, TransformerMixin
+from sentence_transformers import SentenceTransformer
+from sklearn.preprocessing import MaxAbsScaler
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_MODEL_PATH = PROJECT_ROOT / "models" / "rumor_ensemble.joblib"
@@ -55,6 +57,22 @@ def preprocess_many(texts: str | Iterable[str]) -> list[str]:
         return [preprocess_text(texts)]
     return [preprocess_text(text) for text in texts]
 
+class DenseEmbeddingTransformer(BaseEstimator, TransformerMixin):
+    def __init__(self, model_name='all-MiniLM-L6-v2'):
+        # 使用轻量级句子向量模型
+        self.model = SentenceTransformer(model_name)
+        
+    def fit(self, X, y=None):
+        return self
+
+    def transform(self, X):
+        # 将文本列表转化为稠密矩阵
+        return self.model.encode(list(X), show_progress_bar=False)
+
+    def get_feature_names_out(self, input_features=None):
+        # 为每一维特征命名，防止 _feature_names 报错
+        return np.array([f"dense_{i}" for i in range(384)])
+
 
 def build_pipeline(config: dict) -> Pipeline:
     word_vectorizer = TfidfVectorizer(
@@ -76,7 +94,12 @@ def build_pipeline(config: dict) -> Pipeline:
     )
     return Pipeline(
         [
-            ("features", FeatureUnion([("word", word_vectorizer), ("char", char_vectorizer)])),
+            ("features", FeatureUnion([
+                ("word", word_vectorizer), 
+                ("char", char_vectorizer),
+                ("dense", DenseEmbeddingTransformer()) # 新增行
+            ])),
+            ("scaler", MaxAbsScaler()),
             (
                 "classifier",
                 LogisticRegression(max_iter=5000, C=config["c"], solver="liblinear"),
@@ -138,7 +161,16 @@ def _feature_names(feature_union: FeatureUnion) -> np.ndarray:
 
 
 def _display_feature(raw_name: str) -> str:
+    # 新增：忽略 dense 特征，只展示 TF-IDF 关键词
+    if "__" not in raw_name:
+        return ""
+        
     kind, value = raw_name.split("__", 1)
+    
+    # 忽略 dense 特征
+    if kind == "dense":
+        return ""
+        
     value = value.replace("HASHTAG_", "#").replace("urltoken", "URL").replace(
         "usertoken", "USER"
     )
