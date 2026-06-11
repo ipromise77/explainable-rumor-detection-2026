@@ -24,10 +24,11 @@ from .rumor_detector import (
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_DATA_DIR = PROJECT_ROOT / "rumer2026"
+LLM_CACHE_VERSION = "llm_enhanced_clean_train_v2"
 
 
-def _text_hash(text: str) -> str:
-    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+def _text_hash(text: str, cache_version: str = LLM_CACHE_VERSION) -> str:
+    return hashlib.sha256(f"{cache_version}\n{text}".encode("utf-8")).hexdigest()
 
 
 def _extract_json(text: str) -> dict[str, Any]:
@@ -65,6 +66,11 @@ class LLMEnhancedRumorDetector:
         self.top_k = top_k
         self.allow_override = allow_override
         self.override_confidence = override_confidence
+        data_dir = Path(data_dir)
+        self.train_path = data_dir / "train_clean.csv"
+        if not self.train_path.exists():
+            self.train_path = data_dir / "train.csv"
+        self.cache_version = f"{LLM_CACHE_VERSION}:{self.train_path.name}"
         self.cache_path = Path(cache_path)
         self.cache_path.parent.mkdir(parents=True, exist_ok=True)
         self.cache = self._read_cache()
@@ -78,7 +84,7 @@ class LLMEnhancedRumorDetector:
             raise RuntimeError("SJTU_BASE_URL is missing. Please fill it in .env first.")
         self.client = OpenAI(api_key=api_key, base_url=base_url)
 
-        self.train_df = pd.read_csv(Path(data_dir) / "train.csv")
+        self.train_df = pd.read_csv(self.train_path)
         first_pipeline = self.bundle["models"][0]["pipeline"]
         self.retriever_features = first_pipeline.named_steps["features"]
         self.train_matrix = self.retriever_features.transform(preprocess_many(self.train_df["text"]))
@@ -96,10 +102,16 @@ class LLMEnhancedRumorDetector:
         return cache
 
     def _write_cache(self, text: str, result: dict) -> None:
-        key = _text_hash(text)
+        key = _text_hash(text, self.cache_version)
         self.cache[key] = result
         with self.cache_path.open("a", encoding="utf-8") as f:
-            f.write(json.dumps({"hash": key, "result": result}, ensure_ascii=False) + "\n")
+            f.write(
+                json.dumps(
+                    {"hash": key, "cache_version": self.cache_version, "result": result},
+                    ensure_ascii=False,
+                )
+                + "\n"
+            )
 
     def should_call_llm(self, prob_rumor: float, force: bool = False) -> bool:
         if force:
@@ -151,7 +163,7 @@ class LLMEnhancedRumorDetector:
         ]
 
     def call_llm(self, text: str, local: dict, examples: list[dict]) -> dict:
-        key = _text_hash(text)
+        key = _text_hash(text, self.cache_version)
         if key in self.cache:
             return self.cache[key]
         response = self.client.chat.completions.create(
