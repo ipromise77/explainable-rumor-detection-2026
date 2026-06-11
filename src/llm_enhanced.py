@@ -78,7 +78,7 @@ class LLMEnhancedRumorDetector:
             raise RuntimeError("SJTU_BASE_URL is missing. Please fill it in .env first.")
         self.client = OpenAI(api_key=api_key, base_url=base_url)
 
-        self.train_df = pd.read_csv(Path(data_dir) / "train.csv")
+        self.train_df = pd.read_csv(Path(data_dir) / "train_clean.csv")
         first_pipeline = self.bundle["models"][0]["pipeline"]
         self.retriever_features = first_pipeline.named_steps["features"]
         self.train_matrix = self.retriever_features.transform(preprocess_many(self.train_df["text"]))
