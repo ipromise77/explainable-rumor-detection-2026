@@ -1,67 +1,116 @@
 {
   "llm_confidence_threshold": 0.62,
   "rule_max_probability": 0.25,
+  "rule_system": "two-tier",
   "rumor_signals": {
-    "匿名爆料": {
-      "anon": [
-        "anonymous",
-        "unnamed",
-        "unidentified",
-        "undisclosed"
-      ],
-      "leak": [
-        "obtained",
-        "acquired",
-        "leaked",
-        "uncovered",
-        "secured"
-      ]
+    "strong_signals": {
+      "指控抹黑叙事": {
+        "words": [
+          "smear",
+          "slander",
+          "defame",
+          "discredit"
+        ],
+        "condition": "+ campaign",
+        "bias": 0.5
+      },
+      "极端化叙事": {
+        "words": [
+          "devolved",
+          "deteriorated",
+          "descended",
+          "degenerated"
+        ],
+        "condition": "+ worst",
+        "bias": 0.5
+      },
+      "阴谋论指控": {
+        "words": [
+          "false flag",
+          "inside job",
+          "orchestrated",
+          "staged event"
+        ],
+        "bias": 0.5
+      },
+      "证据捏造指控": {
+        "words": [
+          "fabricated",
+          "fabricate",
+          "hoax",
+          "crisis actor"
+        ],
+        "bias": 0.5
+      }
     },
-    "指控抹黑": {
-      "smear": [
-        "smear",
-        "slander",
-        "defame",
-        "discredit"
-      ],
-      "keyword": "campaign"
-    },
-    "暗示隐瞒": {
-      "hide": [
-        "hiding",
-        "concealing",
-        "covering up",
-        "withholding",
-        "suppressing"
-      ]
-    },
-    "极端化表述": {
-      "devolve": [
-        "devolved",
-        "deteriorated",
-        "descended",
-        "degenerated"
-      ],
-      "keyword": "worst"
+    "moderate_signals": {
+      "信息隐瞒暗示": {
+        "words": [
+          "hiding",
+          "concealing",
+          "conceal",
+          "covering up",
+          "cover-up",
+          "withholding",
+          "suppressing"
+        ],
+        "bias": 0.43
+      },
+      "匿名信源引用": {
+        "anon": [
+          "anonymous",
+          "unnamed",
+          "unidentified",
+          "undisclosed"
+        ],
+        "leak": [
+          "obtained",
+          "acquired",
+          "leaked",
+          "uncovered",
+          "secured"
+        ],
+        "bias": 0.36
+      },
+      "权威腐败指控": {
+        "words": [
+          "corrupt",
+          "corruption",
+          "deep state",
+          "shadow government"
+        ],
+        "bias": 0.3
+      },
+      "恐慌煽动话术": {
+        "words": [
+          "fearmongering",
+          "fear mongering",
+          "plandemic",
+          "scamdemic"
+        ],
+        "bias": 0.28
+      }
     }
   },
   "baseline_accuracy": 0.8802992518703242,
-  "final_accuracy": 0.9002493765586035,
-  "macro_f1": 0.8975577355405682,
+  "final_accuracy": 0.9027431421446384,
+  "macro_f1": 0.9002010146453527,
   "confusion_matrix": [
     [
       213,
       13
     ],
     [
-      27,
-      148
+      26,
+      149
     ]
   ],
-  "total_overrides": 12,
+  "total_overrides": 13,
   "llm_overrides": 8,
-  "rule_overrides": 4,
-  "rescued_fn": 10,
+  "rule_overrides": 5,
+  "strong_signal_overrides": 2,
+  "moderate_signal_overrides": 3,
+  "rescued_fn": 11,
   "new_fp": 2,
-  "improvement_accuracy": 0.01995012468827928
+  "improvement_accuracy": 0.02244389027431415
 }

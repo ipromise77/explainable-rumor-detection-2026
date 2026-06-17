@@ -20,8 +20,8 @@
 1. 支持非谣言的主要证据：词项'shame'(贡献0.304)、词项'ferguson hashtag_mikebrown'(贡献0.214)、词项'ferguson'(贡献0.188)、字符片段'son'(贡献0.176)。
 2. 支持谣言的反向证据：词项'they'(贡献0.354)、词项'so'(贡献0.335)、字符片段'they'(贡献0.257)、字符片段'so'(贡献0.253)。
 3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。"
-499553593041903616,BREAKING: #Anonymous has obtained audio files of police dispatch and EMS during the #MikeBrown shooting. Will release ASAP. #Ferguson,1,1,0.14939176742057547,d7109604a0b092b4939c5daf566a0236ce85d33ab439269fb16df8654ff68a44,1,rule:匿名爆料,命中谣言话术特征: 匿名爆料
-500336373833170945,#Ferguson police are embarking on what can only be described as an elaborate smear campaign of Michael Brown http://t.co/SaLZExqR1D,1,1,0.10083180633234651,01c891afd2bc553b6e13b5bd2bc5ec3396c514cc6872afa3fe7de1ec47fc934a,1,rule:指控抹黑,命中谣言话术特征: 指控抹黑
+499553593041903616,BREAKING: #Anonymous has obtained audio files of police dispatch and EMS during the #MikeBrown shooting. Will release ASAP. #Ferguson,1,1,0.14939176742057547,d7109604a0b092b4939c5daf566a0236ce85d33ab439269fb16df8654ff68a44,1,rule:匿名信源引用,命中谣言话术特征[匿名信源引用]: 概率增强后判定 (prob 0.149 + bias 0.36 = 0.509)
+500336373833170945,#Ferguson police are embarking on what can only be described as an elaborate smear campaign of Michael Brown http://t.co/SaLZExqR1D,1,1,0.10083180633234651,01c891afd2bc553b6e13b5bd2bc5ec3396c514cc6872afa3fe7de1ec47fc934a,1,rule:指控抹黑叙事,命中谣言话术特征[指控抹黑叙事]: 强信号直接覆盖
 500303238810574849,Someone with better eyes than me please #checkthedatestamp on the bottom left photo. Isn't that JUNE? #Ferguson http://t.co/PTNuxY2v5B,1,1,0.031549309288171394,43fc153633b99a39f6e62fac0cbcd7cc6bd22552d621987b2e409cbad0b17e53,0,local,"预测标签：0（非谣言）
 谣言概率：0.032
 分类置信度：0.968
@@ -29,7 +29,7 @@
 1. 支持非谣言的主要证据：词项'ferguson URL'(贡献0.689)、词项'left'(贡献0.666)、词项'photo'(贡献0.585)、词项'on the'(贡献0.500)。
 2. 支持谣言的反向证据：字符片段'ate'(贡献0.141)、字符片段'sta'(贡献0.128)、词项'better'(贡献0.114)、词项'that'(贡献0.111)。
 3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。"
-499494187969298432,"What are #Ferguson Police hiding about ""drive by"" shooting of black woman recording last night's action? http://t.co/wfuDYm9q27 #OpFerguson",1,1,0.07855886593893989,7805c4056f4eecbbec212a9daaaaf5299688bbe7a10907e100682ffe6803aa5e,1,rule:暗示隐瞒,命中谣言话术特征: 暗示隐瞒
+499494187969298432,"What are #Ferguson Police hiding about ""drive by"" shooting of black woman recording last night's action? http://t.co/wfuDYm9q27 #OpFerguson",1,1,0.07855886593893989,7805c4056f4eecbbec212a9daaaaf5299688bbe7a10907e100682ffe6803aa5e,1,rule:信息隐瞒暗示,命中谣言话术特征[信息隐瞒暗示]: 概率增强后判定 (prob 0.079 + bias 0.43 = 0.509)
 498272309535191041,200 cops in riot gear in #ferguson because there is a prayer circle and a concerned compassionate community,1,1,0.051425859867923675,4ff1b40b4811f8964703980ffb43f770c0ca411824a364bf1c26b7dc43004aa8,0,local,"预测标签：0（非谣言）
 谣言概率：0.051
 分类置信度：0.949
@@ -38,7 +38,7 @@
 2. 支持谣言的反向证据：字符片段'cir'(贡献0.283)、字符片段'con'(贡献0.261)、字符片段'co'(贡献0.245)、词项'in'(贡献0.198)。
 3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。"
 500290456845299714,Here's the police report. Somehow #Ferguson cops valued a box of Swishers at nearly $50. Time to stop smokin I guess http://t.co/8ZkvrHkApc,1,1,0.38829685399277825,5ab4a43389d8c2b671ddb7d5c2082a277e76972de2ad5e73b3897ff2b7743ee7,1,llm_override_v1,文本使用“Somehow”表达质疑，并断言警方高估商品价值至近50美元，缺乏证据且带讽刺语气，与相似谣言样本（如质疑警方报告的推文）的煽动性特征一致。
-500368579875704832,I'm so disgusted. #Ferguson RT @ZandarVTS: This has now devolved into the worst police shooting cover-up attempt in US history.,1,1,0.12086021453125889,3fdff3fb0fa5855ceee6b4894d6adf4e52e4c19a3c8cd8130f4c0e30c5b0ce95,1,rule:极端化表述,命中谣言话术特征: 极端化表述
+500368579875704832,I'm so disgusted. #Ferguson RT @ZandarVTS: This has now devolved into the worst police shooting cover-up attempt in US history.,1,1,0.12086021453125889,3fdff3fb0fa5855ceee6b4894d6adf4e52e4c19a3c8cd8130f4c0e30c5b0ce95,1,rule:极端化叙事,命中谣言话术特征[极端化叙事]: 强信号直接覆盖
 500360018928353280,Lawyers for police in bad shootings often advise shooters not to write reports or even speak to commanders or investigators. #Ferguson,1,1,0.4065197684865757,7459d573ebf750494721bd99d178b2d175a6d89f936c25c7e078b02990d9f9aa,1,llm_override_v1,输入文本使用“often advise”进行概括性断言，与相似谣言样本中“educated guess”的话术相似，均无具体来源，具有煽动性，而相似真实新闻则为客观报道或律师声明。
 500284871541940225,I'm NOT believing this story because I know how the police lie and will keep lying and will organize together AND LIE. #MIKEBROWN #Ferguson,1,1,0.15163703380399798,22665093ea37a423cddafa6a65445b2842989069ec4773b49038f8d61b085044,0,local,"预测标签：0（非谣言）
 谣言概率：0.152
@@ -98,13 +98,7 @@
 1. 支持非谣言的主要证据：词项'about'(贡献0.560)、词项'us'(贡献0.374)、词项'be'(贡献0.349)、词项'shooting'(贡献0.304)。
 2. 支持谣言的反向证据：词项'ferguson pd'(贡献0.874)、词项'pd'(贡献0.744)、词项'the shooting'(贡献0.582)、字符片段'pd'(贡献0.389)。
 3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。"
-500298752469770240,Shoot unarmed kid. Conceal evidence. Impose martial law. Harass reporters. Smear the victim. Worst. Police. Ever. #Ferguson #MikeBrown,1,1,0.20229171319525405,f3f3fc2b25096f6f9baa6cccc4659f4fc740413bba2c5d889d3679fe98cafb36,0,local,"预测标签：0（非谣言）
-谣言概率：0.202
-分类置信度：0.798
-判断依据：
-1. 支持非谣言的主要证据：词项'ferguson hashtag_mikebrown'(贡献0.195)、字符片段'rs.'(贡献0.186)、词项'law'(贡献0.184)、词项'ferguson'(贡献0.171)。
-2. 支持谣言的反向证据：字符片段'repo'(贡献0.285)、字符片段'rep'(贡献0.279)、字符片段'kid.'(贡献0.226)、字符片段'con'(贡献0.211)。
-3. 综合判断：上述证据来自当前文本的词级和字符级 TF-IDF 特征贡献，贡献越大说明该特征越推动模型做出对应方向的判断。本样本中非谣言方向证据整体更强，因此判为非谣言；解释不引入外部事实，只反映模型在该样本上的局部判定依据。"
+500298752469770240,Shoot unarmed kid. Conceal evidence. Impose martial law. Harass reporters. Smear the victim. Worst. Police. Ever. #Ferguson #MikeBrown,1,1,0.20229171319525405,f3f3fc2b25096f6f9baa6cccc4659f4fc740413bba2c5d889d3679fe98cafb36,1,rule:信息隐瞒暗示,命中谣言话术特征[信息隐瞒暗示]: 概率增强后判定 (prob 0.202 + bias 0.43 = 0.632)
 499571799764770816,People of #Ferguson: Stop #attacking our brave #heroes! -- http://t.co/DfxchWSDBM,0,1,0.049485226163713224,7959b9dfcb3f261704f37dc6452488268597cccd93c42e18c688fa32664dbf50,0,local,"预测标签：0（非谣言）
 谣言概率：0.049
 分类置信度：0.951
