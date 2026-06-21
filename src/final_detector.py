@@ -217,6 +217,7 @@ class FinalRumourDetectClass:
 
     def _override_explanation(self, text: str, prob: float, source: str, reason: str) -> str:
         local = explain_text(self.bundle, text)
+        local = local.replace("预测标签：", "基座模型原始预测标签：")
         return (
             "预测标签：1（谣言）\n"
             f"基座模型谣言概率：{prob:.3f}\n"

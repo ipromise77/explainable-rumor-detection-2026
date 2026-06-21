@@ -17,8 +17,8 @@
     <main>
       <section class="hero">
         <p class="eyebrow">Explainable Rumor Detection</p>
-        <h1>把一条推文，变成可解释判断。</h1>
-        <p class="hero-copy">输入文本后，模型给出 0/1 标签、谣言概率、证据贡献和中文判断依据。</p>
+        <h1><span>把一条推文，</span><span>变成可解释判断。</span></h1>
+        <p class="hero-copy"><span>社交媒体文本的快速判别</span><span>概率估计与证据追踪</span></p>
       </section>
 
       <section class="experience" aria-label="interactive rumor detection demo">
@@ -36,9 +36,15 @@
 
           <textarea id="tweet" rows="7">anonymous sources obtained documents showing a massive cover-up by officials</textarea>
 
+          <div class="sample-tabs" aria-label="样例场景">
+            <button type="button" class="sample-tab active" data-sample="0" data-detector="main">主模型谣言</button>
+            <button type="button" class="sample-tab" data-sample="1" data-detector="main">非谣言样例</button>
+            <button type="button" class="sample-tab" data-sample="2" data-detector="final">规则增强</button>
+          </div>
+
           <div class="actions">
             <button id="runBtn" type="submit">检测</button>
-            <button id="sampleBtn" type="button" class="secondary">换一个样例</button>
+            <button id="copyBtn" type="button" class="secondary">复制解释</button>
           </div>
         </form>
 
@@ -70,7 +76,7 @@
               <strong id="source">-</strong>
             </div>
             <div>
-              <span>本地标签</span>
+              <span>基座标签</span>
               <strong id="localLabel">-</strong>
             </div>
             <div>

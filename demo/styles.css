@@ -26,6 +26,7 @@ body {
   color: var(--ink);
   background:
     linear-gradient(180deg, #fbfbfd 0%, #f5f5f7 46%, #ffffff 100%);
+  overflow-x: hidden;
 }
 
 button,
@@ -88,6 +89,11 @@ h1 {
   font-size: clamp(44px, 6vw, 78px);
   line-height: 1.03;
   font-weight: 760;
+  overflow-wrap: anywhere;
+}
+
+h1 span {
+  display: block;
 }
 
 h2 {
@@ -102,6 +108,10 @@ h2 {
   color: var(--muted);
   font-size: 20px;
   line-height: 1.45;
+}
+
+.hero-copy span {
+  display: inline;
 }
 
 .experience {
@@ -122,6 +132,7 @@ h2 {
 
 .composer {
   padding: 26px;
+  min-width: 0;
 }
 
 .composer-head {
@@ -152,6 +163,29 @@ textarea {
   color: var(--ink);
   line-height: 1.6;
   resize: vertical;
+}
+
+.sample-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.sample-tab {
+  min-height: 36px;
+  padding: 0 10px;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  background: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.sample-tab:hover,
+.sample-tab.active {
+  color: #ffffff;
+  background: var(--ink);
 }
 
 .actions {
@@ -188,6 +222,7 @@ button.secondary:hover {
   overflow: hidden;
   background: #101014;
   color: #f5f5f7;
+  min-width: 0;
 }
 
 .device-top {
@@ -375,26 +410,83 @@ pre {
 }
 
 @media (max-width: 560px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   main {
-    width: min(100% - 24px, 1180px);
+    width: 100%;
+    max-width: 1180px;
+    padding: 0 12px;
   }
 
   h1 {
-    font-size: 42px;
+    font-size: 34px;
+    line-height: 1.08;
   }
 
   .hero-copy {
-    font-size: 17px;
+    max-width: 100%;
+    font-size: 16px;
+    padding: 0 8px;
+    overflow-wrap: anywhere;
+    word-break: keep-all;
+  }
+
+  .hero-copy span {
+    display: block;
+  }
+
+  .experience,
+  .composer,
+  .device,
+  .proof-strip {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .composer,
+  .hero-result,
+  .rationale {
+    padding: 26px;
+  }
+
+  .device-top span {
+    max-width: 210px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .composer-head,
-  .actions {
+  .actions,
+  .sample-tabs {
     display: block;
   }
 
   select,
+  textarea,
   button {
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  select,
+  button {
     margin-top: 10px;
+  }
+
+  .sample-tab {
+    display: block;
+  }
+
+  .result-meta strong,
+  pre {
+    overflow-wrap: anywhere;
   }
 }
