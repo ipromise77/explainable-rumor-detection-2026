@@ -12,7 +12,10 @@ const verdict = document.querySelector("#verdict");
 const prob = document.querySelector("#prob");
 const source = document.querySelector("#source");
 const detectorName = document.querySelector("#detectorName");
+const localLabel = document.querySelector("#localLabel");
+const analysisMode = document.querySelector("#analysisMode");
 const explanation = document.querySelector("#explanation");
+const meterFill = document.querySelector("#meterFill");
 
 function setLoading() {
   verdict.textContent = "检测中";
@@ -20,6 +23,9 @@ function setLoading() {
   prob.textContent = "-";
   source.textContent = "-";
   detectorName.textContent = "-";
+  localLabel.textContent = "-";
+  analysisMode.textContent = "Local";
+  meterFill.style.width = "0%";
   explanation.textContent = "模型正在生成判断依据...";
 }
 
@@ -27,9 +33,13 @@ function setResult(data) {
   const rumor = data.label === 1;
   verdict.textContent = `${data.label} / ${data.label_name}`;
   verdict.className = `verdict ${rumor ? "rumor" : "non-rumor"}`;
-  prob.textContent = Number(data.prob_rumor).toFixed(4);
+  const probability = Number(data.prob_rumor);
+  prob.textContent = probability.toFixed(4);
+  meterFill.style.width = `${Math.max(0, Math.min(100, probability * 100))}%`;
   source.textContent = data.source || "local";
   detectorName.textContent = data.detector === "final" ? "FinalRumourDetectClass" : "RumourDetectClass";
+  localLabel.textContent = data.local_label === null || data.local_label === undefined ? String(data.label) : String(data.local_label);
+  analysisMode.textContent = data.source && data.source.startsWith("rule:") ? "Rule Signal" : "Local Evidence";
   explanation.textContent = data.explanation || "未返回解释。";
 }
 
@@ -58,7 +68,10 @@ async function runPrediction() {
   }
 }
 
-runBtn.addEventListener("click", runPrediction);
+document.querySelector("#composer").addEventListener("submit", (event) => {
+  event.preventDefault();
+  runPrediction();
+});
 sampleBtn.addEventListener("click", () => {
   const current = samples.indexOf(tweet.value.trim());
   tweet.value = samples[(current + 1) % samples.length];

@@ -7,54 +7,94 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <main class="app-shell">
-      <section class="workspace">
-        <header class="topbar">
-          <div>
-            <p class="eyebrow">Explainable Rumor Detection</p>
-            <h1>可解释谣言检测</h1>
-          </div>
-          <div class="metric-strip" aria-label="model metrics">
-            <span><b>主模型</b> Acc 0.8803</span>
-            <span><b>备选增强</b> Acc 0.8928</span>
-          </div>
-        </header>
+    <nav class="global-nav" aria-label="demo navigation">
+      <a href="#" class="brand">RumourLab</a>
+      <span>主模型 0.8803</span>
+      <span>备选增强 0.8928</span>
+      <span>本地可复现</span>
+    </nav>
 
-        <section class="panel input-panel">
-          <div class="field-row">
-            <label for="detector">检测器</label>
-            <select id="detector">
-              <option value="main">RumourDetectClass - 默认主模型</option>
-              <option value="final">FinalRumourDetectClass - 备选增强</option>
+    <main>
+      <section class="hero">
+        <p class="eyebrow">Explainable Rumor Detection</p>
+        <h1>把一条推文，变成可解释判断。</h1>
+        <p class="hero-copy">输入文本后，模型给出 0/1 标签、谣言概率、证据贡献和中文判断依据。</p>
+      </section>
+
+      <section class="experience" aria-label="interactive rumor detection demo">
+        <form class="composer" id="composer">
+          <div class="composer-head">
+            <div>
+              <p class="eyebrow">Input</p>
+              <h2>检测文本</h2>
+            </div>
+            <select id="detector" aria-label="选择检测器">
+              <option value="main">RumourDetectClass</option>
+              <option value="final">FinalRumourDetectClass</option>
             </select>
           </div>
-          <label for="tweet">输入推文文本</label>
-          <textarea id="tweet" rows="7">anonymous sources obtained documents showing a massive cover-up by officials</textarea>
-          <div class="actions">
-            <button id="runBtn" type="button">检测</button>
-            <button id="sampleBtn" type="button" class="secondary">填入样例</button>
-          </div>
-        </section>
 
-        <section class="result-grid">
-          <article class="panel verdict-panel">
+          <textarea id="tweet" rows="7">anonymous sources obtained documents showing a massive cover-up by officials</textarea>
+
+          <div class="actions">
+            <button id="runBtn" type="submit">检测</button>
+            <button id="sampleBtn" type="button" class="secondary">换一个样例</button>
+          </div>
+        </form>
+
+        <section class="device" aria-label="model result">
+          <div class="device-top">
+            <div class="traffic" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <span id="detectorName">RumourDetectClass</span>
+          </div>
+
+          <div class="hero-result">
             <p class="eyebrow">Prediction</p>
             <div class="verdict" id="verdict">等待检测</div>
-            <dl>
-              <div><dt>谣言概率</dt><dd id="prob">-</dd></div>
-              <div><dt>来源</dt><dd id="source">-</dd></div>
-              <div><dt>检测器</dt><dd id="detectorName">-</dd></div>
-            </dl>
-          </article>
+            <div class="probability">
+              <div class="probability-label">
+                <span>谣言概率</span>
+                <strong id="prob">-</strong>
+              </div>
+              <div class="meter" aria-hidden="true">
+                <span id="meterFill"></span>
+              </div>
+            </div>
+          </div>
 
-          <article class="panel explanation-panel">
+          <div class="result-meta">
+            <div>
+              <span>来源</span>
+              <strong id="source">-</strong>
+            </div>
+            <div>
+              <span>本地标签</span>
+              <strong id="localLabel">-</strong>
+            </div>
+            <div>
+              <span>解释模式</span>
+              <strong id="analysisMode">Local</strong>
+            </div>
+          </div>
+
+          <div class="rationale">
             <p class="eyebrow">Rationale</p>
             <h2>判断依据</h2>
             <pre id="explanation">点击“检测”后显示模型解释。</pre>
-          </article>
+          </div>
         </section>
       </section>
+
+      <section class="proof-strip" aria-label="validated metrics">
+        <div><span>Accuracy</span><strong>0.8803</strong><small>正式默认主模型</small></div>
+        <div><span>Macro-F1</span><strong>0.8757</strong><small>val.csv 复现</small></div>
+        <div><span>Accuracy</span><strong>0.8928</strong><small>备选增强模型</small></div>
+        <div><span>Runtime</span><strong>Local</strong><small>默认不依赖 API</small></div>
+      </section>
     </main>
+
     <script src="./app.js"></script>
   </body>
 </html>
