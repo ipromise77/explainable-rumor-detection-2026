@@ -16,6 +16,7 @@
 │   ├── train.py            # 训练并保存模型
 │   ├── evaluate.py         # 评估保存后的模型
 │   ├── evaluate_llm.py      # 评估LLM增强模式
+│   ├── final_detector.py    # 可选的分级信号+缓存LLM备选检测器
 │   └── predict.py          # 单条文本预测
 ├── models/
 │   └── rumor_ensemble.joblib
@@ -35,7 +36,13 @@
 │   ├── run_generalization_experiments.py
 │   ├── run_fn_recall_review_experiment.py
 │   ├── run_rhetorical_feature_experiment.py
-│   └── build_report.py
+│   ├── run_final_detector_evaluation.py
+│   ├── run_demo_server.py
+│   └── build_report.py    # 使用 XeLaTeX 编译报告
+├── demo/
+│   ├── index.html          # 本地可视化演示页面
+│   ├── styles.css
+│   └── app.js
 ├── docs/
 │   ├── data_quality_and_iteration_notes.md
 │   ├── generalization_experiments.md
@@ -44,6 +51,7 @@
 │   ├── dense_embedding.md
 │   ├── experiment_logs.md
 │   └── llm_strategy_evolution.md
+├── report.tex             # LaTeX 报告源文件
 ├── report.pdf
 └── requirements.txt
 ```
@@ -55,6 +63,57 @@
 ```bash
 pip install -r requirements.txt
 ```
+
+## 教师复现路线
+
+项目默认主模型不依赖学校 API 或本地缓存，可直接复现：
+
+```bash
+pip install -r requirements.txt
+python -m src.evaluate --show-examples 0
+```
+
+预期输出：
+
+```text
+Accuracy: 0.8803
+Macro-F1: 0.8757
+Confusion matrix [[TN, FP], [FN, TP]]:
+[[215  11]
+ [ 37 138]]
+```
+
+如需从清洗训练集重新训练：
+
+```bash
+python -m src.train --with-explanations
+python -m src.evaluate --show-examples 0
+```
+
+备选增强模型同样不依赖 ignored LLM cache，复现命令为：
+
+```bash
+python scripts/run_final_detector_evaluation.py
+```
+
+预期 Accuracy 为 `0.8928`，Macro-F1 为 `0.8892`，混淆矩阵为 `[[215, 11], [32, 143]]`。
+
+## 报告编译
+
+报告源文件为 `report.tex`，使用 LaTeX 编写。建议安装 TeX Live 或 MiKTeX，并使用 XeLaTeX 编译中文报告：
+
+```bash
+python scripts/build_report.py
+```
+
+也可以手动运行：
+
+```bash
+xelatex -interaction=nonstopmode -halt-on-error report.tex
+xelatex -interaction=nonstopmode -halt-on-error report.tex
+```
+
+注意：老师要求 GitHub 中包含 `report.pdf`。本仓库保留 `report.tex` 作为源文件，提交前需要在已安装 XeLaTeX 的环境中运行上述命令生成并提交最新 `report.pdf`。
 
 ## 训练
 
@@ -132,7 +191,7 @@ python scripts/run_fn_recall_review_experiment.py
 
 ## 探索记录
 
-`docs/dense_embedding.md`、`docs/experiment_logs.md`、`docs/llm_strategy_evolution.md` 和 `docs/rhetorical_feature_experiment.md` 记录了若干未进入最终主线的探索实验，包括稠密语义特征、event 特征、阈值扫描、L1 正则化、LLM Prompt 迭代和谣言话术辅助特征。话术特征实验表明，`anonymous+obtained`、`smear+campaign`、`hiding` 等模式更适合作为解释阶段的证据归纳，不适合作为直接覆盖标签的规则。最终可复现主线仍以当前 TF-IDF 集成模型、清洗训练集、保守 LLM 复核和高置信覆盖策略为准。
+`docs/dense_embedding.md`、`docs/experiment_logs.md`、`docs/llm_strategy_evolution.md` 和 `docs/rhetorical_feature_experiment.md` 记录了若干未进入最终主线的探索实验，包括稠密语义特征、event 特征、阈值扫描、L1 正则化、LLM Prompt 迭代和谣言话术辅助特征。话术特征实验表明，`anonymous+obtained`、`smear+campaign`、`hiding` 等模式更适合作为解释阶段的证据归纳，不适合作为直接覆盖标签的规则。默认可复现主线以当前 TF-IDF 集成模型和清洗训练集为准；保守 LLM 复核、高置信覆盖和分级话术信号作为附加实验记录。
 
 ## 评估
 
@@ -140,7 +199,7 @@ python scripts/run_fn_recall_review_experiment.py
 python -m src.evaluate --show-examples 3
 ```
 
-当前模型在 `val.csv` 上的结果：
+默认提交模型在 `val.csv` 上的结果如下。该结果由 `RumourDetectClass` 对应的本地 TF-IDF 集成模型产生，是最容易复现、最适合作为课程主线提交的指标：
 
 | 指标 | 数值 |
 | --- | ---: |
@@ -152,14 +211,60 @@ python -m src.evaluate --show-examples 3
 
 ```text
 [[215, 11],
- [ 37, 138]]
+[ 37, 138]]
 ```
+
+## 备选高召回方案
+
+为探索更高的谣言召回率，项目还提供一个工程化的备选检测器 `FinalRumourDetectClass`。它默认不读取被 `.gitignore` 排除的 LLM 缓存文件，而是在默认本地模型之外使用可复现的分级谣言话术信号：
+
+1. 先使用 `RumourDetectClass` 对输入文本给出基础概率和本地标签。
+2. 仅针对本地模型判为非谣言且 `prob_rumor <= 0.25` 的低概率候选检查话术信号。
+3. 强信号直接覆盖为谣言，中等信号采用 `prob_rumor + bias >= 0.50` 后再覆盖。
+
+历史 LLM 缓存复核实验仍保留为显式可选功能，可在单条预测时增加 `--use-cache` 打开；默认复现口径不依赖该缓存。
+
+单条预测：
+
+```bash
+python -m src.final_detector "input tweet text"
+```
+
+可选缓存实验：
+
+```bash
+python -m src.final_detector --use-cache "input tweet text"
+```
+
+验证集复现实验：
+
+```bash
+python scripts/run_final_detector_evaluation.py
+```
+
+在当前 `main` 基础上完成真实检测类封装后，默认规则版备选方案在 `val.csv` 上可独立复现到 `0.8928` Accuracy、`0.8892` Macro-F1，混淆矩阵为 `[[215, 11], [32, 143]]`。远程 `feat/rule-signal-system` 分支的独立后处理脚本曾记录 `0.9027` Accuracy，可作为附加探索结果说明；但该分数更依赖验证集缓存和后处理脚本形态，不作为最终默认主模型指标。默认课程主模型仍以 `RumourDetectClass` 和 `0.8803` Accuracy 为准，备选方案用于展示进一步提升召回率的探索过程。
 
 ## 单条文本预测
 
 ```bash
 python -m src.predict "BREAKING: reports say the city confirms the story is false after investigation #news"
 ```
+
+## 本地可视化演示
+
+项目提供一个无额外前端依赖的本地 demo 页面，可用于课堂展示或报告截图：
+
+```bash
+python scripts/run_demo_server.py
+```
+
+然后打开：
+
+```text
+http://127.0.0.1:8000
+```
+
+页面支持选择默认主模型 `RumourDetectClass` 或备选增强模型 `FinalRumourDetectClass`，并展示标签、谣言概率、来源和中文判断依据。该演示只调用本地模型；学校 API 解释增强仍通过命令行模块单独运行。
 
 ## LLM 增强模式
 
@@ -209,6 +314,16 @@ python -m src.evaluate_llm --low 0.30 --high 0.70 --allow-override --override-co
 from src.rumor_detector import RumourDetectClass
 
 detector = RumourDetectClass("models/rumor_ensemble.joblib")
+label = detector.classify("input tweet text")
+reason = detector.explain("input tweet text")
+```
+
+如果需要运行备选高召回方案，也可以直接调用：
+
+```python
+from src.final_detector import FinalRumourDetectClass
+
+detector = FinalRumourDetectClass("models/rumor_ensemble.joblib")
 label = detector.classify("input tweet text")
 reason = detector.explain("input tweet text")
 ```

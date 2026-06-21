@@ -1,224 +1,303 @@
 from __future__ import annotations
 
-import json
+import shutil
+import subprocess
+import sys
 from pathlib import Path
-
-from reportlab.lib import colors
-from reportlab.lib.enums import TA_CENTER
-from reportlab.lib.pagesizes import A4
-from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
-from reportlab.lib.units import cm
-from reportlab.pdfbase import pdfmetrics
-from reportlab.pdfbase.ttfonts import TTFont
-from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "report.pdf"
+TEX_FILE = ROOT / "report.tex"
+PDF_FILE = ROOT / "report.pdf"
 
 
-def register_fonts() -> tuple[str, str]:
-    font_dir = Path(r"C:\Windows\Fonts")
-    regular = font_dir / "simhei.ttf"
-    bold = font_dir / "simhei.ttf"
-    pdfmetrics.registerFont(TTFont("CNRegular", str(regular)))
-    pdfmetrics.registerFont(TTFont("CNBold", str(bold)))
-    return "CNRegular", "CNBold"
+def run(cmd: list[str]) -> None:
+    subprocess.run(cmd, cwd=ROOT, check=True)
 
 
-def p(text: str, style: ParagraphStyle) -> Paragraph:
-    return Paragraph(text.replace("\n", "<br/>"), style)
+def build_with_latex() -> bool:
+    latexmk = shutil.which("latexmk")
+    xelatex = shutil.which("xelatex")
+
+    if latexmk:
+        run(
+            [
+                latexmk,
+                "-xelatex",
+                "-interaction=nonstopmode",
+                "-halt-on-error",
+                TEX_FILE.name,
+            ]
+        )
+        return PDF_FILE.exists()
+
+    if xelatex:
+        cmd = [xelatex, "-interaction=nonstopmode", "-halt-on-error", TEX_FILE.name]
+        run(cmd)
+        run(cmd)
+        return PDF_FILE.exists()
+
+    return False
 
 
-def main() -> None:
-    regular, bold = register_fonts()
+def register_cjk_font() -> str:
+    from reportlab.pdfbase import pdfmetrics
+    from reportlab.pdfbase.ttfonts import TTFont
+
+    candidates = [
+        Path("C:/Windows/Fonts/msyh.ttc"),
+        Path("C:/Windows/Fonts/simsun.ttc"),
+        Path("C:/Windows/Fonts/simhei.ttf"),
+    ]
+    for path in candidates:
+        if path.exists():
+            pdfmetrics.registerFont(TTFont("CJK", str(path)))
+            return "CJK"
+    return "Helvetica"
+
+
+def build_fallback_pdf() -> None:
+    from reportlab.lib import colors
+    from reportlab.lib.enums import TA_CENTER
+    from reportlab.lib.pagesizes import A4
+    from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
+    from reportlab.lib.units import cm
+    from reportlab.platypus import (
+        Flowable,
+        ListFlowable,
+        ListItem,
+        Paragraph,
+        SimpleDocTemplate,
+        Spacer,
+        Table,
+        TableStyle,
+    )
+
+    font = register_cjk_font()
     styles = getSampleStyleSheet()
-    title = ParagraphStyle(
-        "TitleCN",
-        parent=styles["Title"],
-        fontName=bold,
-        fontSize=18,
-        leading=24,
-        alignment=TA_CENTER,
-        textColor=colors.HexColor("#1F2937"),
-        spaceAfter=10,
-    )
-    h2 = ParagraphStyle(
-        "H2CN",
-        parent=styles["Heading2"],
-        fontName=bold,
-        fontSize=11.5,
-        leading=15,
-        textColor=colors.HexColor("#0F766E"),
-        spaceBefore=8,
-        spaceAfter=4,
-    )
     body = ParagraphStyle(
-        "BodyCN",
+        "body",
         parent=styles["BodyText"],
-        fontName=regular,
-        fontSize=9.5,
-        leading=14.5,
-        firstLineIndent=18,
+        fontName=font,
+        fontSize=9.2,
+        leading=14,
+        wordWrap="CJK",
         spaceAfter=5,
     )
-    small = ParagraphStyle(
-        "SmallCN",
-        parent=styles["BodyText"],
-        fontName=regular,
-        fontSize=8.5,
-        leading=12,
-        spaceAfter=3,
+    title = ParagraphStyle(
+        "title",
+        parent=body,
+        alignment=TA_CENTER,
+        fontSize=19,
+        leading=24,
+        spaceAfter=8,
     )
+    subtitle = ParagraphStyle(
+        "subtitle",
+        parent=body,
+        alignment=TA_CENTER,
+        textColor=colors.HexColor("#475569"),
+        spaceAfter=10,
+    )
+    h1 = ParagraphStyle(
+        "h1",
+        parent=body,
+        fontSize=12.5,
+        leading=16,
+        textColor=colors.HexColor("#0F766E"),
+        spaceBefore=7,
+        spaceAfter=4,
+    )
+    small = ParagraphStyle("small", parent=body, fontSize=8.2, leading=12)
 
-    metrics_path = ROOT / "results" / "metrics.json"
-    metrics = json.loads(metrics_path.read_text(encoding="utf-8")) if metrics_path.exists() else {}
-    llm_metrics_path = ROOT / "results" / "llm_override_val.metrics.json"
-    llm_metrics = (
-        json.loads(llm_metrics_path.read_text(encoding="utf-8"))
-        if llm_metrics_path.exists()
-        else {}
-    )
-    acc = metrics.get("accuracy", 0)
-    macro_f1 = metrics.get("macro_f1", 0)
-    rumor_f1 = metrics.get("rumor_f1", 0)
-    cmatrix = metrics.get("confusion_matrix", [[0, 0], [0, 0]])
-    llm_acc = llm_metrics.get("accuracy", 0)
-    llm_macro_f1 = llm_metrics.get("macro_f1", 0)
-    llm_calls = llm_metrics.get("llm_calls", 0)
-    llm_overrides = llm_metrics.get("llm_overrides", 0)
-    fn_review_path = ROOT / "results" / "fn_recall_review_summary.json"
-    fn_review = json.loads(fn_review_path.read_text(encoding="utf-8")) if fn_review_path.exists() else {}
-    fn_default = fn_review.get("predeclared_default", {})
+    class Rule(Flowable):
+        def __init__(self, color: str = "#0F766E"):
+            super().__init__()
+            self.color = colors.HexColor(color)
+
+        def wrap(self, avail_width, avail_height):
+            self.width = avail_width
+            self.height = 0.12 * cm
+            return self.width, self.height
+
+        def draw(self):
+            self.canv.setStrokeColor(self.color)
+            self.canv.setLineWidth(1)
+            self.canv.line(0, 0.05 * cm, self.width, 0.05 * cm)
+
+    class FlowDiagram(Flowable):
+        def __init__(self, labels: list[str], caption: str):
+            super().__init__()
+            self.labels = labels
+            self.caption = caption
+
+        def wrap(self, avail_width, avail_height):
+            self.width = avail_width
+            self.height = 2.1 * cm
+            return self.width, self.height
+
+        def draw(self):
+            canvas = self.canv
+            gap = 0.28 * cm
+            box_w = (self.width - gap * (len(self.labels) - 1)) / len(self.labels)
+            box_h = 0.78 * cm
+            y = 0.72 * cm
+            canvas.setFont(font, 7.2)
+            for i, label in enumerate(self.labels):
+                x = i * (box_w + gap)
+                canvas.setFillColor(colors.HexColor("#EEF7F5"))
+                canvas.setStrokeColor(colors.HexColor("#0F766E"))
+                canvas.roundRect(x, y, box_w, box_h, 4, fill=1, stroke=1)
+                canvas.setFillColor(colors.black)
+                for j, part in enumerate(label.split("\\n")):
+                    canvas.drawCentredString(
+                        x + box_w / 2,
+                        y + box_h / 2 + (0.12 - 0.22 * j) * cm,
+                        part,
+                    )
+                if i < len(self.labels) - 1:
+                    ax1 = x + box_w + 0.04 * cm
+                    ax2 = x + box_w + gap - 0.04 * cm
+                    ay = y + box_h / 2
+                    canvas.setStrokeColor(colors.HexColor("#475569"))
+                    canvas.line(ax1, ay, ax2, ay)
+                    canvas.line(ax2, ay, ax2 - 0.10 * cm, ay + 0.05 * cm)
+                    canvas.line(ax2, ay, ax2 - 0.10 * cm, ay - 0.05 * cm)
+            canvas.setFont(font, 8)
+            canvas.setFillColor(colors.HexColor("#475569"))
+            canvas.drawCentredString(self.width / 2, 0.18 * cm, self.caption)
+
+    def p(text: str, style=body) -> Paragraph:
+        return Paragraph(text, style)
+
+    def bullet(items: list[str]) -> ListFlowable:
+        return ListFlowable(
+            [ListItem(p(item, body), leftIndent=10) for item in items],
+            bulletType="bullet",
+            start="circle",
+            leftIndent=12,
+        )
+
+    def table(rows: list[list[str]], widths: list[float]) -> Table:
+        data = [[p(cell, small) for cell in row] for row in rows]
+        t = Table(data, colWidths=widths, hAlign="LEFT", repeatRows=1)
+        t.setStyle(
+            TableStyle(
+                [
+                    ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#E6F4F1")),
+                    ("TEXTCOLOR", (0, 0), (-1, 0), colors.HexColor("#0F3F3A")),
+                    ("GRID", (0, 0), (-1, -1), 0.35, colors.HexColor("#CBD5E1")),
+                    ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+                    ("LEFTPADDING", (0, 0), (-1, -1), 5),
+                    ("RIGHTPADDING", (0, 0), (-1, -1), 5),
+                    ("TOPPADDING", (0, 0), (-1, -1), 4),
+                    ("BOTTOMPADDING", (0, 0), (-1, -1), 4),
+                ]
+            )
+        )
+        return t
 
     doc = SimpleDocTemplate(
-        str(OUT),
+        str(PDF_FILE),
         pagesize=A4,
-        rightMargin=1.8 * cm,
-        leftMargin=1.8 * cm,
-        topMargin=1.6 * cm,
-        bottomMargin=1.6 * cm,
+        leftMargin=1.85 * cm,
+        rightMargin=1.85 * cm,
+        topMargin=1.7 * cm,
+        bottomMargin=1.7 * cm,
+        title="可解释的谣言检测",
     )
 
-    story = [p("可解释的谣言检测大作业报告", title)]
-    meta = Table(
-        [
-            ["课程", "人工智能导论", "题目", "可解释的谣言检测"],
+    story = [
+        p("可解释的谣言检测", title),
+        p("人工智能导论大作业 2026 | 小组成员：待填写姓名、学号、贡献比例", subtitle),
+        Rule(),
+        p("<b>摘要。</b>本项目实现英文推文谣言检测系统，输入文本后输出 0/1 标签和中文判断依据。默认主模型为三路 TF-IDF + Logistic Regression 集成，使用 train_clean.csv 训练，不依赖学校 API 或本地缓存，在 val.csv 上复现 Accuracy 0.8803。备选增强模型 FinalRumourDetectClass 使用可复现的分级话术信号，Accuracy 达到 0.8928。项目同时保留数据清理、事件级错误分析、阈值实验、5-fold 交叉验证、LLM 复核和失败实验记录。"),
+        p("<b>关键词：</b>谣言检测；可解释机器学习；TF-IDF；逻辑回归；RAG；大语言模型复核"),
+        p("1. 任务与合规性", h1),
+        p("课程要求模型对推文输出 0/1 标签，并给出一段判断依据。GitHub 需包含 README、report.pdf、代码和支持文件。本项目默认检测类为 RumourDetectClass，提供 classify(text)、explain(text) 和 predict(text)。默认复现路径只依赖仓库中的数据、模型和 Python 依赖；学校 API 的 deepseek-reasoner 仅作为可选解释增强与低置信复核实验。"),
+        p("2. 数据质量与预处理", h1),
+        p("原始训练集 2840 条，验证集 401 条。预处理包括 HTML 反转义、小写化、URLTOKEN、USERTOKEN 和 hashtag 展开。数据审计发现训练集中存在 3 组、7 行预处理后文本相同但标签冲突的异常样本；验证集无同类冲突。因此保留原始 train.csv，额外生成 train_clean.csv 训练。"),
+        p("3. 模型架构", h1),
+        FlowDiagram(
+            ["原始推文", "清洗归一化", "三路 TF-IDF", "逻辑回归\\n概率集成", "标签与解释"],
+            "图 1：默认主模型流程",
+        ),
+        table(
             [
-                "小组成员",
-                "请填写真实姓名、学号",
-                "代码仓库",
-                "https://github.com/ipromise77/explainable-rumor-detection-2026",
+                ["阶段", "输入/处理", "输出"],
+                ["清洗", "HTML 反转义、URL/用户/hashtag 归一化", "稳定文本表示"],
+                ["特征", "词级 1-2/1-3 gram + 字符级 2-6/3-6 gram", "三路 TF-IDF 向量"],
+                ["分类", "三组 Logistic Regression 概率平均", "谣言概率与 0/1 标签"],
+                ["解释", "TF-IDF 特征值与权重乘积", "支持谣言/非谣言的局部证据"],
+                ["增强", "低概率非谣言样本检查分级话术信号", "备选高召回预测"],
             ],
-        ],
-        colWidths=[2.2 * cm, 5.5 * cm, 2.2 * cm, 7.1 * cm],
-    )
-    meta.setStyle(
-        TableStyle(
+            [2.2 * cm, 9.5 * cm, 4.2 * cm],
+        ),
+        p("默认模型训练三组互补管线，解释模块计算当前文本中每个 TF-IDF 特征值与模型权重的乘积。解释不引入外部事实，只反映模型在当前样本上的局部判定依据。"),
+        p("4. 实验与结果", h1),
+        table(
             [
-                ("FONTNAME", (0, 0), (-1, -1), regular),
-                ("FONTSIZE", (0, 0), (-1, -1), 8.5),
-                ("BACKGROUND", (0, 0), (0, -1), colors.HexColor("#E0F2F1")),
-                ("BACKGROUND", (2, 0), (2, -1), colors.HexColor("#E0F2F1")),
-                ("BOX", (0, 0), (-1, -1), 0.6, colors.HexColor("#99A3A4")),
-                ("INNERGRID", (0, 0), (-1, -1), 0.3, colors.HexColor("#CBD5E1")),
-                ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
-                ("LEFTPADDING", (0, 0), (-1, -1), 5),
-                ("RIGHTPADDING", (0, 0), (-1, -1), 5),
+                ["方案", "Accuracy", "Macro-F1", "Rumor F1", "说明"],
+                ["RumourDetectClass", "0.8803", "0.8757", "0.8519", "默认主模型，TN/FP/FN/TP=215/11/37/138"],
+                ["低置信 FN 复核", "0.8828", "0.8784", "0.8554", "复核 79 条，覆盖 1 条，无新增 FP"],
+                ["LLM 高置信覆盖", "0.8828", "0.8787", "0.8563", "调用 70 条，覆盖 3 条，仅作增强实验"],
+                ["FinalRumourDetectClass", "0.8928", "0.8892", "0.8693", "默认不读 LLM 缓存，TN/FP/FN/TP=215/11/32/143"],
+            ],
+            [4.1 * cm, 2.0 * cm, 2.0 * cm, 2.0 * cm, 6.0 * cm],
+        ),
+        p("5-fold 交叉验证 Accuracy 为 0.8641±0.0176。train 内部 dev 阈值实验选择 0.51，但应用到 val.csv 后 Accuracy 降至 0.8753，因此最终保留 0.5。事件级分析发现 event 0 和 event 1 的错误主要是 false negative，说明模型偏保守。"),
+        p("5. 增强方案与失败实验", h1),
+        FlowDiagram(
+            ["本地概率 p", "判 0 且\\np≤0.25", "检查话术\\n信号", "强信号或\\np+bias≥0.50", "覆盖为谣言"],
+            "图 2：备选增强模型的分级信号流程",
+        ),
+        p("FinalRumourDetectClass 只在本地模型判为非谣言且 prob_rumor≤0.25 时检查分级话术信号。强信号直接覆盖为谣言，中等信号仅在 prob_rumor+bias≥0.50 时覆盖。远程分支曾记录 0.9027 Accuracy，但依赖验证集后处理脚本与本地缓存，因此仅作为探索记录。稠密语义特征、event 特征、L1 正则化、直接 LLM 接管等尝试未稳定提升效果，已在 docs/ 中作为失败/风险记录保留。"),
+        p("6. 可解释性与演示", h1),
+        p("默认输出固定包含标签、谣言概率、置信度、支持谣言证据、支持非谣言证据和综合判断。LLM 增强模块采用相似样本提示，将本地证据、近邻标签和输入推文发送给学校 API；高置信覆盖门槛为 0.85。运行 python scripts/run_demo_server.py 可打开本地前端页面，展示标签、概率、来源和中文判断依据。"),
+        p("7. 复现方式与分工", h1),
+        p("核心命令：pip install -r requirements.txt；python -m src.train --with-explanations；python -m src.evaluate --show-examples 0；python scripts/run_final_detector_evaluation.py；python scripts/run_demo_server.py。小组姓名、学号和贡献比例提交前填写。"),
+        p("8. 结论", h1),
+        p("本项目以可复现的 TF-IDF 集成模型作为正式主线，在 val.csv 上达到 0.8803 Accuracy，并提供基于局部特征贡献的解释。备选增强模型在不依赖 LLM 缓存的前提下达到 0.8928 Accuracy，展示了由错误分析驱动的召回改进。报告明确区分默认指标、增强实验和探索性失败结果。"),
+        p("参考文献", h1),
+        bullet(
+            [
+                "Shu et al. Fake News Detection on Social Media: A Data Mining Perspective. ACM SIGKDD Explorations, 2017.",
+                "Salton and Buckley. Term-weighting approaches in automatic text retrieval. Information Processing & Management, 1988.",
+                "Pedregosa et al. Scikit-learn: Machine Learning in Python. JMLR, 2011.",
+                "Lewis et al. Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks. NeurIPS, 2020.",
             ]
-        )
-    )
-    story += [meta, Spacer(1, 8)]
-
-    sections = [
-        (
-            "1. 任务与目标",
-            "本项目面向短推文谣言检测任务，要求输入一条文本后输出二分类标签，并给出可读判断依据。标签中0表示非谣言，1表示谣言。系统采用“本地可解释检测器+学校API大模型增强解释”的复合架构，兼顾准确率、解释合理性、运行效率和可复现性。",
         ),
-        (
-            "2. 数据与预处理",
-            "数据集包含train.csv与val.csv。原训练集2840条，验证集401条。预处理时进行HTML反转义、小写化，并将URL、用户提及和hashtag归一化为稳定标记。数据审计发现训练集中有3组、7行样本在当前预处理后文本相同但标签冲突，验证集未发现同类冲突；因此生成train_clean.csv，剔除冲突样本后使用2833条正常训练样本重训。",
-        ),
-        (
-            "3. 模型设计",
-            "基础模型采用三路TF-IDF逻辑回归集成：词级1-2/1-3 gram捕捉事件关键词和短语，字符级2-6/3-6 gram捕捉hashtag、拼写变体和短文本片段。对于低置信样本，系统调用deepseek-reasoner，并提供本地证据和相似训练样本进行复核与解释生成；针对事件级分析发现的漏报问题，额外设计local_pred=0且0.20<=prob_rumor<0.50的false negative召回复核。",
-        ),
+        p("附录：核心接口", h1),
+        p("from src.rumor_detector import RumourDetectClass"),
+        p("from src.final_detector import FinalRumourDetectClass"),
+        p("main_detector = RumourDetectClass(); label = main_detector.classify('input tweet text'); reason = main_detector.explain('input tweet text')"),
+        p("final_detector = FinalRumourDetectClass(); result = final_detector.predict('input tweet text')"),
     ]
-    for heading, text in sections:
-        story += [p(heading, h2), p(text, body)]
 
-    story += [p("4. 实验结果", h2)]
-    story += [
-        p(
-            "在val.csv上，使用清洗训练集的最终模型主要指标如下。5-fold交叉验证Accuracy为0.8641±0.0176；train内部dev阈值实验选择0.51，但应用到val.csv后准确率降到0.8753，因此最终保留0.5。事件级错误分析显示event 0和event 1的错误均为false negative；低置信false negative复核在不新增误报的情况下救回1条漏报。全部结果可复现。",
-            body,
-        )
-    ]
-    result_table = Table(
-        [
-            ["模式", "Accuracy", "Macro-F1", "备注"],
-            ["本地TF-IDF集成", f"{acc:.4f}", f"{macro_f1:.4f}", f"Rumor F1={rumor_f1:.4f}"],
-            [
-                "低置信FN召回复核",
-                f"{fn_default.get('accuracy', 0):.4f}",
-                f"{fn_default.get('macro_f1', 0):.4f}",
-                f"救回{fn_default.get('rescued_false_negatives', 0)}条FN，新增FP={fn_default.get('new_false_positives', 0)}",
-            ],
-            [
-                "LLM增强高置信覆盖",
-                f"{llm_acc:.4f}",
-                f"{llm_macro_f1:.4f}",
-                f"调用{llm_calls}条，覆盖{llm_overrides}条",
-            ],
-            ["本地混淆矩阵", str(cmatrix), "", "[[TN, FP], [FN, TP]]"],
-        ],
-        colWidths=[5.4 * cm, 3.0 * cm, 3.0 * cm, 4.6 * cm],
-    )
-    result_table.setStyle(
-        TableStyle(
-            [
-                ("FONTNAME", (0, 0), (-1, -1), regular),
-                ("FONTSIZE", (0, 0), (-1, -1), 8.5),
-                ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#0F766E")),
-                ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),
-                ("BOX", (0, 0), (-1, -1), 0.6, colors.HexColor("#99A3A4")),
-                ("INNERGRID", (0, 0), (-1, -1), 0.3, colors.HexColor("#CBD5E1")),
-                ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
-                ("LEFTPADDING", (0, 0), (-1, -1), 5),
-                ("RIGHTPADDING", (0, 0), (-1, -1), 5),
-            ]
-        )
-    )
-    story += [result_table]
+    def add_page_number(canvas, doc):
+        canvas.saveState()
+        canvas.setFont(font, 8)
+        canvas.setFillColor(colors.HexColor("#64748B"))
+        canvas.drawRightString(A4[0] - 1.85 * cm, 1.0 * cm, str(canvas.getPageNumber()))
+        canvas.restoreState()
 
-    tail_sections = [
-        (
-            "5. 可解释性输出",
-            "基础解释模块计算TF-IDF特征值与逻辑回归权重的乘积，并汇总为“支持谣言”和“支持非谣言”的证据。输出采用固定结构，依次给出预测标签、谣言概率、分类置信度、正向证据、反向证据和综合判断，便于检查依据是否来自当前模型而非主观编造。LLM增强模块把本地概率、正反证据和RAG检索出的相似训练样本输入deepseek-reasoner，由大模型生成中文判断依据；默认不随意改标签，只有高置信冲突时才覆盖。",
-        ),
-        (
-            "6. 泛化与运行效率",
-            "模型训练不使用val标签。即使学校API不可用，本地检测器仍可独立运行并达到0.8803准确率；API可用时，只复核低置信样本，兼顾解释性和运行时间。字符级特征提升了对拼写变化、链接替换和话题标签的鲁棒性，相似样本提示进一步增强跨事件泛化。",
-        ),
-        (
-            "7. 创新点",
-            "第一，采用“词级语义+字符级形态”的多视角集成，在短文本场景下兼顾事件关键词和社交媒体局部模式。第二，设计与模型权重绑定的局部解释生成器，能够同时展示支持与反对证据。第三，引入低置信度LLM复核与RAG式相似样本提示，使判断依据更自然且更贴近数据集分布。第四，基于事件级错误分析设计false negative召回复核，只对本地判0且接近阈值的样本进行保守覆盖。",
-        ),
-        (
-            "8. 小组分工",
-            "请按真实情况填写：组长负责仓库管理、实验统筹和报告整合；成员A负责数据分析和预处理；成员B负责模型训练与调参；成员C负责解释模块、README和部署测试。最终贡献比例请由小组协商后在此处列出。",
-        ),
-    ]
-    for heading, text in tail_sections:
-        story += [p(heading, h2), p(text, body)]
+    doc.build(story, onFirstPage=add_page_number, onLaterPages=add_page_number)
 
-    story += [
-        Spacer(1, 5),
-        p("备注：提交前请将小组成员、学号、贡献比例和GitHub地址替换为真实信息。", small),
-    ]
-    doc.build(story)
-    print(f"Wrote {OUT}")
+
+def main() -> int:
+    if not TEX_FILE.exists():
+        print(f"Missing LaTeX source: {TEX_FILE}", file=sys.stderr)
+        return 1
+
+    if build_with_latex():
+        print(f"Wrote {PDF_FILE}")
+        return 0
+
+    print("No LaTeX compiler found; writing ReportLab fallback PDF from the same report content.")
+    build_fallback_pdf()
+    print(f"Wrote {PDF_FILE}")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

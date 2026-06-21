@@ -1,0 +1,63 @@
+{
+  "strategy": "FinalRumourDetectClass",
+  "use_cached_llm": false,
+  "use_rules": true,
+  "baseline_accuracy": 0.8802992518703242,
+  "final_accuracy": 0.8927680798004988,
+  "macro_f1": 0.8891959104725062,
+  "confusion_matrix": [
+    [
+      215,
+      11
+    ],
+    [
+      32,
+      143
+    ]
+  ],
+  "baseline_confusion_matrix": [
+    [
+      215,
+      11
+    ],
+    [
+      37,
+      138
+    ]
+  ],
+  "source_counts": {
+    "local": 396,
+    "rule:信息隐瞒暗示": 2,
+    "rule:匿名信源引用": 1,
+    "rule:指控抹黑叙事": 1,
+    "rule:极端化叙事": 1
+  },
+  "classification_report": {
+    "0": {
+      "precision": 0.8704453441295547,
+      "recall": 0.9513274336283186,
+      "f1-score": 0.9090909090909091,
+      "support": 226.0
+    },
+    "1": {
+      "precision": 0.9285714285714286,
+      "recall": 0.8171428571428572,
+      "f1-score": 0.8693009118541033,
+      "support": 175.0
+    },
+    "accuracy": 0.8927680798004988,
+    "macro avg": {
+      "precision": 0.8995083863504916,
+      "recall": 0.8842351453855879,
+      "f1-score": 0.8891959104725062,
+      "support": 401.0
+    },
+    "weighted avg": {
+      "precision": 0.8958120892101729,
+      "recall": 0.8927680798004988,
+      "f1-score": 0.8917261970798341,
+      "support": 401.0
+    }
+  },
+  "caveat": "This is an engineered optional detector. Its default evaluation does not use ignored LLM cache files, so it is reproducible from the committed local model, data, and rule signals."
+}

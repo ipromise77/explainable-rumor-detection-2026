@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>可解释谣言检测 Demo</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Explainable Rumor Detection</p>
+            <h1>可解释谣言检测</h1>
+          </div>
+          <div class="metric-strip" aria-label="model metrics">
+            <span><b>主模型</b> Acc 0.8803</span>
+            <span><b>备选增强</b> Acc 0.8928</span>
+          </div>
+        </header>
+
+        <section class="panel input-panel">
+          <div class="field-row">
+            <label for="detector">检测器</label>
+            <select id="detector">
+              <option value="main">RumourDetectClass - 默认主模型</option>
+              <option value="final">FinalRumourDetectClass - 备选增强</option>
+            </select>
+          </div>
+          <label for="tweet">输入推文文本</label>
+          <textarea id="tweet" rows="7">anonymous sources obtained documents showing a massive cover-up by officials</textarea>
+          <div class="actions">
+            <button id="runBtn" type="button">检测</button>
+            <button id="sampleBtn" type="button" class="secondary">填入样例</button>
+          </div>
+        </section>
+
+        <section class="result-grid">
+          <article class="panel verdict-panel">
+            <p class="eyebrow">Prediction</p>
+            <div class="verdict" id="verdict">等待检测</div>
+            <dl>
+              <div><dt>谣言概率</dt><dd id="prob">-</dd></div>
+              <div><dt>来源</dt><dd id="source">-</dd></div>
+              <div><dt>检测器</dt><dd id="detectorName">-</dd></div>
+            </dl>
+          </article>
+
+          <article class="panel explanation-panel">
+            <p class="eyebrow">Rationale</p>
+            <h2>判断依据</h2>
+            <pre id="explanation">点击“检测”后显示模型解释。</pre>
+          </article>
+        </section>
+      </section>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>

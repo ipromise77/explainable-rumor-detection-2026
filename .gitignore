@@ -7,7 +7,7 @@ env/
 .DS_Store
 Thumbs.db
 *.zip
-report.pdf
+tmp/
 models/*_raw.joblib
 *.doc
 人工智能导论*.pdf
@@ -15,6 +15,13 @@ models/*_raw.joblib
 template_extracted.txt
 template_converted.docx
 report_preview/
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
 results/llm_cache.jsonl
 results/fn_review_llm_cache.jsonl
 results/llm_uncertain10.csv
