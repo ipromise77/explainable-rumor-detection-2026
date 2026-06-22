@@ -113,7 +113,7 @@ xelatex -interaction=nonstopmode -halt-on-error report.tex
 xelatex -interaction=nonstopmode -halt-on-error report.tex
 ```
 
-注意：老师要求 GitHub 中包含 `report.pdf`。本仓库保留 `report.tex` 作为源文件，提交前需要在已安装 XeLaTeX 的环境中运行上述命令生成并提交最新 `report.pdf`。
+注意：课程要求 GitHub 中包含 `report.pdf`。本仓库保留 `report.tex` 作为源文件，提交前需要在已安装 XeLaTeX 的环境中运行上述命令生成并提交最新 `report.pdf`。
 
 ## 训练
 
@@ -336,7 +336,7 @@ reason = detector.explain("input tweet text")
 - 字符级 TF-IDF：提升对 hashtag、拼写变体、短文本片段的鲁棒性。
 - 逻辑回归集成：平均三个互补模型的谣言概率，兼顾准确率、运行速度和可解释性。
 
-基础解释模块计算当前文本中每个 TF-IDF 特征与逻辑回归权重的乘积，汇总为“支持谣言”和“支持非谣言”的局部证据。最终解释采用固定结构：预测标签、谣言概率、分类置信度、正向证据、反向证据和综合判断，便于老师检查依据的正确性与合理性。LLM 增强模块会把本地证据和相似训练样本发送给 `deepseek-reasoner`，让大模型生成更自然的中文判断依据，并在极少数高置信冲突样本上进行保守修正。
+基础解释模块计算当前文本中每个 TF-IDF 特征与逻辑回归权重的乘积，汇总为“支持谣言”和“支持非谣言”的局部证据。最终解释采用固定结构：预测标签、谣言概率、分类置信度、正向证据、反向证据和综合判断，便于评阅者检查依据的正确性与合理性。LLM 增强模块会把本地证据和相似训练样本发送给 `deepseek-reasoner`，让大模型生成更自然的中文判断依据，并在极少数高置信冲突样本上进行保守修正。
 
 ## 创新点
 

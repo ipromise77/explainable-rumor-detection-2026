@@ -1,169 +1,312 @@
-\documentclass[UTF8,a4paper,10.5pt]{ctexart}
+﻿\documentclass[UTF8,a4paper,11pt]{ctexart}
 
-\usepackage{geometry}
-\usepackage{amsmath}
+\usepackage[left=2.25cm,right=2.25cm,top=2.15cm,bottom=2.35cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{tabularx}
 \usepackage{array}
 \usepackage{xcolor}
 \usepackage{hyperref}
+\usepackage{xurl}
 \usepackage{enumitem}
-\usepackage{tikz}
+\usepackage{caption}
+\usepackage{subcaption}
 \usepackage{listings}
-\usetikzlibrary{arrows.meta,positioning,fit,shapes.geometric}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{setspace}
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric}
+\usepackage{makecell}
+\usepackage{indentfirst}
 
-\geometry{left=2.0cm,right=2.0cm,top=2.0cm,bottom=2.0cm}
-\definecolor{linkteal}{HTML}{0F766E}
-\definecolor{boxbg}{HTML}{EEF7F5}
-\definecolor{boxline}{HTML}{0F766E}
-\definecolor{warnbg}{HTML}{FFF7ED}
-\definecolor{warnline}{HTML}{B45309}
-\hypersetup{colorlinks=true,linkcolor=linkteal,urlcolor=linkteal}
-\setlist[itemize]{leftmargin=1.5em,itemsep=0.15em,topsep=0.15em}
-\setlist[enumerate]{leftmargin=1.6em,itemsep=0.15em,topsep=0.15em}
-\renewcommand{\arraystretch}{1.16}
+\hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue,citecolor=black}
+\urlstyle{same}
+\linespread{1.20}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.10em}
+\setlength{\emergencystretch}{3em}
+\setlist[itemize]{leftmargin=2.0em,itemsep=0.03em,topsep=0.12em}
+\captionsetup{font=small,labelfont=bf,labelsep=space}
+\renewcommand{\arraystretch}{1.12}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
-\lstset{
-  basicstyle=\ttfamily\footnotesize,
-  breaklines=true,
-  frame=single,
-  columns=fullflexible,
-  keepspaces=true,
-  showstringspaces=false
-}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcommand{\file}[1]{\texttt{#1}}
 
-\title{\heiti 可解释的谣言检测}
-\author{小组成员：待填写姓名、学号、贡献比例}
-\date{人工智能导论大作业 2026}
+\definecolor{codebg}{HTML}{F7F7F7}
+\lstset{basicstyle=\ttfamily\small,breaklines=true,frame=single,backgroundcolor=\color{codebg},columns=fullflexible,showstringspaces=false,keepspaces=true,aboveskip=0.45em,belowskip=0.45em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 人工智能导论 - 可解释的谣言检测大作业报告}
+\fancyhead[R]{\small 第 6 组}
+\fancyfoot[C]{\small 第 \thepage 页 / 共 \pageref{LastPage} 页}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{15pt}
+
+\titleformat{\section}{\centering\heiti\zihao{3}}{\thesection}{0.8em}{}
+\titleformat{\subsection}{\heiti\zihao{4}}{\thesubsection}{0.7em}{}
+\titlespacing*{\section}{0pt}{0.75em}{0.55em}
+\titlespacing*{\subsection}{0pt}{0.55em}{0.25em}
+\renewcommand{\contentsname}{目录}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
+\setlength{\cftbeforesecskip}{0.22em}
+\renewcommand{\cftsecfont}{\heiti}
+\renewcommand{\cftsecpagefont}{\heiti}
 
 \begin{document}
-\maketitle
 
-\begin{abstract}
-本项目面向英文推文谣言检测任务，实现输入文本、输出二分类标签与中文判断依据的完整系统。默认主模型为三路 TF-IDF + Logistic Regression 集成，使用清洗后的 \texttt{train\_clean.csv} 训练，不依赖学校 API 或本地缓存即可在 \texttt{val.csv} 上复现 Accuracy 0.8803。为提升谣言召回率，项目另提供可独立复现的 \texttt{FinalRumourDetectClass} 备选增强模型，在默认本地模型基础上加入分级话术信号，Accuracy 达到 0.8928。项目还记录了数据清理、事件级错误分析、阈值实验、5-fold 交叉验证、低置信 LLM 复核和失败实验，确保最终结论有证据支撑。
-\end{abstract}
+\thispagestyle{fancy}
+\begin{center}
+  \vspace*{0.8cm}
+  {\heiti\zihao{2} 上海交通大学《人工智能导论》课程大作业}\\[0.9em]
+  {\heiti\zihao{1} 可解释的谣言检测}\\[0.4em]
+  {\bfseries\Large Explainable Rumor Detection}\\[2.0em]
+\end{center}
 
-\noindent\textbf{关键词：} 谣言检测；可解释机器学习；TF-IDF；逻辑回归；RAG；大语言模型复核
+\begin{center}
+\begin{tabularx}{0.90\textwidth}{>{\heiti}L{2.15cm}Y>{\heiti}L{2.15cm}Y}
+完成组号 & 第 6 组 & 完成时间 & 2 周 \\[0.75em]
+小组人员 & \makecell[l]{钟国鹏（523150910082）\\曾子恒（523010910022）\\董治衡（524031910250）} & 贡献比例 & \makecell[l]{三人贡献均等\\各约 33.3\%} \\[0.75em]
+组长姓名 & 钟国鹏 & 组长学号 & 523150910082 \\[0.75em]
+邮箱 & \footnotesize\texttt{i\_promise23@sjtu.edu.cn} & GitHub & \footnotesize\url{https://github.com/ipromise77/explainable-rumor-detection-2026} \\[0.75em]
+运行环境 & Python 3.11, scikit-learn & 提交内容 & README, report.pdf, code \\
+\end{tabularx}
+\end{center}
 
-\section{任务与合规性}
-课程要求模型对推文输出 0/1 标签，并给出一段判断依据；GitHub 需包含 README、report.pdf、代码和支持文件。本项目的默认检测类为 \texttt{RumourDetectClass}，提供 \texttt{classify(text)}、\texttt{explain(text)} 和 \texttt{predict(text)} 三个接口。默认复现路径只依赖仓库中的数据、模型和 Python 依赖，满足“可运行、可复现、合理运行时间”的要求。学校 API 的 \texttt{deepseek-reasoner} 仅作为可选解释增强与低置信复核实验使用，不作为默认主模型的必要条件。
+\vspace{1.0em}
+\begin{center}
+\begin{tabularx}{0.86\textwidth}{>{\heiti}L{2.5cm}Y}
+项目目标 & 输入英文推文，输出二分类标签，其中 0 表示非谣言、1 表示谣言，并给出中文判断依据。 \\[0.5em]
+主模型 & 三路 TF-IDF 特征 + Logistic Regression 概率集成，默认不依赖学校 API 或本地缓存。 \\[0.5em]
+增强模块 & 备选增强检测器仅在低置信非谣言样本上追加分级话术信号，作为可复现实验补充。 \\
+\end{tabularx}
+\end{center}
 
-\section{数据质量与预处理}
-原始训练集 2840 条，验证集 401 条。预处理包括 HTML 反转义、小写化、URL 归一化为 \texttt{URLTOKEN}、用户提及归一化为 \texttt{USERTOKEN}，并将 hashtag 展开为标记与原词。数据审计发现训练集中存在 3 组、7 行“当前预处理后文本相同但标签冲突”的异常样本；验证集无同类冲突。因此保留原始 \texttt{train.csv} 不变，额外生成 \texttt{train\_clean.csv} 训练。清洗后预测标签未发生变化，但减少了训练噪声，也让报告中的数据处理过程可追溯。
+\vfill
+\begin{center}
+{\small 本组成员贡献均等；远程仓库提交分支为 \texttt{origin/codex/final-submission-polish}。}
+\end{center}
 
-\section{模型架构}
+\newpage
+\tableofcontents
+\newpage
+
+\section{任务目标}
+本项目完成“可解释的谣言检测”任务：对输入推文输出 $0/1$ 标签、谣言概率和中文判断依据，并保证默认主模型可离线复现。整体流程如下：先统一预处理文本，再完成数据审计、模型训练、解释生成和前端展示；学校 API 与缓存结果只作为探索或增强记录，不作为默认提交依赖。
+
+\begin{center}
+\vspace{0.2em}
+{\heiti 任务目标流程图}\par\vspace{0.35em}
+\begin{tikzpicture}[
+  node distance=0.55cm and 0.43cm,
+  box/.style={draw=black!65, rounded corners=2mm, align=center, minimum height=0.78cm, inner xsep=4.5pt, inner ysep=4pt, fill=black!2, font=\small},
+  goal/.style={draw=black!75, rounded corners=2mm, align=center, minimum height=0.82cm, inner xsep=5pt, inner ysep=4pt, fill=blue!5, font=\small\bfseries},
+  arr/.style={-{Latex[length=2.1mm]}, thick, draw=black!65}
+]
+\node[box] (input) {输入推文\\\texttt{text}};
+\node[box, right=of input] (audit) {数据审计\\清洗冲突};
+\node[goal, right=of audit] (model) {主模型分类\\标签 + 概率};
+\node[box, right=of model] (exp) {局部证据\\中文解释};
+\node[box, right=of exp] (demo) {前端演示\\复现提交};
+\draw[arr] (input) -- (audit);
+\draw[arr] (audit) -- (model);
+\draw[arr] (model) -- (exp);
+\draw[arr] (exp) -- (demo);
+\end{tikzpicture}
+\end{center}
+
+\section{具体内容}
+\subsection{实施方案}
+系统实施分为四步：数据审计、默认主模型训练、解释生成、前端展示。数据审计使用与模型一致的 \texttt{preprocess\_text()} 规则，先把 URL、用户名和 hashtag 等社交媒体元素统一到稳定形式，再检查是否存在“同一输入、相反标签”的冲突；默认主模型 \texttt{RumourDetectClass} 采用三路 TF-IDF 与 Logistic Regression 集成，在普通 CPU 环境下即可训练和预测；解释模块依据局部特征贡献生成中文判断依据；演示页面由 \texttt{scripts/run\_demo\_server.py} 启动，展示标签、概率、来源和解释。整个方案优先保证默认结果离线可复现，增强模型和 LLM 相关结果只作为补充分析，不混入默认主线。
+
+小组分工如下：钟国鹏负责项目和仓库管理、模型构建与修改、report 撰写和后续修改；曾子恒、董治衡负责模型修改完善和 report 修改。三位成员贡献均等。具体协作过程中，组长统一维护远程分支、整理实验结果和最终提交文件；两位组员主要围绕模型效果、解释输出和报告表达提出修改意见，并参与报告多轮检查。这样的分工使代码、结果和论文表述能够保持一致。
+
+数据方面，原始训练集 2840 条，验证集 401 条。预处理包括 HTML 反转义、小写化、URL 归一化为 \texttt{URLTOKEN}、用户归一化为 \texttt{USERTOKEN}、hashtag 展开。如图\ref{fig:data-audit}，审计发现训练集中有 3 组、7 行“归一化后文本相同但标签冲突”的样本，验证集无同类冲突。我们保留原始 \texttt{train.csv}，只额外生成 \texttt{train\_clean.csv}，不修改 \texttt{val.csv}，避免人为提高验证结果。该处理方式的目的不是追求更高分数，而是让训练数据的监督信号更自洽：如果两条文本在模型视角下完全相同，却分别标为 0 和 1，模型无法通过文本特征学习到稳定规律，解释时也难以给出可信依据。
+
 \begin{figure}[htbp]
 \centering
-\begin{tikzpicture}[
-  node distance=0.9cm and 0.9cm,
-  block/.style={draw=boxline, fill=boxbg, rounded corners=2pt, align=center, minimum height=0.9cm, minimum width=2.3cm},
-  warn/.style={draw=warnline, fill=warnbg, rounded corners=2pt, align=center, minimum height=0.9cm, minimum width=2.4cm},
-  arrow/.style={-{Stealth[length=2.4mm]}, thick}
-]
-\node[block] (raw) {原始推文\\train / val};
-\node[block, right=of raw] (clean) {清洗与归一化\\URL/用户/hashtag};
-\node[block, right=of clean] (tfidf) {三路 TF-IDF\\词级 + 字符级};
-\node[block, right=of tfidf] (lr) {Logistic\\Regression};
-\node[block, below=of lr] (ens) {概率平均\\阈值 0.5};
-\node[block, left=of ens] (expl) {局部贡献解释\\正向/反向证据};
-\node[warn, below=of expl] (final) {备选增强\\分级话术信号};
-\node[block, right=of ens] (out) {标签 0/1\\中文依据};
-\draw[arrow] (raw) -- (clean);
-\draw[arrow] (clean) -- (tfidf);
-\draw[arrow] (tfidf) -- (lr);
-\draw[arrow] (lr) -- (ens);
-\draw[arrow] (ens) -- (out);
-\draw[arrow] (ens) -- (expl);
-\draw[arrow] (expl) -- (out);
-\draw[arrow] (ens) -- (final);
-\draw[arrow] (final) -- (out);
-\end{tikzpicture}
-\caption{默认主模型与备选增强模型的整体流程。}
+\includegraphics[width=0.90\textwidth]{figures/data_audit_case.png}
+\caption{数据集清洗与数据质量审计流程。右侧给出冲突组 2 的真实样本：两条推文仅短链接不同，但归一化后成为同一模型输入，标签却分别为 1 和 0。}
+\label{fig:data-audit}
 \end{figure}
 
-默认模型训练三组互补管线：词级 1--2 gram + 字符 3--6 gram、词级 1--2 gram + 字符 2--5 gram、词级 1--3 gram + 字符 3--5 gram。三个逻辑回归模型输出谣言概率后取平均。解释模块计算当前文本中每个 TF-IDF 特征值与模型权重的乘积，汇总为支持谣言和支持非谣言的局部证据。该解释只反映模型在当前样本上的判定依据，不引入外部事实。
+\subsection{核心代码分析}
+核心目录包括 \file{rumer2026/}、\file{src/}、\file{scripts/}、\file{models/}、\file{results/}、\file{demo/} 和 \file{docs/}。\file{rumor\_detector.py} 是默认主模型接口，负责预处理、训练、预测和解释；\file{final\_detector.py} 是备选增强检测器；\file{run\_demo\_server.py} 用于启动本地可视化页面。推荐环境为 Python 3.11，默认主模型不需要 PyTorch。
 
-\section{实验与结果}
-\begin{table}[htbp]
+从代码逻辑看，\file{preprocess\_text()} 是训练、评估、预测和审计共同使用的入口，因此可以避免“训练时一种预处理、预测时另一种预处理”的问题。\file{train\_ensemble()} 按配置训练三个子模型，\file{predict\_proba()} 对三路概率取平均，\file{evidence\_for\_text()} 从稀疏 TF-IDF 向量和逻辑回归权重中提取证据。增强检测器不重写基座模型，而是在本地预测为非谣言且谣言概率较低时才检查分级话术信号，因此可以通过参数关闭，便于教师单独复现默认主模型。
+
+\begin{figure}[htbp]
 \centering
-\caption{主要结果汇总。混淆矩阵格式为 [[TN, FP], [FN, TP]]。}
-\begin{tabularx}{\textwidth}{lcccY}
+\includegraphics[width=0.93\textwidth]{figures/main_pipeline.png}
+\caption{默认主模型与解释增强流程。主线为三路 TF-IDF 表示、三个 Logistic Regression 子模型和概率平均；解释分支使用特征贡献生成中文依据。}
+\label{fig:pipeline}
+\end{figure}
+
+设输入文本为 $x$，预处理后为 $\tilde{x}=g(x)$。第 $m$ 个子模型构造词级与字符级 TF-IDF 表示
+\begin{equation}
+\phi_m(\tilde{x})=[\phi_m^{word}(\tilde{x});\phi_m^{char}(\tilde{x})].
+\end{equation}
+代码采用 sublinear TF 与平滑 IDF：
+\begin{equation}
+\mathrm{tf}'(t,d)=1+\log \mathrm{tf}(t,d),\quad
+\mathrm{idf}(t)=\log\frac{1+n}{1+\mathrm{df}(t)}+1.
+\end{equation}
+每个子模型为逻辑回归：
+\begin{equation}
+p_m=P_m(y=1|x)=\sigma(\mathbf{w}_m^\top\phi_m(\tilde{x})+b_m),\quad
+\sigma(s)=\frac{1}{1+e^{-s}}.
+\end{equation}
+最终概率取三路平均，并以 0.5 为阈值：
+\begin{equation}
+P(y=1|x)=\frac{1}{3}\sum_{m=1}^{3}p_m,\quad
+\hat{y}=\mathbb{I}[P(y=1|x)\ge0.5].
+\end{equation}
+局部解释使用 $c_i=w_i\phi_i(\tilde{x})$，正贡献为支持谣言证据，负贡献为支持非谣言证据。系统不会声称判断新闻事实真假，而是说明模型为什么把文本判到某一类：例如某些词项、字符片段或话题标签贡献更偏向谣言方向，另一些证据则偏向非谣言方向。备选增强器见图\ref{fig:final-detector}，只在窄候选集上检查话术信号，避免大范围规则覆盖。
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.90\textwidth]{figures/final_detector_architecture.png}
+\caption{备选增强检测器 \texttt{FinalRumourDetectClass}。强信号直接覆盖为谣言，中等信号需满足概率偏置阈值，弱信号保持基座预测。}
+\label{fig:final-detector}
+\end{figure}
+
+\subsection{检测结果分析与判断依据分析}
+默认主模型在 \texttt{val.csv} 上达到 Accuracy 0.8803、Macro-F1 0.8757、Rumor F1 0.8519。备选增强模型默认不读 LLM 缓存，达到 Accuracy 0.8928、Macro-F1 0.8892、Rumor F1 0.8693，混淆矩阵由 [[215, 11], [37, 138]] 改为 [[215, 11], [32, 143]]，说明主要改进来自减少 false negative。我们没有把历史探索中更高但依赖缓存或验证集后处理的结果写成默认指标，因为这会削弱可复现性和评估公平性。报告中所有正式数字均来自仓库结果文件或脚本可重新生成的输出。
+
+\begin{table}[H]
+\centering
+\caption{验证集结果汇总，混淆矩阵格式为 [[TN, FP], [FN, TP]]}
+\begin{tabularx}{\textwidth}{L{2.55cm}C{1.55cm}C{1.55cm}C{1.55cm}Y}
 \toprule
 方案 & Accuracy & Macro-F1 & Rumor F1 & 说明 \\
 \midrule
-\texttt{RumourDetectClass} & 0.8803 & 0.8757 & 0.8519 & 默认主模型，独立复现，矩阵 [[215,11],[37,138]] \\
-低置信 FN 复核 & 0.8828 & 0.8784 & 0.8554 & 复核 79 条，覆盖 1 条，无新增 FP \\
-LLM 高置信覆盖 & 0.8828 & 0.8787 & 0.8563 & 调用 70 条，覆盖 3 条，仅作增强实验 \\
-\texttt{FinalRumourDetectClass} & 0.8928 & 0.8892 & 0.8693 & 默认不读 LLM 缓存，矩阵 [[215,11],[32,143]] \\
+\makecell[l]{Rumour\\DetectClass} & 0.8803 & 0.8757 & 0.8519 & 默认主模型；[[215, 11], [37, 138]]。 \\
+低置信 FN 复核 & 0.8828 & 0.8784 & 0.8554 & 复核候选 79 条，覆盖 1 条，无新增 FP。 \\
+\makecell[l]{FinalRumour\\DetectClass} & 0.8928 & 0.8892 & 0.8693 & 默认不读 LLM 缓存；[[215, 11], [32, 143]]。 \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-泛化检查显示，\texttt{train\_clean.csv} 上 5-fold 交叉验证 Accuracy 为 \(0.8641\pm0.0176\)。train 内部 dev 阈值实验选择 0.51，但应用到 \texttt{val.csv} 后 Accuracy 降至 0.8753，因此最终保留 0.5。事件级分析发现 event 0 和 event 1 的错误主要是 false negative，说明模型偏保守，后续优化应优先提升谣言召回。
-
-\section{增强方案与失败实验}
 \begin{figure}[htbp]
 \centering
-\begin{tikzpicture}[
-  node distance=0.78cm,
-  block/.style={draw=boxline, fill=boxbg, rounded corners=2pt, align=center, minimum height=0.78cm, minimum width=4.2cm},
-  decision/.style={draw=warnline, fill=warnbg, diamond, aspect=2.2, align=center, inner sep=1pt},
-  arrow/.style={-{Stealth[length=2.2mm]}, thick}
-]
-\node[block] (p0) {本地模型输出概率 \(p\)};
-\node[decision, below=of p0] (d0) {本地判 0 且 \(p\le0.25\)?};
-\node[block, below left=0.9cm and 1.8cm of d0] (local) {保持本地预测};
-\node[decision, below right=0.9cm and 1.8cm of d0] (d1) {命中话术信号?};
-\node[block, below left=0.9cm and 1.2cm of d1] (keep) {保持本地预测};
-\node[block, below right=0.9cm and 1.2cm of d1] (cover) {强信号或\\\(p+\mathrm{bias}\ge0.50\)\\覆盖为谣言};
-\draw[arrow] (p0) -- (d0);
-\draw[arrow] (d0) -- node[left]{否} (local);
-\draw[arrow] (d0) -- node[right]{是} (d1);
-\draw[arrow] (d1) -- node[left]{否} (keep);
-\draw[arrow] (d1) -- node[right]{是} (cover);
-\end{tikzpicture}
-\caption{\texttt{FinalRumourDetectClass} 的默认可复现决策流程。}
+\begin{subfigure}{0.49\textwidth}
+\centering
+\includegraphics[width=\linewidth]{figures/metrics_overview.pdf}
+\caption{主要指标对比}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.49\textwidth}
+\centering
+\includegraphics[width=\linewidth]{figures/confusion_matrices.pdf}
+\caption{混淆矩阵对比}
+\end{subfigure}
+\caption{默认模型、LLM 复核与备选增强模型在验证集上的表现。}
+\label{fig:metrics-cm}
 \end{figure}
 
-备选增强模型只在本地模型判为非谣言且概率很低时检查分级话术信号，强信号包括“抹黑活动”“极端化叙事”等，中等信号采用概率偏置，避免简单关键词强制翻转。远程分支曾记录 0.9027 Accuracy，但依赖验证集后处理脚本与本地缓存，因此仅作为探索记录。稠密语义特征、event 特征、L1 正则化、直接 LLM 接管等尝试未稳定提升效果，已在 \texttt{docs/} 中作为失败/风险记录保留。
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.70\textwidth]{figures/event_accuracy.pdf}
+\caption{按 event 分组的准确率和样本量。event 0 与 event 1 的主要问题是 false negative，说明默认模型较保守，备选增强器主要针对这一错误模式。}
+\label{fig:event-accuracy}
+\end{figure}
 
-\section{可解释性与演示}
-默认输出固定包含标签、谣言概率、置信度、支持谣言证据、支持非谣言证据和综合判断。LLM 增强模块采用相似样本提示：先从清洗训练集检索近邻，再把本地证据、近邻标签和输入推文发送给学校 API，使解释更自然；但高置信覆盖门槛为 0.85，避免大模型随意改标签。项目还提供本地前端演示：运行 \texttt{python scripts/run\_demo\_server.py} 后，可在浏览器输入文本并查看模型标签、概率和解释，便于报告截图与课堂展示。
+判断依据固定包含预测标签、谣言概率、分类置信度、正向证据、反向证据和综合判断。由于证据来自 $w_i\phi_i(\tilde{x})$，解释与线性模型预测路径一致。前端页面把“输入文本-输出标签-输出解释”的链条可视化，方便检查模型来源和解释是否一致。对于规则增强样例，页面还同时展示基座模型原始预测和最终预测，避免把规则覆盖误理解为基座模型本身的直接输出。
 
-\section{复现方式与分工}
-核心复现命令如下：
-\begin{lstlisting}
+\begin{figure}[htbp]
+\centering
+\begin{subfigure}{0.48\textwidth}
+\centering
+\includegraphics[width=\linewidth]{figures/demo_nonrumor_sample.png}
+\caption{非谣言样例}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.48\textwidth}
+\centering
+\includegraphics[width=\linewidth]{figures/demo_rumor_sample.png}
+\caption{主模型谣言样例}
+\end{subfigure}
+\vspace{0.6em}
+\begin{subfigure}{0.72\textwidth}
+\centering
+\includegraphics[width=\linewidth]{figures/demo_rule_enhanced.png}
+\caption{规则增强样例}
+\end{subfigure}
+\caption{本地前端演示页面。新版页面将样例按钮拆分为“主模型谣言 / 非谣言样例 / 规则增强”，增加“复制解释”，并在增强模式中区分最终预测与基座模型原始预测。}
+\label{fig:demo}
+\end{figure}
+
+\section{复现方式与提交检查}
+教师复现默认主模型可执行：
+\begin{lstlisting}[language=bash]
 pip install -r requirements.txt
 python -m src.train --with-explanations
 python -m src.evaluate --show-examples 0
+\end{lstlisting}
+复现增强模型和前端可执行：
+\begin{lstlisting}[language=bash]
 python scripts/run_final_detector_evaluation.py
 python scripts/run_demo_server.py
 \end{lstlisting}
 
-小组分工待填写：组长负责仓库管理、实验统筹和报告整合；成员 A 负责数据审计与预处理；成员 B 负责模型训练、调参和评估脚本；成员 C 负责解释模块、README、LaTeX 报告和演示页面。最终姓名、学号和贡献比例请提交前替换。
+\begin{table}[H]
+\centering
+\caption{课程要求覆盖检查}
+\begin{tabularx}{\textwidth}{L{3.6cm}Y}
+\toprule
+课程要求 & 覆盖情况 \\
+\midrule
+二分类输出 & \texttt{classify(text)} 输出 0/1，前端和预测文件同步展示。 \\
+判断依据 & \texttt{explain(text)} 输出中文证据说明，图\ref{fig:demo}展示效果。 \\
+检测结果分析图 & 已给出指标柱状图、混淆矩阵和事件级准确率图。 \\
+代码可运行 & README、脚本和本节命令支持训练、评估、demo 与报告编译。 \\
+小组分工 & 2.1 节写明分工，封面列出第 6 组成员和均等贡献。 \\
+正文数量 & 正文约 2000 字。 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{工作总结}
+\subsection{收获、心得}
+本项目最大的收获是认识到“可解释”不只是生成自然语言，而是要让解释能追溯到模型证据。TF-IDF 线性模型虽然简单，但能清楚给出哪些词项或字符片段推动了预测；配合数据审计、错误分析和前端展示，可以形成完整、可复查的工程链路。我们也体会到，在课程作业中，稳定复现往往比堆叠复杂模型更重要：只要预处理、训练、评估和解释口径一致，轻量模型同样可以达到较好的效果，并且更容易清楚说明判断依据。
+
+\subsection{遇到问题及解决思路}
+主要问题有三类：第一，训练集中有同文本异标签冲突，我们通过一致预处理定位并只清洗训练集，同时保留原始数据，便于回溯；第二，默认模型 false negative 较多，我们尝试过阈值调整，但验证集效果下降，因此改为设计窄候选集增强器，避免过度规则覆盖；第三，LLM 直接接管标签不稳定，且依赖 API 与缓存，因此只作为可选复核和解释增强，不纳入默认依赖。第四，报告排版中长路径和大图容易造成溢出或空白，我们通过表格、子图和精简文字解决。
+
+\section{课程建议}
+建议后续课程提供隐藏测试集或统一评测脚本，减少对 \texttt{val.csv} 的过拟合空间；同时给出基础报告模板和结果文件命名规范，便于不同小组在准确率、解释性、运行时间和可复现性之间公平比较。若课程允许使用外部大模型，也建议明确其边界，例如是否可以参与最终标签判断、是否必须提供离线可复现模式、缓存文件能否作为评分依据。这样既能鼓励同学探索新方法，也能保证评分标准清晰。
 
 \section{结论}
-本项目以可复现的 TF-IDF 集成模型作为正式主线，在 \texttt{val.csv} 上达到 0.8803 Accuracy，并提供基于局部特征贡献的解释。备选增强模型在不依赖 LLM 缓存的前提下达到 0.8928 Accuracy，展示了由错误分析驱动的召回改进。报告明确区分默认指标、增强实验和探索性失败结果，避免将验证集后处理误写为主模型能力。
+本项目实现了课程大作业所需的可解释谣言检测系统。默认主模型在 \texttt{val.csv} 上达到 Accuracy 0.8803，并输出基于局部特征贡献的中文解释；备选增强模型在不依赖 LLM 缓存的情况下达到 Accuracy 0.8928。报告中的数字均来自仓库结果文件或可复现实验脚本，并区分默认指标、增强实验和探索性记录。
 
-\begin{thebibliography}{9}
-\bibitem{shu2017} K. Shu, A. Sliva, S. Wang, J. Tang, and H. Liu. Fake News Detection on Social Media: A Data Mining Perspective. \emph{ACM SIGKDD Explorations}, 19(1):22--36, 2017.
-\bibitem{salton1988} G. Salton and C. Buckley. Term-weighting approaches in automatic text retrieval. \emph{Information Processing \& Management}, 24(5):513--523, 1988.
-\bibitem{pedregosa2011} F. Pedregosa et al. Scikit-learn: Machine Learning in Python. \emph{Journal of Machine Learning Research}, 12:2825--2830, 2011.
-\bibitem{lewis2020} P. Lewis et al. Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks. \emph{NeurIPS}, 2020.
-\end{thebibliography}
+\section*{参考文献}
+\begin{enumerate}[label={[\arabic*]}]
+\item 上海交通大学《人工智能导论》大作业说明与课程支持文档, 2026.
+\item Shu K., Sliva A., Wang S., Tang J., Liu H. Fake News Detection on Social Media: A Data Mining Perspective. \textit{ACM SIGKDD Explorations}, 2017.
+\item Salton G., Buckley C. Term-weighting approaches in automatic text retrieval. \textit{Information Processing \& Management}, 1988.
+\item Pedregosa F. et al. Scikit-learn: Machine Learning in Python. \textit{Journal of Machine Learning Research}, 2011.
+\end{enumerate}
 
 \appendix
-\section{核心接口}
+\section{核心接口示例}
 \begin{lstlisting}[language=Python]
 from src.rumor_detector import RumourDetectClass
 from src.final_detector import FinalRumourDetectClass
 
-main_detector = RumourDetectClass()
+main_detector = RumourDetectClass("models/rumor_ensemble.joblib")
 label = main_detector.classify("input tweet text")
 reason = main_detector.explain("input tweet text")
 
-final_detector = FinalRumourDetectClass()
+final_detector = FinalRumourDetectClass("models/rumor_ensemble.joblib")
 result = final_detector.predict("input tweet text")
 \end{lstlisting}
 
 \end{document}
+
