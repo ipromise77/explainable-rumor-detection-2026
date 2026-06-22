@@ -2,6 +2,12 @@
 
 本项目完成《人工智能导论》大作业“可解释的谣言检测”：输入一条推文文本，输出二分类结果，其中 `0` 表示非谣言，`1` 表示谣言，并给出判断依据。项目包含本地可复现的 TF-IDF 集成检测器，以及可选的学校 API 大模型解释增强模块。
 
+## 可视化概览
+
+默认主线采用三路 TF-IDF + Logistic Regression 概率集成，并基于局部特征贡献生成中文判断依据；学校 API 与缓存结果只作为可选增强和探索记录。
+
+![主模型与解释流程](figures/main_pipeline.png)
+
 ## 项目结构
 
 ```text
@@ -148,6 +154,8 @@ python scripts/audit_data_quality.py
 
 当前清洗策略是删除训练集中 3 组、7 行标签冲突样本，保留原始 `train.csv` 不动。清洗后训练集为 2833 条。本地模型在 `val.csv` 上的 Accuracy 仍为 0.8803，与原始训练结果一致；原始模型和清洗模型的验证集预测标签没有发生变化。
 
+![数据清洗与质量审计流程](figures/data_audit_case.png)
+
 ## 泛化与阈值实验
 
 运行：
@@ -172,6 +180,8 @@ python scripts/run_generalization_experiments.py
 - event 0 / event 1 的错误主要是 false negative：模型把部分真实谣言判为非谣言，说明后续优化重点应放在这些事件的谣言召回上。
 
 详细记录在 `docs/generalization_experiments.md`。
+
+![事件级泛化分析](figures/event_accuracy.png)
 
 ## 低置信 False Negative 召回复核
 
@@ -214,6 +224,11 @@ python -m src.evaluate --show-examples 3
 [ 37, 138]]
 ```
 
+<p align="center">
+  <img src="figures/metrics_overview.png" alt="指标对比图" width="48%">
+  <img src="figures/confusion_matrices.png" alt="混淆矩阵对比图" width="48%">
+</p>
+
 ## 备选高召回方案
 
 为探索更高的谣言召回率，项目还提供一个工程化的备选检测器 `FinalRumourDetectClass`。它默认不读取被 `.gitignore` 排除的 LLM 缓存文件，而是在默认本地模型之外使用可复现的分级谣言话术信号：
@@ -244,6 +259,8 @@ python scripts/run_final_detector_evaluation.py
 
 在当前 `main` 基础上完成真实检测类封装后，默认规则版备选方案在 `val.csv` 上可独立复现到 `0.8928` Accuracy、`0.8892` Macro-F1，混淆矩阵为 `[[215, 11], [32, 143]]`。远程 `feat/rule-signal-system` 分支的独立后处理脚本曾记录 `0.9027` Accuracy，可作为附加探索结果说明；但该分数更依赖验证集缓存和后处理脚本形态，不作为最终默认主模型指标。默认课程主模型仍以 `RumourDetectClass` 和 `0.8803` Accuracy 为准，备选方案用于展示进一步提升召回率的探索过程。
 
+![备选增强检测器流程](figures/final_detector_architecture.png)
+
 ## 单条文本预测
 
 ```bash
@@ -265,6 +282,15 @@ http://127.0.0.1:8000
 ```
 
 页面支持选择默认主模型 `RumourDetectClass` 或备选增强模型 `FinalRumourDetectClass`，并展示标签、谣言概率、来源和中文判断依据。该演示只调用本地模型；学校 API 解释增强仍通过命令行模块单独运行。
+
+<p align="center">
+  <img src="figures/demo_nonrumor_sample.png" alt="非谣言样例" width="48%">
+  <img src="figures/demo_rumor_sample.png" alt="主模型谣言样例" width="48%">
+</p>
+
+<p align="center">
+  <img src="figures/demo_rule_enhanced.png" alt="规则增强样例" width="72%">
+</p>
 
 ## LLM 增强模式
 
