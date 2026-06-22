@@ -64,7 +64,7 @@
 pip install -r requirements.txt
 ```
 
-## 教师复现路线
+## 复现路线
 
 项目默认主模型不依赖学校 API 或本地缓存，可直接复现：
 
